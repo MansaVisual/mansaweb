@@ -3,7 +3,7 @@ const Main = () =>{
 
     return(
         <main>
-            <p>Hola Timo, el poder esta en tus manos.</p>
+            <h1>Hola Timo, el pode de Mansa esta en tus manos.</h1>
         </main>
     )
 }
