@@ -1,15 +1,15 @@
-import Header from "./Header"
-import Main from "./Main"
-import Footer from "./Footer"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./views/Home"
+import "./styles/styles.scss"
 
 const App = () =>{
 
     return(
-    <>
-        <Header/>
-        <Main/>
-        <Footer/>
-    </>
+        <Router>
+            <Routes>
+            <Route path="/" element={<Home/>} />
+            </Routes>
+        </Router>
     )
 } 
 
