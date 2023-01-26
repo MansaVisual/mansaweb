@@ -1,0 +1,5 @@
+@mixin screen_600 {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
