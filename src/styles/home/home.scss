@@ -1,0 +1,31 @@
+.home-container{
+    .first-box{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0px 16px;
+        margin-top: 64px;
+        padding: 16px;
+        h2{
+            font-family: $font-nunito;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            color: $primary-color;
+            margin-bottom: 6px;
+        }
+        p{
+            font-family: $font-nunito;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 26px;
+            letter-spacing: 0.03em;
+            color: $primary-color;
+            &.link{
+                text-decoration: underline
+            }
+        }
+    }
+}

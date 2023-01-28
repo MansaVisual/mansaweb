@@ -1,11 +1,18 @@
-import Banner from "../components/Banner"
+import Banner from "../Components/Banner"
 
 const Home = () =>{
 
     return(
-        <main>
+        <div className="home-container">
             <Banner/>
-        </main>
+
+             <div className="first-box gradient-background">
+                <h2>Web Development & Design Agency</h2>
+                <p>We create experiences and build products together, that make business grow..</p>
+                <p className="link">Schedule a meeting here</p>
+            </div>
+            
+        </div>
     )
 }
 
