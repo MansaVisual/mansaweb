@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Ruda:wght@700&family=Saira:wght@500&display=swap');
 
+@import "~delicious-hamburgers/scss/base";
+@import "~delicious-hamburgers/scss/animations/stack";
+
 @import "./mixins.scss";
 @import "./generalStyles.scss";
 
@@ -10,3 +13,4 @@
 }
 
 @import "./navbar/navbar.scss";
+@import "./banner/banner.scss";
