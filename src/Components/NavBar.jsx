@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import logo1 from "../assets/logo1.svg"
 import logo3 from "../assets/logo3.svg"
 
-const NavBar = () => {
+const Navbar = () => {
     const navigate=useNavigate()
 
     const [menuOpen,setMenuOpen]=useState(false)
@@ -27,4 +27,4 @@ const NavBar = () => {
     )
 }
     
-export default NavBar
+export default Navbar
