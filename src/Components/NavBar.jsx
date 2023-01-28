@@ -12,11 +12,11 @@ const NavBar = () => {
         <>
             <div className={`navbar-container-mobile ${menuOpen && "menuOpen"}`}>
                 <div style={{backgroundImage:menuOpen?`url(${logo3}`:`url(${logo1}`}} alt="LOGO" onClick={()=>navigate("/")} className={`${menuOpen?"logo-menu-open":"logo-menu-close"}`}/>
-                <button class={`hamburger hamburger--stack ${menuOpen&&"active"}`} type="button" onClick={()=>setMenuOpen(!menuOpen)}>
-                    <div class="inner">
-                        <span class="bar"></span>
-                        <span class="bar"></span> 
-                        <span class="bar"></span>
+                <button className={`hamburger hamburger--stack ${menuOpen&&"active"}`} type="button" onClick={()=>setMenuOpen(!menuOpen)}>
+                    <div className="inner">
+                        <span className="bar"></span>
+                        <span className="bar"></span> 
+                        <span className="bar"></span>
                     </div>
                 </button>
             </div>
