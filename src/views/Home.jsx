@@ -1,9 +1,10 @@
+import Banner from "../components/Banner"
 
 const Home = () =>{
 
     return(
         <main>
-            <h1>Hola Timo, el pode de Mansa esta en tus manos.</h1>
+            <Banner/>
         </main>
     )
 }
