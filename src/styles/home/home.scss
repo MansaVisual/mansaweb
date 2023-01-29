@@ -1,31 +1,81 @@
 .home-container{
-    .first-box{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .home-container-2{
         margin: 0px 16px;
-        margin-top: 64px;
-        padding: 16px;
-        h2{
-            font-family: $font-nunito;
-            font-style: normal;
+        .first-box{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 64px;
+            padding: 16px;
+            h2{
+                font-family: $font-nunito;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+                color: $primary-color;
+                margin-bottom: 6px;
+            }
+            p{
+                font-family: $font-nunito;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                letter-spacing: 0.03em;
+                color: $primary-color;
+                &.link{
+                    text-decoration: underline
+                }
+            }
+        }
+        .title{
+            font-family: $font-saira;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 47px;
+            color: $black-color;
+            margin: auto;
+            width: fit-content;
+            &.services{
+                margin-top: 75px;
+            }
+            &.clients{
+                margin-top: 64px;
+            }
+            &.team{
+                margin-top: 64px;
+            }
+        }
+        .button-schedule{
+            border-radius: 3px;
+            padding: 17px 0px;
+            font-family: $font-ruda;
             font-weight: 700;
             font-size: 18px;
-            line-height: 25px;
+            line-height: 21px;
             color: $primary-color;
-            margin-bottom: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            img{
+                margin-right: 13px;
+            }
         }
-        p{
-            font-family: $font-nunito;
-            font-style: normal;
+        .ourTeam-eagle{
+            margin-top: 4px;
+            position: absolute;
+            z-index: -1;
+        }
+        .ourTeam-description{
             font-weight: 400;
             font-size: 15px;
             line-height: 26px;
-            letter-spacing: 0.03em;
-            color: $primary-color;
-            &.link{
-                text-decoration: underline
-            }
+            color: $black-color;
+            margin-top: 13px;
         }
     }
 }
