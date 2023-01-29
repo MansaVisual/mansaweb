@@ -2,6 +2,7 @@ import Banner from "../Components/Banner"
 import calendar from "../assets/calendar.svg"
 import TitlesHome from "../Components/TitlesHome"
 import eagle from "../assets/eagle.svg"
+import Accordion from "../Components/Accordion"
 
 const Home = () =>{
 
@@ -36,6 +37,7 @@ const Home = () =>{
                     Our team is based in Buenos Aires, but we work with clients all over the world. We ensure smooth planning and communication across different time zones.
                 </p>
 
+                <Accordion/>
             </div>
         </div>
     )
