@@ -15,7 +15,7 @@ const Home = () =>{
                 <div className="first-box gradient-background">
                     <h2>Web Development & Design Agency</h2>
                     <p>We create experiences and build products together, that make business grow.</p>
-                    <p className="link">Schedule a meeting here</p>
+                    <p className="link" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}>Schedule a meeting here</p>
                 </div>
                 
                 <TitlesHome titleClass={"services"} title={"Services"}/>
