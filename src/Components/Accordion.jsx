@@ -52,6 +52,18 @@ export default function Accordion(){
             document.getElementById(`accordion${idParam}`).classList.remove("accordion-close")
             document.getElementById(`accordion${idParam}`).classList.add("accordion-open")
         }
+        if(objOpen===""){
+            document.getElementById(`logo${idParam}`).style.display="none"
+        }else if(objOpen===idParam){
+            if(document.getElementsByClassName("accordion-open").length!==0){
+                document.getElementById(`logo${objOpen}`).style.display="none"
+            }else{
+                document.getElementById(`logo${objOpen}`).style.display="block"
+            }
+        }else{
+            document.getElementById(`logo${objOpen}`).style.display="block"
+            document.getElementById(`logo${idParam}`).style.display="none"
+        }
     }
 
     return(
@@ -60,9 +72,9 @@ export default function Accordion(){
                 return(
                     <div key={i}>
                         {i!==0&&<div className="line-accordion"></div>}
-                        <div className="card-accordion" onClick={()=>onClickAccordion(i)}>
+                        <div className="card-accordion" onClick={()=>{onClickAccordion(i)}}>
                             <h2>{obj.title}</h2>
-                            <img src={add} alt="ADD"/>
+                            <img src={add} alt="ADD" id={`logo${i}`}/>
                         </div>
                         <div id={`accordion${i}`} className={`accordion${i} accordion-close`}>
                             {obj.array.map((obj,ii)=>{
