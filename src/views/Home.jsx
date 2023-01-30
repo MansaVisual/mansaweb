@@ -13,7 +13,7 @@ const Home = () =>{
             <div className="home-container-2">
                 <div className="first-box gradient-background">
                     <h2>Web Development & Design Agency</h2>
-                    <p>We create experiences and build products together, that make business grow..</p>
+                    <p>We create experiences and build products together, that make business grow.</p>
                     <p className="link">Schedule a meeting here</p>
                 </div>
                 
