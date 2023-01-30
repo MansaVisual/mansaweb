@@ -34,8 +34,18 @@ export default function Accordion(){
 
     const onClickAccordion=(idParam)=>{
         if(objOpen!==""){
-            document.getElementById(`accordion${objOpen}`).classList.add("accordion-close")
-            document.getElementById(`accordion${objOpen}`).classList.remove("accordion-open")
+            if(idParam===objOpen){
+                if(document.getElementById(`accordion${idParam}`).classList.value.indexOf("accordion-close")!==-1){
+                    document.getElementById(`accordion${objOpen}`).classList.remove("accordion-close")
+                    document.getElementById(`accordion${objOpen}`).classList.add("accordion-open")
+                }else{
+                    document.getElementById(`accordion${objOpen}`).classList.add("accordion-close")
+                    document.getElementById(`accordion${objOpen}`).classList.remove("accordion-open")
+                }
+            }else{
+                document.getElementById(`accordion${objOpen}`).classList.add("accordion-close")
+                document.getElementById(`accordion${objOpen}`).classList.remove("accordion-open")
+            }
         }
         if(idParam!==objOpen){
             setObjOpen(idParam)
