@@ -1,7 +1,7 @@
 import foto1 from "../assets/timoteo.jpg"
 import foto2 from "../assets/timoteo.jpg"
 import foto3 from "../assets/timoteo.jpg"
-import foto4 from "../assets/timoteo.jpg"
+import foto4 from "../assets/denise.jpeg"
 import linkedin from "../assets/linkedin.svg"
 
 export default function Ourteam() {
@@ -32,7 +32,7 @@ export default function Ourteam() {
             name:"Denise Viola",
             rol:"CHIEF MARKETING OFFICE",
             mail:"denisev@mansavisual.com",
-            linkedin:"https://www.linkedin.com/in/abelpalavecino/",
+            linkedin:"https://www.linkedin.com/in/denisereddyeco/",
             foto:foto4
         },
     ]
