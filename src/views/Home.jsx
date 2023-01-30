@@ -41,6 +41,12 @@ const Home = () =>{
                 <Ourteam/>
 
             </div>
+            <div className="home-footer gradient-background">
+                <p>2023 Mansa Visual. All Right Reserved.</p>
+                <p>
+                    Terms Of Use. Privacy Policy
+                </p>
+            </div>
         </div>
     )
 }
