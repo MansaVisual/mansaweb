@@ -1,4 +1,5 @@
 import { useState } from "react"
+import add from "../assets/add.svg"
 
 export default function Accordion(){
 
@@ -17,8 +18,9 @@ export default function Accordion(){
         <div className="accordion-container">
             {arrayAccordion.map((obj,i)=>{
                 return(
-                    <div >
-                        
+                    <div className="card-accordion">
+                        <h2>{obj}</h2>
+                        <img src={add} alt="ADD" />
                     </div>
                 )
             })}

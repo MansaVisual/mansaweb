@@ -19,7 +19,8 @@ const Home = () =>{
                 
                 <TitlesHome titleClass={"services"} title={"Services"}/>
 
-                <div style={{width:"100%",height:"448px",backgroundColor:"#5D5D5D", marginTop:"30px"}}></div>
+                {/* <div style={{width:"100%",height:"448px",backgroundColor:"#5D5D5D", marginTop:"30px"}}></div> */}
+                <Accordion/>
 
                 <TitlesHome titleClass={"clients"} title={"Clients"}/>
 
@@ -37,7 +38,6 @@ const Home = () =>{
                     Our team is based in Buenos Aires, but we work with clients all over the world. We ensure smooth planning and communication across different time zones.
                 </p>
 
-                <Accordion/>
             </div>
         </div>
     )
