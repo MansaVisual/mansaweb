@@ -1,8 +1,35 @@
 .accordion-container{
     padding: 8px 0px;
+    background-color: $contrast-primary-dark;
+    margin-top: 16px;
+    .line-accordion{
+        height: 0.5px;
+        background-color: $primary-color;
+        margin: 0px 16px;
+    }
     .card-accordion{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        padding: 23.5px 32px 23.5px 16px;
+        h2{
+            font-family: $font-nunito;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            color: $primary-color;
+        }
+    }
+    
+    .accordion-close{
+        transition: 1s;
+        height: auto;
+        height: 0px;
+        overflow: hidden;
+    }
+    .accordion-open{
+        transition: 1s;
+        height: 100px;
+        overflow: auto;
     }
 }
