@@ -24,7 +24,7 @@ const Home = () =>{
 
                 <TitlesHome titleClass={"clients"} title={"Clients"}/>
 
-                <span className="button-schedule gradient-background">
+                <span className="button-schedule gradient-background" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}>
                     <img src={calendar} alt="CALENDAR" />
                     Schedule Meeting
                 </span>
