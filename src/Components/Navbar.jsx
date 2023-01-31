@@ -2,6 +2,9 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import logo1 from "../assets/logo1.svg"
 import logo3 from "../assets/logo3.svg"
+import subLogo1 from "../assets/linkedin.svg"
+import subLogo2 from "../assets/envelope.svg"
+import subLogo3 from "../assets/calendar.svg"
 
 export default function Navbar() {
     const navigate=useNavigate()
@@ -35,9 +38,11 @@ export default function Navbar() {
                     <h4>Contact</h4>
                     <h5>Offices</h5>
                 </div>
-            </div>
-            <div>
-
+                <div className="navbar-logos">
+                        <img src={subLogo1} alt="LINKEDIN"/>
+                        <img src={subLogo2} alt="ENVELOPE" />
+                        <img src={subLogo3} alt="CALENDAR" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}/>
+                </div>
             </div>
         </>
     )
