@@ -8,6 +8,7 @@ export default function Navbar() {
 
     const [menuOpen,setMenuOpen]=useState(false)
 
+    
     return(
         <>
             <div className={`navbar-container-mobile ${menuOpen && "menuOpen"}`}>
