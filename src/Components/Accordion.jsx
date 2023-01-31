@@ -107,8 +107,8 @@ export default function Accordion(){
         <div className="accordion-container">
             {arrayAccordion.map((obj,i)=>{
                 return(
-                    <div key={i}>
-                        {i!==0&&<div className="line-accordion"></div>}
+                    <div key={i} style={{borderBottom:i+1!==arrayAccordion.length&&"1px solid #FFF0D9"}}>
+                        {/* {i!==0&&<div className="line-accordion"></div>} */}
                         <div className="card-accordion" onClick={()=>{onClickAccordion(i)}}>
                             <h2>{obj.title}</h2>
                             <div className="line1" id={`line${i}-1`}></div>
