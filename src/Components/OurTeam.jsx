@@ -41,7 +41,7 @@ export default function Ourteam() {
         <div className="ourTeam-container">
             {ourTeamArray.map((obj,i)=>{
                 return(
-                    <div className="card-team">
+                    <div className="card-team" key={i}>
                         <img src={obj.foto} alt="FOTO" />
                         <img src={linkedin} alt="LINKEDIN" className="linkedin" onClick={()=>window.open(obj.linkedin)}/>
                         <h4 className="name">{obj.name}</h4>
