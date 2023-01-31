@@ -74,7 +74,7 @@
     .accordion-open{
         transition: 1s;
         height: 100px;
-        overflow: auto;
+        overflow: hidden;
         h3{
             font-family: $font-nunito;
             font-weight: 400;
