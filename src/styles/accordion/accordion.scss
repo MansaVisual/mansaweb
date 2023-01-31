@@ -8,12 +8,15 @@
         margin: 0px 16px;
     }
     .card-accordion{
-
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-
-        justify-content: space-between;
-
-        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+                align-items: center;
         padding: 23.5px 32px 23.5px 16px;
         position: relative;
         h2{
@@ -40,39 +43,50 @@
         }
         
         .line1-open{
-
+            -webkit-transition: 1s;
+            -o-transition: 1s;
             transition: 1s;
-
-            transform: rotateZ(90deg);
-
-            transition-delay: 0.1s;
+            -webkit-transform: rotateZ(90deg);
+            -ms-transform: rotate(90deg);
+                    transform: rotateZ(90deg);
+            -webkit-transition-delay: 0.1s;
+            -o-transition-delay: 0.1s;
+                    transition-delay: 0.1s;
         }
         .line2-open{
-
+            -webkit-transition: 1s;
+            -o-transition: 1s;
             transition: 1s;
-
-            transform: rotateZ(180deg);
+            -webkit-transform: rotateZ(180deg);
+            -ms-transform: rotate(180deg);
+                    transform: rotateZ(180deg);
         }
         
         .line1-close{
-
+            -webkit-transition: 0.8s;
+            -o-transition: 0.8s;
             transition: 0.8s;
-
-            transform: rotateZ(-90deg);
-
-            transition-delay: 0.1s;
+            -webkit-transform: rotateZ(-90deg);
+            -ms-transform: rotate(-90deg);
+                    transform: rotateZ(-90deg);
+            -webkit-transition-delay: 0.1s;
+            -o-transition-delay: 0.1s;
+                    transition-delay: 0.1s;
         }
         .line2-close{
-
+            -webkit-transition: 0.8s;
+            -o-transition: 0.8s;
             transition: 0.8s;
-
-            transform: rotateZ(-90deg);
+            -webkit-transform: rotateZ(-90deg);
+            -ms-transform: rotate(-90deg);
+                    transform: rotateZ(-90deg);
         }
     }
     
     .accordion-close{
+        -webkit-transition: 1s;
+        -o-transition: 1s;
         transition: 1s;
-
         height: auto;
         height: 0px;
         overflow: hidden;
@@ -86,8 +100,9 @@
         }
     }
     .accordion-open{
+        -webkit-transition: 1s;
+        -o-transition: 1s;
         transition: 1s;
-
         height: 100px;
         overflow: hidden;
         h3{
