@@ -1,5 +1,4 @@
 import { useState } from "react"
-import add from "../assets/add.svg"
 
 export default function Accordion(){
 
@@ -33,69 +32,69 @@ export default function Accordion(){
     const [objOpen,setObjOpen]=useState("")
 
     const onClickAccordion=async(idParam)=>{
+        const helper1=(param,class1,class2)=>{
+            document.getElementById(param).classList.remove(class1)
+            document.getElementById(param).classList.add(class2)
+        }
         if(objOpen!==""){
             if(idParam===objOpen){
                 if(document.getElementById(`accordion${idParam}`).classList.value.indexOf("accordion-close")!==-1){
-                    document.getElementById(`accordion${objOpen}`).classList.remove("accordion-close")
-                    document.getElementById(`accordion${objOpen}`).classList.add("accordion-open")
+                    helper1(`accordion${objOpen}`,"accordion-close","accordion-open")
                 }else{
-                    document.getElementById(`accordion${objOpen}`).classList.add("accordion-close")
-                    document.getElementById(`accordion${objOpen}`).classList.remove("accordion-open")
+                    helper1(`accordion${objOpen}`,"accordion-open","accordion-close")
                 }
             }else{
-                document.getElementById(`accordion${objOpen}`).classList.add("accordion-close")
-                document.getElementById(`accordion${objOpen}`).classList.remove("accordion-open")
+                helper1(`accordion${objOpen}`,"accordion-open","accordion-close")
             }
         }
         if(idParam!==objOpen){
             setObjOpen(idParam)
-            document.getElementById(`accordion${idParam}`).classList.remove("accordion-close")
-            document.getElementById(`accordion${idParam}`).classList.add("accordion-open")
+            helper1(`accordion${idParam}`,"accordion-close","accordion-open")
         }
 
         // -------------------------------------------------------------------------------------------------------------
-
+        const helper2=(param1,param2,class1,class2,action)=>{
+            if(action){
+                document.getElementById(param1).classList.add(class1)
+                document.getElementById(param2).classList.add(class2)
+            }else{
+                document.getElementById(param1).classList.remove(class1)
+                document.getElementById(param2).classList.remove(class2)
+            }
+        }
         if(objOpen===""){
-            document.getElementById(`line${idParam}-1`).classList.add("line1-open")
-            document.getElementById(`line${idParam}-2`).classList.add("line2-open")
+            helper2(`line${idParam}-1`,`line${idParam}-2`,"line1-open","line2-open",true)
     
             setTimeout(() => {
                 document.getElementById(`line${idParam}-1`).style.display="none"
             }, 200);
         }else if(objOpen===idParam){
             if(document.getElementsByClassName("line2-open").length!==0){
-                document.getElementById(`line${objOpen}-1`).classList.add("line1-close")
-                document.getElementById(`line${objOpen}-2`).classList.add("line2-close")
-                document.getElementById(`line${objOpen}-1`).classList.remove("line1-open")
-                document.getElementById(`line${objOpen}-2`).classList.remove("line2-open")
+                helper2(`line${objOpen}-1`,`line${objOpen}-2`,"line1-close","line2-close",true)
+                helper2(`line${objOpen}-1`,`line${objOpen}-2`,"line1-open","line2-open",false)
                 
                 setTimeout(() => {
                     document.getElementById(`line${objOpen}-1`).style.display="block"
                 }, 200);
             }else{
-                document.getElementById(`line${objOpen}-1`).classList.add("line1-open")
-                document.getElementById(`line${objOpen}-2`).classList.add("line2-open")
-                document.getElementById(`line${objOpen}-1`).classList.remove("line1-close")
-                document.getElementById(`line${objOpen}-2`).classList.remove("line2-close")
+                helper2(`line${objOpen}-1`,`line${objOpen}-2`,"line1-open","line2-open",true)
+                helper2(`line${objOpen}-1`,`line${objOpen}-2`,"line1-close","line2-close",false)
         
                 setTimeout(() => {
                     document.getElementById(`line${objOpen}-1`).style.display="none"
                 }, 200);
             }
         }else{
-            document.getElementById(`line${objOpen}-1`).classList.add("line1-close")
-            document.getElementById(`line${objOpen}-2`).classList.add("line2-close")
-            document.getElementById(`line${objOpen}-1`).classList.remove("line1-open")
-            document.getElementById(`line${objOpen}-2`).classList.remove("line2-open")
+            helper2(`line${objOpen}-1`,`line${objOpen}-2`,"line1-close","line2-close",true)
+            helper2(`line${objOpen}-1`,`line${objOpen}-2`,"line1-open","line2-open",false)
     
             setTimeout(() => {
                 document.getElementById(`line${objOpen}-1`).style.display="block"
             }, 200);
-            
-            document.getElementById(`line${idParam}-1`).classList.add("line1-open")
-            document.getElementById(`line${idParam}-2`).classList.add("line2-open")
-            document.getElementById(`line${objOpen}-1`).classList.remove("line1-close")
-            document.getElementById(`line${objOpen}-2`).classList.remove("line2-close")
+
+
+            helper2(`line${idParam}-1`,`line${idParam}-2`,"line1-open","line2-open",true)
+            helper2(`line${objOpen}-1`,`line${objOpen}-2`,"line1-close","line2-close",false)
     
             setTimeout(() => {
                 document.getElementById(`line${idParam}-1`).style.display="none"
