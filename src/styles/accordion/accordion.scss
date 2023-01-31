@@ -12,12 +12,48 @@
         justify-content: space-between;
         align-items: center;
         padding: 23.5px 32px 23.5px 16px;
+        position: relative;
         h2{
             font-family: $font-nunito;
             font-weight: 700;
             font-size: 18px;
             line-height: 25px;
             color: $primary-color;
+        }
+        
+        .line1{
+            width: 2px;
+            height: 17px;
+            background-color: $primary-color;
+            position: absolute;
+            right: 39.5px;
+        }
+        .line2{
+            width: 17px;
+            height: 2px;
+            background-color: $primary-color;  
+            position: absolute;
+            right: 32px;
+        }
+        
+        .line1-open{
+            transition: 1s;
+            transform: rotateZ(90deg);
+            transition-delay: 0.1s;
+        }
+        .line2-open{
+            transition: 1s;
+            transform: rotateZ(180deg);
+        }
+        
+        .line1-close{
+            transition: 0.8s;
+            transform: rotateZ(-90deg);
+            transition-delay: 0.1s;
+        }
+        .line2-close{
+            transition: 0.8s;
+            transform: rotateZ(-90deg);
         }
     }
     
