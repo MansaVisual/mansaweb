@@ -34,6 +34,7 @@
     }
 }
 
+
 .menu-close{
     position: fixed;
     top:0;
@@ -42,6 +43,31 @@
     height: 0px;
     transition: 1s;
     background-color: $contrast-primary-dark;
+    overflow: hidden;
+    .navbar-bar{
+        margin-top: 178px;
+        margin-left: 44px;
+        h4{
+            transition-duration: 1s;
+            height: 0px;
+            overflow: hidden;
+            font-family: $font-ruda;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 40px;
+            color: $primary-color;
+        }
+        h5{
+            transition-duration: 1s;
+            height: 40px;
+            overflow: hidden;
+            font-family: $font-ruda;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 40px;
+            color: $primary-color;
+        }
+    }
 }
 .menu-open{
     position: fixed;
@@ -50,5 +76,30 @@
     width: 100vw;
     transition: 1s;
     height: 100vh;
+    overflow: hidden;
     background-color: $contrast-primary-dark;
+    .navbar-bar{
+        margin-top: 178px;
+        margin-left: 44px;
+        h4{
+            transition-duration: 1s;
+            height: 40px;
+            overflow: hidden;
+            font-family: $font-ruda;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 40px;
+            color: $primary-color;
+        }
+        h5{
+            transition-duration: 1s;
+            height: 40px;
+            overflow: hidden;
+            font-family: $font-ruda;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 40px;
+            color: $primary-color;
+        }
+    }
 }
