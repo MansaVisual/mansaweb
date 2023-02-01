@@ -4,8 +4,19 @@ import TitlesHome from "../Components/TitlesHome"
 import eagle from "../assets/eagle.svg"
 import Accordion from "../Components/Accordion"
 import Ourteam from "../Components/OurTeam"
+import { useEffect } from "react"
 
-const Home = () =>{
+const Home = ({menuOpen,setMenuOpen}) =>{
+
+    useEffect(() => {
+        if(menuOpen){
+            setMenuOpen(!menuOpen)
+        }
+        window.scrollTo({
+            top: 0,
+            behavior: "auto",
+        });
+    }, [])
 
     return(
         <div className="home-container">
