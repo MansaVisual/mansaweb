@@ -107,7 +107,7 @@
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
-    height: 95vh;
+    height: 100vh;
     overflow: hidden;
     background-color: $contrast-primary-dark;
     .navbar-bar{
@@ -140,7 +140,7 @@
     }
     .navbar-logos{
         position: absolute;
-        bottom: 86px;
+        bottom: 100px;
         left: 44px;
         display: -webkit-box;
         display: -ms-flexbox;
