@@ -1,5 +1,7 @@
 @import "./variables.scss";
 
 .gradient-background{
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(84, 167, 182, 0.64)), to(rgba(84, 167, 182, 0.64))), -webkit-gradient(linear, left top, right top, color-stop(50.92%, #99CB9F), to(#94A1A3));
+    background: -o-linear-gradient(bottom, rgba(84, 167, 182, 0.64), rgba(84, 167, 182, 0.64)), -o-linear-gradient(left, #99CB9F 50.92%, #94A1A3 100%);
     background: linear-gradient(0deg, rgba(84, 167, 182, 0.64), rgba(84, 167, 182, 0.64)), linear-gradient(90deg, #99CB9F 50.92%, #94A1A3 100%);
 }

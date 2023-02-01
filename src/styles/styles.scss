@@ -13,6 +13,7 @@ $hamburger-thickness:2.5px;
 *{
     margin: 0px;
     padding: 0px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-style: normal;
 }

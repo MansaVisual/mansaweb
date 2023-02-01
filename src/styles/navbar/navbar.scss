@@ -3,12 +3,18 @@
     width: 100%;
     height: 48px;
     padding: 0px 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     text-align: center;
     z-index: 3;
     position: absolute;
     .logo-menu-close{
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
         width: 177px;
         height: 17px;
@@ -17,6 +23,8 @@
         background-repeat: no-repeat;
     }
     .logo-menu-open{
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
         width: 59px;
         height: 14px;
@@ -43,6 +51,8 @@
     z-index: 2;
     width: 100vw;
     height: 0px;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     background-color: $contrast-primary-dark;
     overflow: hidden;
@@ -50,6 +60,8 @@
         margin-top: 178px;
         margin-left: 44px;
         h4{
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
             transition-duration: 1s;
             height: 0px;
             overflow: hidden;
@@ -60,6 +72,8 @@
             color: $primary-color;
         }
         h5{
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
             transition-duration: 1s;
             height: 40px;
             overflow: hidden;
@@ -74,8 +88,12 @@
         position: absolute;
         bottom: 86px;
         left: 44px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 26px;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
         width: 0px;
         height: 0px;
@@ -86,6 +104,8 @@
     top:0;
     z-index: 2;
     width: 100vw;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     height: 100vh;
     overflow: hidden;
@@ -94,6 +114,8 @@
         margin-top: 178px;
         margin-left: 44px;
         h4{
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
             transition-duration: 1s;
             height: 40px;
             overflow: hidden;
@@ -104,6 +126,8 @@
             color: $primary-color;
         }
         h5{
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
             transition-duration: 1s;
             height: 40px;
             overflow: hidden;
@@ -118,8 +142,12 @@
         position: absolute;
         bottom: 86px;
         left: 44px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 26px;
+        -webkit-transition: 1s;
+        -o-transition: 1s;
         transition: 1s;
         width: 26px;
         height: 29px;

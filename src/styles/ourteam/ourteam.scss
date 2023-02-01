@@ -1,9 +1,16 @@
 .ourTeam-container{
     margin-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 8px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     .card-team{
         position: relative;

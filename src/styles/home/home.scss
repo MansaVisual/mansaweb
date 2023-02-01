@@ -1,13 +1,29 @@
 .home-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     .home-container-2{
         margin: 0px 16px;
         .first-box{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
             align-items: flex-start;
             margin-top: 64px;
             padding: 16px;
@@ -39,6 +55,8 @@
             line-height: 47px;
             color: $black-color;
             margin: auto;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
             width: fit-content;
             &.services{
                 margin-top: 75px;
@@ -58,14 +76,24 @@
             font-size: 18px;
             line-height: 21px;
             color: $primary-color;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             margin-top: 30px;
             cursor: pointer;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
             transition: 0.5s;
             &:hover{
                 font-size: 22px;
+                -webkit-transition: 0.5s;
+                -o-transition: 0.5s;
                 transition: 0.5s;
             }
             img{
@@ -97,7 +125,6 @@
             line-height: 26px;
             letter-spacing: 0.03em;
             color: $primary-color;
-
         }
     }
 }
