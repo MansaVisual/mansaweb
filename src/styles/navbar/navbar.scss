@@ -37,10 +37,15 @@
         position: fixed;
         top:0;
         z-index: 3;
-        margin-top: 11px;
     }
     .hamburger{
         margin: auto 0px;
+        .bar2::before{
+            background-color: black !important;
+        }
+        .bar2-background{
+            background-color: black !important;
+        }
     }
 }
 
