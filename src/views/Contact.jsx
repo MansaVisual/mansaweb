@@ -63,6 +63,9 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
                 </div>
 
                 <Form/>
+
+
+                <p className="footer">2023 Mansa Visual. All Right Reserved. Terms Of Use. Privacy Policy</p>
             </div>
         </div>
     )
