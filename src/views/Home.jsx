@@ -25,7 +25,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
             <div className="home-container-2">
                 <div className="first-box gradient-background">
                     <h2>Web Development & Design Agency</h2>
-                    <p>We create experiences and build products together, that make business grow.</p>
+                    <p>We create experiences and build products all together. We make your business grow</p>
                     <p className="link" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}>Schedule a meeting here</p>
                 </div>
                 
@@ -46,14 +46,14 @@ const Home = ({menuOpen,setMenuOpen}) =>{
 
                 <TitlesHome titleClass={"team"} title={"Our Team"}/>
                 <p className="ourTeam-description">
-                    Our team is based in Buenos Aires, but we work with clients all over the world. We ensure smooth planning and communication across different time zones.
+                    We have a global team mainly focused in Argentina, Italy and the USA. This allows us to improve productivity as well as creativity and  service.
                 </p>
 
                 <Ourteam/>
 
             </div>
             <div className="home-footer gradient-background">
-                <p>2023 Mansa Visual. All Right Reserved.</p>
+                <p>2023 Mansa Visual. All Rights Reserved.</p>
                 <p>
                     Terms Of Use. Privacy Policy
                 </p>
