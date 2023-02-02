@@ -43,8 +43,8 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
     return(
         <div className="contact-container">
             <div className="contact-container-2">
-                <p>Our team is based in Buenos Aires, but we work with clients all over the world. We ensure smooth planning and communication across different time zones.</p>
-                <p className="description-2">To discuss a new project or find out more about us, do not hesitate to contact info@mansavisual.com or call our offices:</p>
+                <p className="description">Our team is based in Buenos Aires, but we work with clients all over the world. We ensure smooth planning and communication across different time zones.</p>
+                <p className="description description-2">To discuss a new project or find out more about us, do not hesitate to contact info@mansavisual.com or call our offices:</p>
 
                 <div className="contacts">
                     {mails.map((obj,i)=>{
