@@ -20,4 +20,33 @@
             font-weight: 900;
         }
     }
+    .form{
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        label {
+            color: $primary-color;
+        }
+        div div{
+            border-bottom: 1px solid $primary-color;
+            &:after{
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+        .button{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 34px;
+            border-bottom: none;
+            p{
+                width: fit-content;
+                font-family: $font-ruda;
+                font-weight: 900;
+                font-size: 16px;
+                line-height: 21px;
+                color: $primary-color;
+            }
+        }
+    }
 }
