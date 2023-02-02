@@ -1,0 +1,23 @@
+.form-container{
+    background-color: $contrast-primary-dark;
+    padding: 42px 14px 21px 14px;
+    margin-top: 36px;
+    .title{
+        font-family: $font-saira;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 29px;
+        color: $primary-color;
+    }
+    .subtitle{
+        font-family: $font-ruda;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 21px;
+        color: $primary-color;
+        margin-top: 28px;
+        span{
+            font-weight: 900;
+        }
+    }
+}
