@@ -1,0 +1,54 @@
+.contact-container{
+    padding-left: 15px;
+    .contact-container-2{
+        padding-top: 58px;
+        p{
+            font-family: $font-nunito;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 35px;
+            color: $black-color;
+        }
+        .description-2{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 37px;
+        }
+        .contacts{
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            div{
+                h3{
+                    font-family: $font-saira;
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 29px;
+                    color: $black-color;
+                }
+                div{
+                    display: flex;
+                    img{
+                        margin-right: 7px;
+                    }
+                    h3{
+                        font-family: $font-ruda;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 30px;
+                        color: $black-color-2-disabled;
+                    }
+                }
+                h4{
+                    font-family: $font-ruda;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $black-color-2;
+                }
+            }
+        }
+    }
+}
