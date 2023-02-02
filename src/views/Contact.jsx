@@ -49,7 +49,7 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
                 <div className="contacts">
                     {mails.map((obj,i)=>{
                         return(
-                            <div>
+                            <div key={i}>
                                 <h3>{obj.provincia}</h3>
                                 <div>
                                     <img src={obj.bandera} alt="BANDERA" />
@@ -62,11 +62,8 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
                     })}
                 </div>
 
-                <Form/>
-
-
-                <p className="footer">2023 Mansa Visual. All Right Reserved. Terms Of Use. Privacy Policy</p>
             </div>
+            <Form/>
         </div>
     )
 }
