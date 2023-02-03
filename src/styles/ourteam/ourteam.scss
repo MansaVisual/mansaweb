@@ -1,5 +1,4 @@
 .ourTeam-container{
-    margin-top: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12,6 +11,9 @@
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    max-width: 360px;
+    margin: auto;
+    margin-top: 60px;
     .card-team{
         position: relative;
         max-width: 175px;
