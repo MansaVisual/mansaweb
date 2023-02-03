@@ -59,4 +59,17 @@
             margin-top: 37px;
         }
     }
+    .contact-footer{
+        margin: 37px 22px 90px 22px;
+        p{
+            font-family: $font-ruda;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 21px;
+            color: $full-black;
+            span{
+                text-decoration: underline;
+            }
+        }
+    }
 }
