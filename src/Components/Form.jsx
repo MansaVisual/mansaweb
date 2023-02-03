@@ -34,8 +34,17 @@ export default function Form(){
         },
     ]
 
+    const [clickButton,setClickButton]=useState(false)
+
+    const handleClick = ()=>{
+        setClickButton(true)
+        setTimeout(() => {
+            setClickButton(false)
+        }, 5000);
+    }
+
     useEffect(() => {
-    console.log(form)
+        console.log(form)
     }, [form])
 
     return(
@@ -52,8 +61,9 @@ export default function Form(){
                         />
                     )
                 })}
-                <div className="button">
-                    <p>SEND</p>
+                <div className="button" onClick={()=>handleClick()}>
+                    {!clickButton&&<p>SEND</p>}
+                    {clickButton&&<div className="button-loader"></div>}
                 </div>
             </div>
         </div>
