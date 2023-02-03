@@ -29,6 +29,9 @@
         label {
             color: $primary-color;
             margin-left: 6px;
+            .css-wgai2y-MuiFormLabel-asterisk{
+                color: #FFF0D94D;
+            }
         }
         div div{
             border-bottom: 1px solid $primary-color;

@@ -14,23 +14,28 @@ export default function Form(){
     const arrayForm=[
         {
             title:"Mail",
-            form:"mail"
+            form:"mail",
+            optional:false
         },
         {
             title:"Name",
-            form:"name"
+            form:"name",
+            optional:false
         },
         {
             title:"Phone",
-            form:"phone"
+            form:"phone",
+            optional:true
         },
         {
             title:"Company Name",
-            form:"company"
+            form:"company",
+            optional:true
         },
         {
             title:"Describe Your Project",
-            form:"description"
+            form:"description",
+            optional:false
         },
     ]
 
@@ -44,8 +49,12 @@ export default function Form(){
     }
 
     useEffect(() => {
-        console.log(form)
-    }, [form])
+        for(let i in arrayForm){
+            if(document.getElementById(`${arrayForm[i].title}-label`).children.length!==0){
+                document.getElementById(`${arrayForm[i].title}-label`).children[0].innerHTML=" (optional)"
+            }
+        }
+    }, [])
 
     return(
         <div className="form-container">
@@ -55,7 +64,7 @@ export default function Form(){
             <div className="form">
                 {arrayForm.map((obj,i)=>{
                     return(
-                        <TextField key={i} id={obj.title} variant="standard" label={obj.title} 
+                        <TextField required={obj.optional} key={i} id={obj.title} variant="standard" label={obj.title} 
                             onChange={(e)=>setForm({...form,[obj.form]:e.target.value})}
                             multiline={true}
                         />
