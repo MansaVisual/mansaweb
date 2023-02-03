@@ -10,7 +10,9 @@ export default function Banner(){
             <p className="subtititle">
                 At Mansa Visual we work to provide you the design and marketing solutions that your business needs.
             </p>
-            <div className="mouse"></div>
+            <div className="mouse-container">
+                <div className="mouse"></div>
+            </div>
         </div>
     )
 }

@@ -21,7 +21,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
     return(
         <div className="home-container">
             <Banner/>
-
+            
             <div className="home-container-2">
                 <div className="first-box gradient-background" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}>
                     <h2>Web Development & Design Agency</h2>
