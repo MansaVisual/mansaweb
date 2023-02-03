@@ -23,10 +23,10 @@ const Home = ({menuOpen,setMenuOpen}) =>{
             <Banner/>
 
             <div className="home-container-2">
-                <div className="first-box gradient-background">
+                <div className="first-box gradient-background" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}>
                     <h2>Web Development & Design Agency</h2>
                     <p>We create experiences and build products all together. We make your business grow</p>
-                    <p className="link" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}>Schedule a meeting here</p>
+                    <p className="link">Schedule a meeting here</p>
                 </div>
                 
                 <TitlesHome titleClass={"services"} title={"Services"}/>
