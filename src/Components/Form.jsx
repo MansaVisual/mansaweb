@@ -61,7 +61,7 @@ export default function Form(){
             <p className="title">Contact Us</p>
             <p className="subtitle">Mail to <span>info@mansavisual</span> or book an appointment in the <span>www.app.com</span></p>
 
-            <div className="form">
+            <form className="form">
                 {arrayForm.map((obj,i)=>{
                     return(
                         <TextField required={obj.optional} key={i} id={obj.title} variant="standard" label={obj.title} 
@@ -71,10 +71,10 @@ export default function Form(){
                     )
                 })}
                 <div className="button" onClick={()=>handleClick()}>
-                    {!clickButton&&<p>SEND</p>}
+                    {!clickButton&&<button>SEND</button>}
                     {clickButton&&<div className="button-loader"></div>}
                 </div>
-            </div>
+            </form>
         </div>
     )
 }
