@@ -10,7 +10,6 @@ const App = () =>{
     const [menuOpen,setMenuOpen]=useState(false)
 
     const [banner,setBanner]=useState(true)
-    const [blurNumber,setBlurNumber]=useState(0)
 
     useEffect(()=>{
         setTimeout(() => {
@@ -25,10 +24,10 @@ const App = () =>{
     
             if (load > 99) {
                 clearInterval(int)
-                document.getElementById("bg").classList.add("banner-loading-close")
+                setTimeout(() => {
+                    document.getElementById("bg").classList.add("banner-loading-close")
+                }, 300);
             }
-
-            setBlurNumber(load)
 
             document.getElementById("bg").style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
         }

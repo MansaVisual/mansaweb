@@ -33,10 +33,25 @@
                 color: #FFF0D94D;
             }
         }
+        .MuiInputBase-inputMultiline{
+            color: $primary-color !important;
+            margin-left: 5px;
+        }
         div div{
             border-bottom: 1px solid $primary-color;
             &:after{
                 border-bottom: 2px solid $primary-color;
+            }
+        }
+        .MuiInputBase-inputMultiline-error{
+            label{
+                color: #FF6A6B !important;
+            }
+            div{
+                border-bottom: 1px solid #FF6A6B !important;
+                &:after{
+                    border-bottom: 2px solid #FF6A6B;
+                }
             }
         }
         .button{
