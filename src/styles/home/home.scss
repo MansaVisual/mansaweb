@@ -128,3 +128,20 @@
         }
     }
 }
+
+.banner-loading{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/portada.svg");
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 50;
+}
+.banner-loading-close{
+    transition: 1.5s;
+    height: 0px;
+}
