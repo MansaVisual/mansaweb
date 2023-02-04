@@ -40,7 +40,6 @@ export default function Form(){
     ]
 
     const [clickButton,setClickButton]=useState(false)
-    const [validating,setValidating]=useState(false)
 
     const [errorMail,setErrorMail]=useState(false)
     const [errorName,setErrorName]=useState(false)
@@ -51,7 +50,6 @@ export default function Form(){
 
     const handleClick = ()=>{
         setClickButton(true)
-        setValidating(true)
         let returnError=false
 
         if(form.mail===""){
@@ -73,7 +71,6 @@ export default function Form(){
         }
 
         if(returnError){
-            setValidating(false)
             setClickButton(false)
             return
         }

@@ -46,7 +46,7 @@ const App = () =>{
             <div className="banner-loading" id="bg"></div>
             <Routes>
                 <Route path="/" element={<Home banner={banner} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
-                <Route path="/Contact" element={<Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
+                <Route path="/Contact" element={<Contact banner={banner} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
             </Routes>
         </Router>
     )

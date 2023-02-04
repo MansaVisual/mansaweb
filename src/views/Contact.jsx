@@ -4,7 +4,7 @@ import ita from "../assets/italy.svg"
 import eua from "../assets/united-states.svg"
 import Form from "../Components/Form"
 
-const Contact = ({menuOpen,setMenuOpen}) =>{
+const Contact = ({banner,menuOpen,setMenuOpen}) =>{
 
     useEffect(() => {
         if(menuOpen){
@@ -41,33 +41,37 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
     ]
 
     return(
-        <div className="contact-container">
-            <div className="contact-container-2">
-                <p className="description">Our team is based in Buenos Aires, but we work with clients all over the world. We ensure smooth planning and communication across different time zones.</p>
-                <p className="description description-2">To discuss a new project or find out more about us, do not hesitate to contact info@mansavisual.com or call our offices:</p>
+        <>
+            {!banner && 
+                <div className="contact-container">
+                    <div className="contact-container-2">
+                        <p className="description">Our team is based in Buenos Aires, but we work with clients all over the world. We ensure smooth planning and communication across different time zones.</p>
+                        <p className="description description-2">To discuss a new project or find out more about us, do not hesitate to contact info@mansavisual.com or call our offices:</p>
 
-                <div className="contacts">
-                    {mails.map((obj,i)=>{
-                        return(
-                            <div key={i}>
-                                <h3>{obj.provincia}</h3>
-                                <div>
-                                    <img src={obj.bandera} alt="BANDERA" />
-                                    <h3>{obj.pais}</h3>
-                                </div>
-                                <h4>{obj.mail}</h4>
-                                <h4>{obj.telefono}</h4>
-                            </div>
-                        )
-                    })}
+                        <div className="contacts">
+                            {mails.map((obj,i)=>{
+                                return(
+                                    <div key={i}>
+                                        <h3>{obj.provincia}</h3>
+                                        <div>
+                                            <img src={obj.bandera} alt="BANDERA" />
+                                            <h3>{obj.pais}</h3>
+                                        </div>
+                                        <h4>{obj.mail}</h4>
+                                        <h4>{obj.telefono}</h4>
+                                    </div>
+                                )
+                            })}
+                        </div>
+
+                    </div>
+                    <Form/>
+                    <div className="contact-footer">
+                        <p>2023 Mansa Visual. All Right Reserved. <span>Terms Of Use</span>. <span>Privacy Policy</span></p>
+                    </div>
                 </div>
-
-            </div>
-            <Form/>
-            <div className="contact-footer">
-                <p>2023 Mansa Visual. All Right Reserved. <span>Terms Of Use</span>. <span>Privacy Policy</span></p>
-            </div>
-        </div>
+            }
+        </>
     )
 }
 
