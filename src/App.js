@@ -32,14 +32,14 @@ const App = () =>{
             document.getElementById("bg").style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
         }
 
-        let int = setInterval(blurring,12)
+        let int = setInterval(blurring,15)
     },[])
     
     const scale = (num, in_min, in_max, out_min, out_max) => {
         return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
     }
 
-    
+
     function disableScroll(){  
         window.scrollTo(0, 0);
     }
@@ -49,7 +49,7 @@ const App = () =>{
             window.addEventListener('scroll', disableScroll);
             setTimeout(() => {
                 window.removeEventListener('scroll', disableScroll);  
-            }, 1200);
+            }, 1500);
         }
     }, [banner])
     
