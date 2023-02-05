@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material"
-import { useEffect, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
 
 export default function Form(){
 
@@ -94,7 +94,7 @@ export default function Form(){
             <div className="form">
                 {arrayForm.map((obj,i)=>{
                     return(
-                        <div key={i}>
+                        <Fragment key={i}>
                             <TextField required={obj.optional} id={obj.title} variant="standard" label={obj.title} 
                                 onChange={(e)=>setForm({...form,[obj.form]:e.target.value})}
                                 multiline={true}
@@ -109,7 +109,7 @@ export default function Form(){
                             {obj.title==="Mail" && errorMail ? "Please enter your email" : null}
                             {obj.title==="Name" && errorName ? "Please enter your name" : null}
                             {obj.title==="Describe Your Project" && errorDescription ? "Please enter your project's description" : null}
-                        </div>
+                        </Fragment>
                     )
                 })}
                 <div className="button">
