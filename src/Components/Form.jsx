@@ -94,8 +94,8 @@ export default function Form(){
             <div className="form">
                 {arrayForm.map((obj,i)=>{
                     return(
-                        <>
-                            <TextField required={obj.optional} key={i} id={obj.title} variant="standard" label={obj.title} 
+                        <div key={i}>
+                            <TextField required={obj.optional} id={obj.title} variant="standard" label={obj.title} 
                                 onChange={(e)=>setForm({...form,[obj.form]:e.target.value})}
                                 multiline={true}
                                 className={`
@@ -109,7 +109,7 @@ export default function Form(){
                             {obj.title==="Mail" && errorMail ? "Please enter your email" : null}
                             {obj.title==="Name" && errorName ? "Please enter your name" : null}
                             {obj.title==="Describe Your Project" && errorDescription ? "Please enter your project's description" : null}
-                        </>
+                        </div>
                     )
                 })}
                 <div className="button">

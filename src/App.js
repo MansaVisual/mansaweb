@@ -39,6 +39,21 @@ const App = () =>{
         return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
     }
 
+    
+    function disableScroll(){  
+        window.scrollTo(0, 0);
+    }
+      
+    useEffect(() => {
+        if(!banner){
+            window.addEventListener('scroll', disableScroll);
+            setTimeout(() => {
+                window.removeEventListener('scroll', disableScroll);  
+            }, 1200);
+        }
+    }, [banner])
+    
+
     return(
         <Router>
             {!banner&&<Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}
