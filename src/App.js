@@ -32,9 +32,8 @@ const App = () =>{
             document.getElementById("bg").style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
         }
 
-        let int = setInterval(blurring,15)
+        let int = setInterval(blurring,12)
     },[])
-
     
     const scale = (num, in_min, in_max, out_min, out_max) => {
         return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
