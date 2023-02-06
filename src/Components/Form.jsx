@@ -105,10 +105,10 @@ export default function Form(){
                                     ${obj.title==="Describe Your Project" && errorDescription ? "MuiInputBase-inputMultiline-error" : ""}
                                 `}
                             />
-                            {obj.title==="Mail" && errorValidate ? <span>Incorrect email</span> : null}
-                            {obj.title==="Mail" && errorMail ? "Please enter your email" : null}
-                            {obj.title==="Name" && errorName ? "Please enter your name" : null}
-                            {obj.title==="Describe Your Project" && errorDescription ? "Please enter your project's description" : null}
+                            {obj.title==="Mail" && errorValidate ? <span className="label-error">Incorrect email</span> : null}
+                            {obj.title==="Mail" && errorMail ? <span className="label-error">Please enter your email</span> : null}
+                            {obj.title==="Name" && errorName ? <span className="label-error">Please enter your name</span> : null}
+                            {obj.title==="Describe Your Project" && errorDescription ? <span className="label-error">Please enter a project's description</span> : null}
                         </Fragment>
                     )
                 })}
