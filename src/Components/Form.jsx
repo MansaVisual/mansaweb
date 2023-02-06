@@ -1,5 +1,6 @@
 import { TextField } from "@mui/material"
 import { Fragment, useEffect, useState } from "react"
+import emailjs from "@emailjs/browser";
 
 export default function Form(){
 
@@ -47,6 +48,13 @@ export default function Form(){
 
     const [errorValidate,setErrorValidate]=useState(false)
 
+    useEffect(() => {
+        for(let i in arrayForm){
+            if(document.getElementById(`${arrayForm[i].title}-label`).children.length!==0){
+                document.getElementById(`${arrayForm[i].title}-label`).children[0].innerHTML=" (optional)"
+            }
+        }
+    }, [])
 
 
     const handleClick = async()=>{
@@ -89,17 +97,24 @@ export default function Form(){
                 return
             }
             
-            setClickButton(false)
+            emailjs.send("service_83l1qlo", "template_rw1tsgv", {
+                form_mail:form.mail,
+                form_name:form.name,
+                form_phone:form.phone,
+                form_company:form.company,
+                form_description:form.description
+            },"w6YQHA8ldotv1sCU2").then(
+                function () {
+                    setClickButton(false)
+                    return true;
+                },
+                function () {
+                  return false;
+                }
+            );
+
         }, 1500);
     }
-
-    useEffect(() => {
-        for(let i in arrayForm){
-            if(document.getElementById(`${arrayForm[i].title}-label`).children.length!==0){
-                document.getElementById(`${arrayForm[i].title}-label`).children[0].innerHTML=" (optional)"
-            }
-        }
-    }, [])
 
     return(
         <div className="form-container">
