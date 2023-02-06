@@ -48,34 +48,49 @@ export default function Form(){
     const [errorValidate,setErrorValidate]=useState(false)
 
 
-    const handleClick = ()=>{
+
+    const handleClick = async()=>{
         setClickButton(true)
+        let focus=false
         let returnError=false
 
-        if(form.mail===""){
-            setErrorMail(true)
-            returnError=true
-        }else{
-            if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.mail))){
-                setErrorValidate(true)
+        setTimeout(() => {
+            if(form.mail===""){
+                setErrorMail(true)
+                document.getElementById("Mail").focus()
+                focus=true
+                returnError=true
+            }else{
+                if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.mail))){
+                    setErrorValidate(true)
+                    document.getElementById("Mail").focus()
+                    focus=true
+                    returnError=true
+                }
+            }
+            if(form.name===""){
+                setErrorName(true)
+                if(!focus){
+                    document.getElementById("Name").focus()
+                    focus=true
+                }
                 returnError=true
             }
-        }
-        if(form.name===""){
-            setErrorName(true)
-            returnError=true
-        }
-        if(form.description===""){
-            setErrorDescription(true)
-            returnError=true
-        }
-
-        if(returnError){
+            if(form.description===""){
+                setErrorDescription(true)
+                if(!focus){
+                    document.getElementById("Describe Your Project").focus()
+                }
+                returnError=true
+            }
+    
+            if(returnError){
+                setClickButton(false)
+                return
+            }
+            
             setClickButton(false)
-            return
-        }
-
-        setClickButton(false)
+        }, 1500);
     }
 
     useEffect(() => {
@@ -96,7 +111,17 @@ export default function Form(){
                     return(
                         <Fragment key={i}>
                             <TextField required={obj.optional} id={obj.title} variant="standard" label={obj.title} 
-                                onChange={(e)=>setForm({...form,[obj.form]:e.target.value})}
+                                onChange={(e)=>{
+                                    setForm({...form,[obj.form]:e.target.value})
+                                    if(obj.title==="Mail"){
+                                        setErrorValidate(false)
+                                        setErrorMail(false)
+                                    }else if(obj.title==="Name"){
+                                        setErrorName(false)
+                                    }else if(obj.title==="Describe Your Project"){
+                                        setErrorDescription(false)
+                                    }
+                                }}
                                 multiline={true}
                                 className={`
                                     ${obj.title==="Mail" && errorValidate ? "MuiInputBase-inputMultiline-error" : ""}
@@ -112,6 +137,7 @@ export default function Form(){
                         </Fragment>
                     )
                 })}
+                <p className="text-form">By submitting this form I consent to having Mansa Studio collect and process my personal details and agree with Privacy policy</p>
                 <div className="button">
                     {!clickButton&&<button onClick={()=>handleClick()}>SEND</button>}
                     {clickButton&&<div className="button-loader"></div>}

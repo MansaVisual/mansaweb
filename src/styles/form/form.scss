@@ -33,6 +33,14 @@
                 color: #FFF0D94D;
             }
         }
+        .text-form{
+            font-family: $font-nunito;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 20px;
+            color: $white-color;
+            margin-top: 20px;
+        }
         .MuiInputBase-inputMultiline{
             color: $primary-color !important;
             margin-left: 5px;
@@ -45,12 +53,12 @@
         }
         .MuiInputBase-inputMultiline-error{
             label{
-                color: #FF6A6B !important;
+                color: $error-color !important;
             }
             div{
-                border-bottom: 1px solid #FF6A6B !important;
+                border-bottom: 1px solid $error-color !important;
                 &:after{
-                    border-bottom: 2px solid #FF6A6B;
+                    border-bottom: 2px solid $error-color;
                 }
             }
         }
@@ -59,7 +67,7 @@
             font-weight: 400;
             font-size: 12px;
             line-height: 15px;
-            color: #FF6A6B;
+            color: $error-color;
         }
         .button{
             display: flex;
