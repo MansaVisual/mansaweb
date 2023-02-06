@@ -17,8 +17,13 @@
         }
         .contacts{
             margin-top: 28px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                    flex-direction: column;
             gap: 18px;
             div{
                 h3{
@@ -29,6 +34,8 @@
                     color: $black-color;
                 }
                 div{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
                     img{
                         margin-right: 7px;

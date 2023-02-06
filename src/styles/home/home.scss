@@ -128,6 +128,8 @@
     z-index: 50;
 }
 .banner-loading-close{
+    -webkit-transition: 1.5s;
+    -o-transition: 1.5s;
     transition: 1.5s;
     height: 0px;
 }
