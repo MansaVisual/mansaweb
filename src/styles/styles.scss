@@ -18,6 +18,21 @@ $hamburger-thickness:2px;
     font-style: normal;
 }
 
+.footer{
+    padding: 16px 47.5px 43px 16px;
+    width: 100%;
+    margin-top: 65px;
+    margin-bottom: 42px;
+    p{
+        font-family: $font-nunito;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: 0.03em;
+        color: $primary-color;
+    }
+}
+
 @import "./navbar/navbar.scss";
 @import "./banner/banner.scss";
 @import "./home/home.scss";

@@ -4,9 +4,19 @@ import TitlesHome from "../Components/TitlesHome"
 import eagle from "../assets/eagle.svg"
 import Accordion from "../Components/Accordion"
 import Ourteam from "../Components/OurTeam"
+import { useEffect } from "react"
 
 const Home = ({menuOpen,setMenuOpen,banner}) =>{
 
+    useEffect(() => {
+        if(menuOpen){
+            setMenuOpen(!menuOpen)
+        }
+        window.scrollTo({
+            top: 0,
+            behavior: "auto",
+        });
+    }, [])
 
     return(
         <>
@@ -44,7 +54,7 @@ const Home = ({menuOpen,setMenuOpen,banner}) =>{
                         <Ourteam/>
 
                     </div>
-                    <div className="home-footer gradient-background">
+                    <div className="footer gradient-background">
                         <p>2023 Mansa Visual. All Rights Reserved.</p>
                         <p>
                             Terms Of Use. Privacy Policy

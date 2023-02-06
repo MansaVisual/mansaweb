@@ -66,8 +66,11 @@ const Contact = ({banner,menuOpen,setMenuOpen}) =>{
 
                     </div>
                     <Form/>
-                    <div className="contact-footer">
-                        <p>2023 Mansa Visual. All Right Reserved. <span>Terms Of Use</span>. <span>Privacy Policy</span></p>
+                    <div className="footer gradient-background">
+                        <p>2023 Mansa Visual. All Rights Reserved.</p>
+                        <p>
+                            Terms Of Use. Privacy Policy
+                        </p>
                     </div>
                 </div>
             }
