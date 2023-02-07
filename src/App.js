@@ -4,6 +4,7 @@ import "./styles/styles.scss"
 import Navbar from "./Components/Navbar";
 import Contact from "./views/Contact";
 import { useEffect, useState } from "react";
+import Page404 from "./views/404page";
 
 
 const App = () =>{
@@ -61,6 +62,7 @@ const App = () =>{
             <Routes>
                 <Route path="/" element={<Home banner={banner} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
                 <Route path="/Contact" element={<Contact banner={banner} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
+                <Route path="/*" element={<Page404/>} />
             </Routes>
         </Router>
     )

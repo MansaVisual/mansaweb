@@ -1,0 +1,47 @@
+.container-404{
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: #DD5D5E;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 15px;
+    .title{
+        font-family: $font-saira;
+        font-weight: 600;
+        font-size: 170px;
+        line-height: 28px;
+        color: $white-color;
+        height: 82px;
+        margin-top: 180px;
+        @include screen_390{
+            font-size: 42vw;
+        }
+    }
+    .subtitle{
+        font-family: $font-nunito;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 23px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 46px;
+        text-align: center;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        p{
+            font-family: $font-saira;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            color: $white-color;
+        }
+        img{
+            margin-left: 8px;
+        }
+    }
+}
