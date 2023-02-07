@@ -1,5 +1,5 @@
-@mixin screen_600 {
-    @media (max-width: 600px) {
+@mixin screen_390 {
+    @media (max-width: 390px) {
       @content;
     }
   }
