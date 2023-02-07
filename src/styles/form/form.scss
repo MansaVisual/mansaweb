@@ -142,5 +142,36 @@
                     animation: rotation 1s linear infinite;
             margin-right: 8px;
         }
+
+        .form-state{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 60px;
+            margin-bottom: 120px;
+            .description{
+                font-family: $font-saira;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 28px;
+                text-align: center;
+                color: #DD5D5E;
+                margin-top: 30px;
+            }
+            .button{
+                border-bottom: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    font-family: $font-saira;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #DD5D5E;
+                }
+            }
+        }
     }
 }

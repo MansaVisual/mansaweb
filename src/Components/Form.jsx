@@ -1,6 +1,9 @@
 import { TextField } from "@mui/material"
 import { Fragment, useEffect, useState } from "react"
 import emailjs from "@emailjs/browser";
+import xRed from "../assets/x-red.svg"
+import checkRed from "../assets/check-red.svg"
+import arrowRed from "../assets/arrow-right-red.svg"
 
 export default function Form(){
 
@@ -47,11 +50,15 @@ export default function Form(){
     const [errorDescription,setErrorDescription]=useState(false)
 
     const [errorValidate,setErrorValidate]=useState(false)
+    
+    const [mailSend,setMailSend]=useState(null)
 
     useEffect(() => {
-        for(let i in arrayForm){
-            if(document.getElementById(`${arrayForm[i].title}-label`).children.length!==0){
-                document.getElementById(`${arrayForm[i].title}-label`).children[0].innerHTML=" (optional)"
+        if(mailSend===null){
+            for(let i in arrayForm){
+                if(document.getElementById(`${arrayForm[i].title}-label`).children.length!==0){
+                    document.getElementById(`${arrayForm[i].title}-label`).children[0].innerHTML=" (optional)"
+                }
             }
         }
     }, [])
@@ -106,13 +113,13 @@ export default function Form(){
             },"w6YQHA8ldotv1sCU2").then(
                 function () {
                     setClickButton(false)
-                    return true;
+                    setMailSend(true)
                 },
                 function () {
-                  return false;
+                    setClickButton(false)
+                    setMailSend(false)
                 }
             );
-
         }, 1500);
     }
 
@@ -122,41 +129,64 @@ export default function Form(){
             <p className="subtitle">Mail to <span>info@mansavisual</span> or book an appointment in the <span>www.app.com</span></p>
 
             <div className="form">
-                {arrayForm.map((obj,i)=>{
-                    return(
-                        <Fragment key={i}>
-                            <TextField required={obj.optional} id={obj.title} variant="standard" label={obj.title} 
-                                onChange={(e)=>{
-                                    setForm({...form,[obj.form]:e.target.value})
-                                    if(obj.title==="Mail"){
-                                        setErrorValidate(false)
-                                        setErrorMail(false)
-                                    }else if(obj.title==="Name"){
-                                        setErrorName(false)
-                                    }else if(obj.title==="Describe Your Project"){
-                                        setErrorDescription(false)
-                                    }
-                                }}
-                                multiline={true}
-                                className={`
-                                    ${obj.title==="Mail" && errorValidate ? "MuiInputBase-inputMultiline-error" : ""}
-                                    ${obj.title==="Mail" && errorMail ? "MuiInputBase-inputMultiline-error" : ""}
-                                    ${obj.title==="Name" && errorName ? "MuiInputBase-inputMultiline-error" : ""}
-                                    ${obj.title==="Describe Your Project" && errorDescription ? "MuiInputBase-inputMultiline-error" : ""}
-                                `}
-                            />
-                            {obj.title==="Mail" && errorValidate ? <span className="label-error">Incorrect email</span> : null}
-                            {obj.title==="Mail" && errorMail ? <span className="label-error">Please enter your email</span> : null}
-                            {obj.title==="Name" && errorName ? <span className="label-error">Please enter your name</span> : null}
-                            {obj.title==="Describe Your Project" && errorDescription ? <span className="label-error">Please enter a project's description</span> : null}
-                        </Fragment>
-                    )
-                })}
-                <p className="text-form">By submitting this form I consent to having Mansa Studio collect and process my personal details and agree with Privacy policy</p>
-                <div className="button">
-                    {!clickButton&&<button onClick={()=>handleClick()}>SEND</button>}
-                    {clickButton&&<div className="button-loader"></div>}
-                </div>
+                {mailSend===null &&
+                    <>
+                        {arrayForm.map((obj,i)=>{
+                            return(
+                                <Fragment key={i}>
+                                    <TextField required={obj.optional} id={obj.title} variant="standard" label={obj.title} 
+                                        onChange={(e)=>{
+                                            setForm({...form,[obj.form]:e.target.value})
+                                            if(obj.title==="Mail"){
+                                                setErrorValidate(false)
+                                                setErrorMail(false)
+                                            }else if(obj.title==="Name"){
+                                                setErrorName(false)
+                                            }else if(obj.title==="Describe Your Project"){
+                                                setErrorDescription(false)
+                                            }
+                                        }}
+                                        multiline={true}
+                                        className={`
+                                            ${obj.title==="Mail" && errorValidate ? "MuiInputBase-inputMultiline-error" : ""}
+                                            ${obj.title==="Mail" && errorMail ? "MuiInputBase-inputMultiline-error" : ""}
+                                            ${obj.title==="Name" && errorName ? "MuiInputBase-inputMultiline-error" : ""}
+                                            ${obj.title==="Describe Your Project" && errorDescription ? "MuiInputBase-inputMultiline-error" : ""}
+                                        `}
+                                    />
+                                    {obj.title==="Mail" && errorValidate ? <span className="label-error">Incorrect email</span> : null}
+                                    {obj.title==="Mail" && errorMail ? <span className="label-error">Please enter your email</span> : null}
+                                    {obj.title==="Name" && errorName ? <span className="label-error">Please enter your name</span> : null}
+                                    {obj.title==="Describe Your Project" && errorDescription ? <span className="label-error">Please enter a project's description</span> : null}
+                                </Fragment>
+                            )
+                        })}
+                        <p className="text-form">By submitting this form I consent to having Mansa Studio collect and process my personal details and agree with Privacy policy</p>
+                        <div className="button">
+                            {!clickButton&&<button onClick={()=>handleClick()}>SEND</button>}
+                            {clickButton&&<div className="button-loader"></div>}
+                        </div>
+                    </>
+                }
+                {mailSend===false && 
+                    <div className="form-state">
+                        <img src={xRed} alt="X" />
+                        <p className="description">Sorry, for some reason your message has not been sent. Please try again</p>
+                        <div className="button" onClick={()=>{
+                            setClickButton(false)
+                            setMailSend(null)
+                        }}>
+                            <p>Try Again</p>
+                            <img src={arrowRed} alt="ARROW" />
+                        </div>
+                    </div>
+                }
+                {mailSend===true && 
+                    <div className="form-state">
+                        <img src={checkRed} alt="X" />
+                        <p className="description">Thank you. We have received her message. We will try to respond in a few hours.</p>
+                    </div>
+                }
             </div>
         </div>
     )
