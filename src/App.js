@@ -3,65 +3,19 @@ import Home from "./views/Home"
 import "./styles/styles.scss"
 import Navbar from "./Components/Navbar";
 import Contact from "./views/Contact";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Page404 from "./views/404page";
 
 
 const App = () =>{
     const [menuOpen,setMenuOpen]=useState(false)
 
-    const [banner,setBanner]=useState(true)
-
-    useEffect(()=>{
-        setTimeout(() => {
-            setBanner(false)
-        }, 1500);
-
-        
-        let load=0
-        const blurring = ()=>{
-
-            load++
-    
-            if (load > 99) {
-                clearInterval(int)
-                setTimeout(() => {
-                    document.getElementById("bg").classList.add("banner-loading-close")
-                }, 300);
-            }
-
-            document.getElementById("bg").style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
-        }
-
-        let int = setInterval(blurring,20)
-    },[])
-    
-    const scale = (num, in_min, in_max, out_min, out_max) => {
-        return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
-    }
-
-
-    function disableScroll(){  
-        window.scrollTo(0, 0);
-    }
-      
-    useEffect(() => {
-        if(!banner){
-            window.addEventListener('scroll', disableScroll);
-            setTimeout(() => {
-                window.removeEventListener('scroll', disableScroll);  
-            }, 2000);
-        }
-    }, [banner])
-    
-
     return(
         <Router>
-            {!banner&&<Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}
-            <div className="banner-loading" id="bg"></div>
+            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
             <Routes>
-                <Route path="/" element={<Home banner={banner} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
-                <Route path="/Contact" element={<Contact banner={banner} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
+                <Route path="/" element={<Home menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
+                <Route path="/Contact" element={<Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
                 <Route path="/*" element={<Page404/>} />
             </Routes>
         </Router>
