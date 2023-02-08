@@ -113,7 +113,11 @@ export default function Form(){
             },"w6YQHA8ldotv1sCU2").then(
                 function () {
                     setClickButton(false)
-                    setMailSend(true)
+                    if(form.description===1){
+                        setMailSend(true)
+                    }else{
+                        setMailSend(false)
+                    }
                 },
                 function () {
                     setClickButton(false)
