@@ -156,7 +156,7 @@
                 font-size: 22px;
                 line-height: 28px;
                 text-align: center;
-                color: #DD5D5E;
+                color: $error-color;
                 margin-top: 30px;
             }
             .button{
@@ -169,7 +169,7 @@
                     font-weight: 700;
                     font-size: 18px;
                     line-height: 28px;
-                    color: #DD5D5E;
+                    color: $error-color;
                 }
             }
         }
