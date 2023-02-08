@@ -55,6 +55,9 @@
             &:after{
                 border-bottom: 2px solid $primary-color;
             }
+            &::before{
+                border-bottom: none !important;
+            }
         }
         .MuiInputBase-inputMultiline-error{
             label{
@@ -64,6 +67,9 @@
                 border-bottom: 1px solid $error-color !important;
                 &:after{
                     border-bottom: 2px solid $error-color;
+                }
+                &::before{
+                    border-bottom: none !important;
                 }
             }
         }
