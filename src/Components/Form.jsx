@@ -52,7 +52,7 @@ export default function Form(){
     const [errorValidate,setErrorValidate]=useState(false)
     
     const [mailSend,setMailSend]=useState(null)
-
+console.log(form)
     useEffect(() => {
         if(mailSend===null){
             for(let i in arrayForm){
@@ -113,7 +113,7 @@ export default function Form(){
             },"w6YQHA8ldotv1sCU2").then(
                 function () {
                     setClickButton(false)
-                    if(form.description===1){
+                    if(form.description==="1"){
                         setMailSend(true)
                     }else{
                         setMailSend(false)
