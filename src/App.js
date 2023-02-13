@@ -54,7 +54,7 @@ const App = () =>{
                     <img src={logo2} alt="LOGO2" className={`foto2 ${animation2 && "foto2-appear"}`}/>
                 </div>
             </div>
-            <div className={`main-container`}>
+            <div className={`main-container`} style={{display:initWeb?"none":"block"}}>
                 <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
                 <Routes>
                     <Route path="/" element={<Home menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
