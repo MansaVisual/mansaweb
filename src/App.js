@@ -18,7 +18,7 @@ const App = () =>{
     useEffect(() => {
         setTimeout(() => {
             setInitWeb(false)
-        }, 2800);
+        }, 6000);
         setTimeout(() => {
             setAnimation1(true)
             setTimeout(() => {
@@ -27,6 +27,18 @@ const App = () =>{
                     setAnimation2(false)
                     setTimeout(() => {
                         setAnimation1(false)
+                        setTimeout(() => {
+                            setAnimation1(true)
+                            setTimeout(() => {
+                                setAnimation2(true)
+                                setTimeout(() => {
+                                    setAnimation2(false)
+                                    setTimeout(() => {
+                                        setAnimation1(false)
+                                    }, 800);
+                                }, 800);
+                            }, 800);
+                        }, 800);
                     }, 800);
                 }, 800);
             }, 800);
@@ -38,7 +50,7 @@ const App = () =>{
             window.addEventListener('scroll', disableScroll);
             setTimeout(() => {
                 window.removeEventListener('scroll', disableScroll);  
-            }, 3400);
+            }, 6700);
         }
     }, [initWeb])
 
