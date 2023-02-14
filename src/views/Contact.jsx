@@ -75,7 +75,7 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
 
             </div>
             <Form/>
-            <div className="footer gradient-background">
+            <div className="footer footer-contact gradient-background">
                 <p>2023 Mansa Visual. All Rights Reserved.</p>
                 <p>
                     Terms Of Use. Privacy Policy

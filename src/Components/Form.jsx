@@ -17,13 +17,13 @@ export default function Form(){
     
     const arrayForm=[
         {
-            title:"Mail",
-            form:"mail",
+            title:"Name",
+            form:"name",
             optional:false
         },
         {
-            title:"Name",
-            form:"name",
+            title:"Email",
+            form:"mail",
             optional:false
         },
         {
@@ -37,7 +37,7 @@ export default function Form(){
             optional:true
         },
         {
-            title:"Describe Your Project",
+            title:"Describe your project in short",
             form:"description",
             optional:false
         },
@@ -52,16 +52,6 @@ export default function Form(){
     const [errorValidate,setErrorValidate]=useState(false)
     
     const [mailSend,setMailSend]=useState(null)
-console.log(form)
-    useEffect(() => {
-        if(mailSend===null){
-            for(let i in arrayForm){
-                if(document.getElementById(`${arrayForm[i].title}-label`).children.length!==0){
-                    document.getElementById(`${arrayForm[i].title}-label`).children[0].innerHTML=" (optional)"
-                }
-            }
-        }
-    }, [])
 
 
     const handleClick = async()=>{
@@ -72,13 +62,13 @@ console.log(form)
         setTimeout(() => {
             if(form.mail===""){
                 setErrorMail(true)
-                document.getElementById("Mail").focus()
+                document.getElementById("Email").focus()
                 focus=true
                 returnError=true
             }else{
                 if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.mail))){
                     setErrorValidate(true)
-                    document.getElementById("Mail").focus()
+                    document.getElementById("Email").focus()
                     focus=true
                     returnError=true
                 }
@@ -94,7 +84,7 @@ console.log(form)
             if(form.description===""){
                 setErrorDescription(true)
                 if(!focus){
-                    document.getElementById("Describe Your Project").focus()
+                    document.getElementById("Describe your project in short").focus()
                 }
                 returnError=true
             }
@@ -130,7 +120,7 @@ console.log(form)
     return(
         <div className="form-container">
             <p className="title">Contact Us</p>
-            <p className="subtitle">Mail to <span>info@mansavisual</span> or book an appointment in the <span>www.app.com</span></p>
+            <p className="subtitle">To discuss a new project or find out more about us, do not hesitate to contact info@mansastudio.com or call our offices:</p>
 
             <div className="form">
                 {mailSend===null &&
@@ -138,38 +128,38 @@ console.log(form)
                         {arrayForm.map((obj,i)=>{
                             return(
                                 <Fragment key={i}>
-                                    <TextField required={obj.optional} id={obj.title} variant="standard" label={obj.title} 
+                                    <TextField id={obj.title} variant="standard" label={`${obj.title}${!obj.optional?"*":""}`} 
                                         onChange={(e)=>{
                                             setForm({...form,[obj.form]:e.target.value})
-                                            if(obj.title==="Mail"){
+                                            if(obj.title==="Email"){
                                                 setErrorValidate(false)
                                                 setErrorMail(false)
                                             }else if(obj.title==="Name"){
                                                 setErrorName(false)
-                                            }else if(obj.title==="Describe Your Project"){
+                                            }else if(obj.title==="Describe your project in short"){
                                                 setErrorDescription(false)
                                             }
                                         }}
                                         multiline={true}
                                         className={`
-                                            ${obj.title==="Mail" && errorValidate ? "MuiInputBase-inputMultiline-error" : ""}
-                                            ${obj.title==="Mail" && errorMail ? "MuiInputBase-inputMultiline-error" : ""}
+                                            ${obj.title==="Email" && errorValidate ? "MuiInputBase-inputMultiline-error" : ""}
+                                            ${obj.title==="Email" && errorMail ? "MuiInputBase-inputMultiline-error" : ""}
                                             ${obj.title==="Name" && errorName ? "MuiInputBase-inputMultiline-error" : ""}
-                                            ${obj.title==="Describe Your Project" && errorDescription ? "MuiInputBase-inputMultiline-error" : ""}
+                                            ${obj.title==="Describe your project in short" && errorDescription ? "MuiInputBase-inputMultiline-error" : ""}
                                         `}
                                     />
-                                    {obj.title==="Mail" && errorValidate ? <span className="label-error">Incorrect email</span> : null}
-                                    {obj.title==="Mail" && errorMail ? <span className="label-error">Please enter your email</span> : null}
+                                    {obj.title==="Email" && errorValidate ? <span className="label-error">Incorrect email</span> : null}
+                                    {obj.title==="Email" && errorMail ? <span className="label-error">Please enter your email</span> : null}
                                     {obj.title==="Name" && errorName ? <span className="label-error">Please enter your name</span> : null}
-                                    {obj.title==="Describe Your Project" && errorDescription ? <span className="label-error">Please enter a project's description</span> : null}
+                                    {obj.title==="Describe your project in short" && errorDescription ? <span className="label-error">Please enter a project's description</span> : null}
                                 </Fragment>
                             )
                         })}
-                        <p className="text-form">By submitting this form I consent to having Mansa Studio collect and process my personal details and agree with Privacy policy</p>
                         <div className="button">
-                            {!clickButton&&<button onClick={()=>handleClick()}>SEND</button>}
+                            {!clickButton&&<button onClick={()=>handleClick()}>Send</button>}
                             {clickButton&&<div className="button-loader"></div>}
                         </div>
+                        <p className="text-form">By submitting this form I consent to having Mansa Studio collect and process my personal details and agree with Privacy policy.</p>
                     </>
                 }
                 {mailSend===false && 
