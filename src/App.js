@@ -18,7 +18,7 @@ const App = () =>{
     useEffect(() => {
         setTimeout(() => {
             setInitWeb(false)
-        }, 6000);
+        }, 1000);
         setTimeout(() => {
             setAnimation1(true)
             setTimeout(() => {

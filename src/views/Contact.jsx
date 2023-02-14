@@ -3,6 +3,8 @@ import arg from "../assets/argentina.svg"
 import ita from "../assets/italy.svg"
 import eua from "../assets/united-states.svg"
 import Form from "../Components/Form"
+import con1 from "../assets/contact-1.svg"
+import con2 from "../assets/contact-2.svg"
 
 const Contact = ({menuOpen,setMenuOpen}) =>{
 
@@ -18,23 +20,23 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
 
     const mails = [
         {
-            pais:"Argentina",
+            pais:"ARGENTINA",
             provincia:"Buenos Aires",
-            mail:"bsas@mansavisual.com",
+            mail:"infoar@mansavisual.com",
             telefono:"(+54) 11 63001724",
             bandera:arg
         },
         {
-            pais:"United States",
+            pais:"UNITED STATES",
             provincia:"California",
-            mail:"usa@mansavisual.com",
+            mail:"infous@mansavisual.com",
             telefono:"(+1) 646 4040026",
             bandera:eua
         },
         {
-            pais:"Italy",
+            pais:"ITALY",
             provincia:"Roma",
-            mail:"italy@mansavisual.com",
+            mail:"infoit@mansavisual.com",
             telefono:"+6 51 4043130",
             bandera:ita
         },
@@ -43,8 +45,11 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
     return(
         <div className="contact-container">
             <div className="contact-container-2">
-                <p className="description">Our team is based in Buenos Aires, but we work with clients all over the world. We ensure smooth planning and communication across different time zones.</p>
-                <p className="description description-2">To discuss a new project or find out more about us, do not hesitate to contact info@mansavisual.com or call our offices:</p>
+                <h2>Contact us</h2>
+                <p className="description">
+                    Our team is based in Buenos Aires, but we work with clients all over the world.
+                    We ensure smooth planning and communication across different time zones.
+                </p>
 
                 <div className="contacts">
                     {mails.map((obj,i)=>{
@@ -55,8 +60,14 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
                                     <img src={obj.bandera} alt="BANDERA" />
                                     <h3>{obj.pais}</h3>
                                 </div>
-                                <h4>{obj.mail}</h4>
-                                <h4>{obj.telefono}</h4>
+                                <div>
+                                    <img src={con2} alt="MAIL" />
+                                    <h4 className="mail">{obj.mail}</h4>
+                                </div>
+                                <div>
+                                    <img src={con1} alt="TEL" />
+                                    <h4>{obj.telefono}</h4>
+                                </div>
                             </div>
                         )
                     })}

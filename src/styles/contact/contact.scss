@@ -1,19 +1,22 @@
 .contact-container{
     .contact-container-2{
         padding: 58px 16px 0px 16px;
+        h2{
+            font-family: $font-saira;
+            color: $black-color;
+            margin-bottom: 24px;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 29px;
+        }
         .description{
             font-family: $font-nunito;
             font-weight: 500;
-            font-size: 22px;
-            line-height: 35px;
+            font-size: 18px;
+            line-height: 32px;
             color: $black-color;
         }
-        .description-2{
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 30px;
-            margin-top: 37px;
-        }
+
         .contacts{
             margin-top: 28px;
             display: -webkit-box;
@@ -40,19 +43,22 @@
                         margin-right: 7px;
                     }
                     h3{
-                        font-family: $font-ruda;
-                        font-weight: 700;
-                        font-size: 12px;
-                        line-height: 30px;
+                        font-family: $font-saira;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 22px;
                         color: $black-color-2-disabled;
                     }
-                }
-                h4{
-                    font-family: $font-ruda;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 22px;
-                    color: $black-color-2;
+                    h4{
+                        font-family: $font-ruda;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: #767676;
+                    }
+                    .mail{
+                        color:#43AFC2;
+                    }
                 }
             }
         }
