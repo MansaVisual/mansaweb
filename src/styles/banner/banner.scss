@@ -1,30 +1,29 @@
 .banner-container{
     z-index: -2;
     width: 100%;
-    height: 368px;
+    height: 440px;
     background-image: url("../../assets/portada.svg");
     background-repeat: no-repeat;
-    background-position: 85%;
+    background-position: 70%;
     background-size: cover;
-    padding-top: 84px;
+    padding-top: 72px;
     padding-left: 16px;
     .title{
         h1{
             font-family: $font-saira;
             font-weight: 500;
-            font-size: 36px;
-            line-height: 42px;
-            color: $white-color;
+            font-size: 40px;
+            line-height: 58px;
+            color: $primary-color;
         }
     }
     .subtititle{
-        margin-top: 21px;
-        width: 263px;
-        font-family: $font-nunito;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 26px;
-        color: $white-color;
+      margin: 24px 16px 16px 1px;
+      font-family: $font-nunito;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 32px;
+      color: $white-color;
     }
     @keyframes scrollDown {
         0% {

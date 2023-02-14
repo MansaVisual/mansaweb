@@ -9,14 +9,14 @@ export default function Ourteam() {
     const ourTeamArray=[
         {
             name:"Abel Palavecino",
-            rol:"DESIGNER & PROJECT MANAGER",
+            rol:"CHIEF OPERATING OFFICER",
             mail:"abelp@mansavisual.com",
             linkedin:"https://www.linkedin.com/in/abelpalavecino/",
             foto:foto1
         },
         {
             name:"Luc Rossi",
-            rol:"UX/UI LEAD DESIGNER",
+            rol:"HEAD UX/UI DESIGNER",
             mail:"lucr@mansavisual.com",
             linkedin:"https://www.linkedin.com/in/lucasrossiux/",
             foto:foto2

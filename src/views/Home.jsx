@@ -46,7 +46,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
 
                 <TitlesHome titleClass={"team"} title={"Our Team"}/>
                 <p className="ourTeam-description">
-                    We have a global team mainly focused in Argentina, Italy and the USA. This allows us to improve productivity as well as creativity and  service.
+                    We have a global team mainly focused in Argentina, Italy and the USA. This allows us to improve productivity as well as creativity and service.
                 </p>
 
                 <Ourteam/>
