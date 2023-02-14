@@ -155,10 +155,10 @@ export default function Form(){
                                 </Fragment>
                             )
                         })}
-                        <div className="button">
-                            {!clickButton&&<button onClick={()=>handleClick()}>Send</button>}
+                        <button className="button">
+                            {!clickButton&&<p onClick={()=>handleClick()}>Send</p>}
                             {clickButton&&<div className="button-loader"></div>}
-                        </div>
+                        </button>
                         <p className="text-form">By submitting this form I consent to having Mansa Studio collect and process my personal details and agree with Privacy policy.</p>
                     </>
                 }
