@@ -71,7 +71,7 @@ const App = () =>{
                 <Routes>
                     <Route path="/" element={<Home menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
                     <Route path="/Contact" element={<Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
-                    <Route path="/*" element={<Page404/>} />
+                    <Route path="/*" element={<Page404 menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>} />
                 </Routes>
             </div>
         </Router>

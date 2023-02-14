@@ -6,33 +6,46 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
     padding: 0px 15px;
-    .title{
-        font-family: $font-saira;
-        font-weight: 600;
-        font-size: 170px;
-        line-height: 28px;
-        color: $white-color;
-        height: 82px;
-        margin-top: 180px;
-        @include screen_390{
-            font-size: 42vw;
+    div{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        .title{
+            font-family: $font-saira;
+            font-weight: 600;
+            font-size: 170px;
+            line-height: 28px;
+            color: $white-color;
+            height: 82px;
+            margin-top: 180px;
+            @include screen_390{
+                font-size: 42vw;
+            }
         }
-    }
-    .subtitle{
-        font-family: $font-nunito;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 23px;
-        color: rgba(255, 255, 255, 0.6);
-        margin-top: 46px;
-        text-align: center;
+        .subtitle{
+            font-family: $font-nunito;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 32px;
+            color: $primary-color;
+            margin: 46px 16px 0px 16px;
+            text-align: center;
+        }
     }
     .button{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 30px;
+        margin: 40px 16px 0px 16px;
+        margin-bottom: 40px;
+        border: 2px solid #FFF0D9;
+        border-radius: 3px;
+        width: 100%;
+        max-width: 358px;
+        height: 63px;
         p{
             font-family: $font-saira;
             font-weight: 600;

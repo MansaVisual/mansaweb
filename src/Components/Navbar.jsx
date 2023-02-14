@@ -59,7 +59,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                 <div className="navbar-bar">
                     <h4 
                         onClick={()=>{
-                            if(window.location.pathname==="/Contact"){
+                            if(window.location.pathname!=="/"){
                                 setMenuBar(false)
                                 navigate("/")
                             }
@@ -67,7 +67,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                     >Home</h4>
                     <h4 
                         onClick={()=>{
-                            if(window.location.pathname==="/"){
+                            if(window.location.pathname!=="/Contact"){
                                 setMenuBar(true)
                                 navigate("/Contact")
                             }
