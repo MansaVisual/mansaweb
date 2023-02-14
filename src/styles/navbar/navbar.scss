@@ -61,8 +61,11 @@
     transition: 1s;
     background-color: $contrast-primary-dark;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .navbar-bar{
-        margin-top: 178px;
+        margin-top: 112px;
         margin-left: 44px;
         h4{
             -webkit-transition-duration: 1s;
@@ -71,37 +74,23 @@
             height: 0px;
             overflow: hidden;
             font-family: $font-ruda;
-            font-weight: 500;
-            font-size: 28px;
-            line-height: 40px;
-            color: $primary-color;
-        }
-        h5{
-            -webkit-transition-duration: 1s;
-            -o-transition-duration: 1s;
-            transition-duration: 1s;
-            height: 40px;
-            overflow: hidden;
-            font-family: $font-ruda;
-            font-weight: 500;
-            font-size: 22px;
-            line-height: 40px;
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 94px;
             color: $primary-color;
         }
     }
     .navbar-logos{
-        position: absolute;
-        bottom: 86px;
-        left: 44px;
+        display: flex;
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex;
         gap: 26px;
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s;
-        width: 0px;
-        height: 0px;
+        margin-bottom: 32px;
+        justify-content: center;
+        align-items: center;
     }
 }
 .menu-open{
@@ -115,38 +104,26 @@
     height: 100vh;
     overflow: hidden;
     background-color: $contrast-primary-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .navbar-bar{
-        margin-top: 178px;
+        margin-top: 112px;
         margin-left: 44px;
         h4{
             -webkit-transition-duration: 1s;
             -o-transition-duration: 1s;
             transition-duration: 1s;
-            height: 40px;
             overflow: hidden;
             font-family: $font-ruda;
-            font-weight: 500;
-            font-size: 28px;
-            line-height: 40px;
-            color: $primary-color;
-        }
-        h5{
-            -webkit-transition-duration: 1s;
-            -o-transition-duration: 1s;
-            transition-duration: 1s;
-            height: 40px;
-            overflow: hidden;
-            font-family: $font-ruda;
-            font-weight: 500;
-            font-size: 22px;
-            line-height: 40px;
+            font-weight: 600;
+            height: 94px;
+            font-size: 60px;
+            line-height: 94px;
             color: $primary-color;
         }
     }
     .navbar-logos{
-        position: absolute;
-        bottom: 100px;
-        left: 44px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -154,7 +131,8 @@
         -webkit-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        width: 26px;
-        height: 29px;
+        margin-bottom: 32px;
+        justify-content: center;
+        align-items: center;
     }
 }

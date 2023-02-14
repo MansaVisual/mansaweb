@@ -73,12 +73,12 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                             }
                         }}
                     >Contact</h4>
-                    <h5>Offices</h5>
+                    <h4>Our Team</h4>
                 </div>
                 <div className="navbar-logos">
                         <img src={subLogo1} alt="LINKEDIN"/>
-                        <img src={subLogo2} alt="ENVELOPE" />
                         <img src={subLogo3} alt="CALENDAR" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}/>
+                        <img src={subLogo2} alt="ENVELOPE" />
                 </div>
             </div>
         </>
