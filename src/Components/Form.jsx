@@ -60,6 +60,14 @@ export default function Form(){
         let returnError=false
 
         setTimeout(() => {
+            if(form.name===""){
+                setErrorName(true)
+                if(!focus){
+                    document.getElementById("Name").focus()
+                    focus=true
+                }
+                returnError=true
+            }
             if(form.mail===""){
                 setErrorMail(true)
                 document.getElementById("Email").focus()
@@ -72,14 +80,6 @@ export default function Form(){
                     focus=true
                     returnError=true
                 }
-            }
-            if(form.name===""){
-                setErrorName(true)
-                if(!focus){
-                    document.getElementById("Name").focus()
-                    focus=true
-                }
-                returnError=true
             }
             if(form.description===""){
                 setErrorDescription(true)
