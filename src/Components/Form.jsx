@@ -1,9 +1,9 @@
 import { TextField } from "@mui/material"
 import { Fragment, useEffect, useState } from "react"
 import emailjs from "@emailjs/browser";
-import xRed from "../assets/x-red.svg"
-import checkRed from "../assets/check-red.svg"
-import arrowRed from "../assets/arrow-right-red.svg"
+import tick from "../assets/form-tick.svg"
+import cross from "../assets/form-cross.svg"
+import eagle from "../assets/eagle-form.svg"
 
 export default function Form(){
 
@@ -51,7 +51,7 @@ export default function Form(){
 
     const [errorValidate,setErrorValidate]=useState(false)
     
-    const [mailSend,setMailSend]=useState(null)
+    const [mailSend,setMailSend]=useState(false)
 
 
     const handleClick = async()=>{
@@ -121,8 +121,12 @@ export default function Form(){
 
     return(
         <div className="form-container">
-            <p className="title">Contact Us</p>
-            <p className="subtitle">To discuss a new project or find out more about us, do not hesitate to contact info@mansastudio.com or call our offices:</p>
+            {mailSend===null &&
+                <>
+                    <p className="title">Contact Us</p>
+                    <p className="subtitle">To discuss a new project or find out more about us, do not hesitate to contact info@mansastudio.com or call our offices:</p>
+                </>
+            }
 
             <div className="form">
                 {mailSend===null &&
@@ -172,21 +176,26 @@ export default function Form(){
                 }
                 {mailSend===false && 
                     <div className="form-state">
-                        <img src={xRed} alt="X" />
-                        <p className="description">Sorry, for some reason your message has not been sent. Please try again</p>
-                        <div className="button" onClick={()=>{
+                        <img src={cross} alt="X" />
+                        <p className="problem">Oops... Something went wrong.</p>
+                        <p>Please <span className="try-again" onClick={()=>{
+                            setClickButton(false)
+                            setMailSend(null)
+                        }}>try again</span></p>
+                        <button className="button" onClick={()=>{
                             setClickButton(false)
                             setMailSend(null)
                         }}>
-                            <p>Try Again</p>
-                            <img src={arrowRed} alt="ARROW" />
-                        </div>
+                            Try again
+                        </button>
                     </div>
                 }
                 {mailSend===true && 
                     <div className="form-state">
-                        <img src={checkRed} alt="X" />
-                        <p className="description">Thank you. We have received her message. We will try to respond in a few hours.</p>
+                        <img src={tick} alt="X" />
+                        <p className="description-thank">Thank you!</p>
+                        <p className="description">We have received her message. We will try to respond in a few hours.</p>
+                        <img src={eagle} alt="EAGLE" className="eagle"/>
                     </div>
                 }
             </div>

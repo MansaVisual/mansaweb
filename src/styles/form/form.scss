@@ -2,6 +2,10 @@
     background-color: $contrast-primary-dark;
     padding: 42px 16px 21px 16px;
     margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .title{
         font-family: $font-saira;
         font-weight: 500;
@@ -31,7 +35,11 @@
         -ms-flex-direction: column;
                 flex-direction: column;
         gap: 10px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
         div {
+            width: 100%;
             label {
                 color: $primary-color;
                 font-family: $font-nunito;
@@ -144,29 +152,27 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: 60px;
-            margin-bottom: 120px;
-            .description{
-                font-family: $font-saira;
-                font-weight: 400;
-                font-size: 22px;
-                line-height: 28px;
-                text-align: center;
-                color: $error-color;
-                margin-top: 30px;
+            margin-top: -4px;
+            font-family: $font-saira;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 32px;
+            color: $primary-color;
+            max-width: 358px;
+            .description-thank{
+                margin-top: 24px;
             }
-            .button{
-                border-bottom: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                p{
-                    font-family: $font-saira;
-                    font-weight: 700;
-                    font-size: 18px;
-                    line-height: 28px;
-                    color: $error-color;
-                }
+            .description{
+                text-align: center;
+            }
+            .eagle{
+                margin-top: 24px;
+            }
+            .problem{
+                margin-top: 24px;
+            }
+            .try-again{
+                text-decoration: underline;
             }
         }
     }
