@@ -50,7 +50,7 @@ const App = () =>{
     }, [])
     
     useEffect(() => {
-        if(initWeb){
+        if(initWeb && (window.location==="/Contact" || window.location.pathname==="/")){
             window.addEventListener('scroll', disableScroll);
             setTimeout(() => {
                 window.removeEventListener('scroll', disableScroll);  
