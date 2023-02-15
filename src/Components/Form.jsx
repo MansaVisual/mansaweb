@@ -62,22 +62,24 @@ export default function Form(){
         setTimeout(() => {
             if(form.name===""){
                 setErrorName(true)
-                if(!focus){
-                    document.getElementById("Name").focus()
-                    focus=true
-                }
+                document.getElementById("Name").focus()
+                focus=true
                 returnError=true
             }
             if(form.mail===""){
                 setErrorMail(true)
-                document.getElementById("Email").focus()
-                focus=true
+                if(!focus){
+                    document.getElementById("Email").focus()
+                    focus=true
+                }
                 returnError=true
             }else{
                 if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.mail))){
                     setErrorValidate(true)
-                    document.getElementById("Email").focus()
-                    focus=true
+                    if(!focus){
+                        document.getElementById("Email").focus()
+                        focus=true
+                    }
                     returnError=true
                 }
             }
@@ -127,7 +129,7 @@ export default function Form(){
                     <>
                         {arrayForm.map((obj,i)=>{
                             return(
-                                <Fragment key={i}>
+                                <div key={i}>
                                     <TextField id={obj.title} variant="standard" label={`${obj.title}${!obj.optional?"*":""}`} 
                                         onChange={(e)=>{
                                             setForm({...form,[obj.form]:e.target.value})
@@ -148,11 +150,17 @@ export default function Form(){
                                             ${obj.title==="Describe your project in short" && errorDescription ? "MuiInputBase-inputMultiline-error" : ""}
                                         `}
                                     />
-                                    {obj.title==="Email" && errorValidate ? <span className="label-error">Incorrect email</span> : null}
-                                    {obj.title==="Email" && errorMail ? <span className="label-error">Please enter your email</span> : null}
-                                    {obj.title==="Name" && errorName ? <span className="label-error">Please enter your name</span> : null}
-                                    {obj.title==="Describe your project in short" && errorDescription ? <span className="label-error">Please enter a project's description</span> : null}
-                                </Fragment>
+                                    {obj.title==="Email" && errorValidate && <span className="label-error">Incorrect email</span>}
+                                    {obj.title==="Email" && errorMail && <span className="label-error">Please enter your email</span>}
+                                    {obj.title==="Email" && !errorMail && !errorValidate && <div className="label-error"></div>}
+                                    {obj.title==="Name" && errorName && <span className="label-error">Please enter your name</span>}
+                                    {obj.title==="Name" && !errorName && <div className="label-error"></div>}
+                                    {obj.title==="Describe your project in short" && errorDescription && <span className="label-error">Please enter a project's description</span>}
+                                    {obj.title==="Describe your project in short" && !errorDescription && <div className="label-error"></div>}
+
+                                    {obj.title==="Phone" && <div className="label-error"></div>}
+                                    {obj.title==="Company Name" && <div className="label-error"></div>}
+                                </div>
                             )
                         })}
                         <button className="button">

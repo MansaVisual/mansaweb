@@ -16,33 +16,37 @@ const App = () =>{
     const [animation2,setAnimation2] = useState(false)
 
     useEffect(() => {
-        setTimeout(() => {
+        if(window.location.pathname!=="/Contact" && window.location.pathname!=="/"){
             setInitWeb(false)
-        }, 1000);
-        setTimeout(() => {
-            setAnimation1(true)
+        }else{
             setTimeout(() => {
-                setAnimation2(true)
+                setInitWeb(false)
+            }, 1000);
+            setTimeout(() => {
+                setAnimation1(true)
                 setTimeout(() => {
-                    setAnimation2(false)
+                    setAnimation2(true)
                     setTimeout(() => {
-                        setAnimation1(false)
+                        setAnimation2(false)
                         setTimeout(() => {
-                            setAnimation1(true)
+                            setAnimation1(false)
                             setTimeout(() => {
-                                setAnimation2(true)
+                                setAnimation1(true)
                                 setTimeout(() => {
-                                    setAnimation2(false)
+                                    setAnimation2(true)
                                     setTimeout(() => {
-                                        setAnimation1(false)
+                                        setAnimation2(false)
+                                        setTimeout(() => {
+                                            setAnimation1(false)
+                                        }, 800);
                                     }, 800);
                                 }, 800);
                             }, 800);
                         }, 800);
                     }, 800);
                 }, 800);
-            }, 800);
-        }, 200);
+            }, 200);
+        }
     }, [])
     
     useEffect(() => {

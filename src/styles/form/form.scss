@@ -31,11 +31,53 @@
         -ms-flex-direction: column;
                 flex-direction: column;
         gap: 10px;
-        label {
-            color: $primary-color;
-            margin-left: 6px;
-            .MuiInputLabel-asterisk{
-                color: #FFF0D94D;
+        div {
+            label {
+                color: $primary-color;
+                font-family: $font-nunito;
+                margin-left: 16px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+                .MuiInputLabel-asterisk{
+                    color: #FFF0D94D;
+                }
+            }
+            .MuiInputBase-inputMultiline{
+                color: $primary-color !important;
+                margin-left: 5px;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                div{
+                    border-bottom: 1px solid $primary-color;
+                    &:after{
+                        border-bottom: 2px solid $primary-color;
+                    }
+                    &::before{
+                        border-bottom: none !important;
+                    }
+                }
+            }
+            .MuiInputBase-inputMultiline-error{
+                div{
+                    border-bottom: 1px solid $error-color !important;
+                    &:after{
+                        border-bottom: 2px solid $error-color;
+                    }
+                    &::before{
+                        border-bottom: none !important;
+                    }
+                }
+            }
+            .label-error{
+                font-family: $font-nunito;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 15px;
+                color: $error-color;
+                min-height: 16px;
             }
         }
         .text-form{
@@ -45,37 +87,6 @@
             line-height: 26px;
             color: $white-color;
             margin-top: 20px;
-        }
-        .MuiInputBase-inputMultiline{
-            color: $primary-color !important;
-            margin-left: 5px;
-        }
-        div div{
-            border-bottom: 1px solid $primary-color;
-            &:after{
-                border-bottom: 2px solid $primary-color;
-            }
-            &::before{
-                border-bottom: none !important;
-            }
-        }
-        .MuiInputBase-inputMultiline-error{
-            div{
-                border-bottom: 1px solid $error-color !important;
-                &:after{
-                    border-bottom: 2px solid $error-color;
-                }
-                &::before{
-                    border-bottom: none !important;
-                }
-            }
-        }
-        .label-error{
-            font-family: $font-nunito;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 15px;
-            color: $error-color;
         }
         button{
             width: -webkit-fit-content;
