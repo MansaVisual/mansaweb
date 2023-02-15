@@ -51,7 +51,7 @@ export default function Form(){
 
     const [errorValidate,setErrorValidate]=useState(false)
     
-    const [mailSend,setMailSend]=useState(false)
+    const [mailSend,setMailSend]=useState(null)
 
 
     const handleClick = async()=>{
