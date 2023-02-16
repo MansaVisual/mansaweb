@@ -62,7 +62,7 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
                                 </div>
                                 <div>
                                     <img src={con2} alt="MAIL" />
-                                    <h4 className="mail">{obj.mail}</h4>
+                                    <h4 className="mail" onClick={()=>window.location=`mailto:${obj.mail}`}>{obj.mail}</h4>
                                 </div>
                                 <div>
                                     <img src={con1} alt="TEL" />
