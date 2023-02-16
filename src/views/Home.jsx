@@ -41,7 +41,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
                 </span>
 
                 <div className="ourTeam-eagle">
-                    <img src={eagle} alt="EAGLE" />
+                    <img src={eagle} alt="EAGLE" id="OurTeam"/>
                 </div>
 
                 <TitlesHome titleClass={"team"} title={"Our Team"}/>

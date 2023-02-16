@@ -73,7 +73,31 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                             }
                         }}
                     >Contact</h4>
-                    <h4>Our Team</h4>
+                    <h4 onClick={window.location.pathname==="/" ?
+                            ()=>{
+                                setMenuOpen(false)
+                                setTimeout(() => {
+                                    window.scrollTo({
+                                        top: document.getElementById("OurTeam").getBoundingClientRect().y + 140,
+                                        behavior: "smooth",
+                                    })
+                                }, 500);
+                            }
+                        :
+                            ()=>{
+                                navigate("/")
+                                setMenuOpen(false)
+                                setTimeout(() => {
+                                    window.scrollTo({
+                                        top: document.getElementById("OurTeam").getBoundingClientRect().y + 140,
+                                        behavior: "smooth",
+                                    })
+                                }, 500);
+                            }
+                        }
+                    >
+                        Our Team
+                    </h4>
                 </div>
                 <div className="navbar-logos">
                         <img src={subLogo1} alt="LINKEDIN"/>
