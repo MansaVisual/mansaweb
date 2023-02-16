@@ -46,7 +46,9 @@ export default function Ourteam() {
                         <img src={linkedin} alt="LINKEDIN" className="linkedin" onClick={()=>window.open(obj.linkedin)}/>
                         <h4 className="name">{obj.name}</h4>
                         <h4 className="rol">{obj.rol}</h4>
-                        <h4 className="mail">{obj.mail}</h4>
+                        <h4 className="mail" id={`card-mail-${i}`} onClick={()=>{
+                            window.location=`mailto:${obj.mail}`
+                        }}>{obj.mail}</h4>
                     </div>
                 )
             })}
