@@ -12,7 +12,7 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
                 align-items: center;
-        padding: 23.5px 16px 8px 0px;
+        padding: 23.5px 16px 23.5px 0px;
         position: relative;
         h2{
             font-family: $font-nunito;
@@ -83,8 +83,10 @@
         -o-transition: 1s;
         transition: 1s;
         height: auto;
-        height: 0px;
         overflow: hidden;
+        margin-top: -16px;
+        max-height: 0px;
+        margin-bottom: 8px;
         h3{
             font-family: $font-nunito;
             font-weight: 500;
@@ -106,8 +108,10 @@
         -webkit-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        height: 140px;
         overflow: hidden;
+        max-height: 180px;
+        margin-top: -16px;
+        margin-bottom: 8px;
         h3{
             font-family: $font-nunito;
             font-weight: 500;
