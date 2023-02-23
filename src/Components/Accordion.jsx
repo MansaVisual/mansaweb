@@ -5,7 +5,7 @@ export default function Accordion(){
     const arrayAccordion=[
         {
             title:"UX/UI Design",
-            array:["Brand Strategy 1", "Brand, sdfsd 1", "Load generatoru 1"]        
+            array:["UX Research", "UX Strategy", "User Testing", "UI Design", "Usability & Interface Consultancy"]        
         },
         {
             title:"Web Development",
@@ -17,7 +17,7 @@ export default function Accordion(){
         },
         {
             title:"Branding",
-            array:["Brand Strategy", "Brand, sdfsd", "Load generatoru"]        
+            array:["Design Logo", "Visual Design", "Tone of voice", "Identity manual"]        
         },
         {
             title:"Data, Analytics",
@@ -25,7 +25,7 @@ export default function Accordion(){
         },
         {
             title:"Marketing & Promotion",
-            array:["Brand Strategy", "Brand, sdfsd", "Load generatoru"]        
+            array:["Google and Facebook Ads", "Social Media Strategy", "Content Design", "Marketing Planification"]        
         }
     ]
 
