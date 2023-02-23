@@ -54,7 +54,7 @@ const App = () =>{
             window.addEventListener('scroll', disableScroll);
             setTimeout(() => {
                 window.removeEventListener('scroll', disableScroll);  
-            }, 6500);
+            }, 6700);
         }
     }, [initWeb])
 
