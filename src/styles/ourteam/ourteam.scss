@@ -5,15 +5,18 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 8px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    max-width: 360px;
+    max-width: 540px;
     margin: auto;
     margin-top: 60px;
+    @include min_screen(770){
+        max-width: none;
+    }
     .card-team{
         position: relative;
         max-width: 175px;
@@ -37,7 +40,7 @@
         }
         .rol{
             font-family: $font-saira;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 13px;
             line-height: 20px;
             color:#C5C5C5;
