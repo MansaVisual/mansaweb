@@ -1,5 +1,5 @@
-@mixin screen_390 {
-    @media (max-width: 390px) {
+@mixin max_screen($size) {
+    @media (max-width: ($size + "px")) {
       @content;
     }
   }

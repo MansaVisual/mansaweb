@@ -21,7 +21,7 @@
             color: $white-color;
             height: 82px;
             margin-top: 180px;
-            @include screen_390{
+            @include max_screen(390){
                 font-size: 42vw;
             }
         }

@@ -69,6 +69,9 @@
   }
   .mouse-container{
     margin-left: -16px;
+    @include max_screen(370){
+      margin-bottom: 18px;
+    }
     .mouse {
         width: 28px;
         height: 40px;
