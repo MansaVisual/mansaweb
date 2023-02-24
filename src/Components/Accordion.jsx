@@ -9,11 +9,11 @@ export default function Accordion(){
         },
         {
             title:"Web Development",
-            array:["Brand Strategy", "Brand, sdfsd", "Load generatoru"]        
+            array:[]        
         },
         {
             title:"App Development",
-            array:["Brand Strategy", "Brand, sdfsd", "Load generatoru"]        
+            array:[]        
         },
         {
             title:"Branding",
@@ -110,8 +110,12 @@ export default function Accordion(){
                     <div key={i} style={{borderBottom:i+1!==arrayAccordion.length&&"1px solid #FFF0D9"}}>
                         <div className="card-accordion" onClick={()=>{onClickAccordion(i)}}>
                             <h2>{obj.title}</h2>
-                            <div className="line1" id={`line${i}-1`}></div>
-                            <div className="line2" id={`line${i}-2`}></div>
+                            {obj.array.length!==0&&
+                                <>
+                                    <div className="line1" id={`line${i}-1`}></div>
+                                    <div className="line2" id={`line${i}-2`}></div>
+                                </>
+                            }
                         </div>
                         <div id={`accordion${i}`} className={`accordion${i} accordion-close`}>
                             {obj.array.map((obj,ii)=>{
