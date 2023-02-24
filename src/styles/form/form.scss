@@ -2,9 +2,18 @@
     background-color: $contrast-primary-dark;
     padding: 42px 16px 21px 16px;
     margin-top: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     .title{
         font-family: $font-saira;
@@ -33,10 +42,14 @@
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
-                flex-direction: column;
+        flex-direction: column;
         gap: 10px;
         width: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         div {
             width: 100%;
@@ -56,7 +69,12 @@
                 margin-left: 5px;
             }
             div {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
                 flex-direction: column;
                 div{
                     border-bottom: 1px solid $primary-color;
@@ -110,9 +128,11 @@
             margin-top: 24px;
 
             border: solid 2px transparent;
+            background-image: -o-linear-gradient($primary-color,$primary-color), -o-linear-gradient(50deg, $primary-color, #43AFC2);
             background-image: linear-gradient($primary-color,$primary-color), linear-gradient(40deg, $primary-color, #43AFC2);
             background-origin: border-box;
             background-clip: content-box, border-box;
+            -webkit-box-shadow: 2px 1000px 1px $contrast-primary-dark inset;
             box-shadow: 2px 1000px 1px $contrast-primary-dark inset;
             border-radius: 3px;
         }
@@ -126,12 +146,12 @@
         }
         @-webkit-keyframes rotation {
             0% {
-              -webkit-transform: rotate(0deg);
-                      transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
             }
             100% {
-              -webkit-transform: rotate(360deg);
-                      transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
             }
         }
         .button-loader{
@@ -142,15 +162,24 @@
             border-top: 3px solid $primary-color;
             border-right: 3px solid transparent;
             -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
+            box-sizing: border-box;
             -webkit-animation: rotation 1s linear infinite;
-                    animation: rotation 1s linear infinite;
+            animation: rotation 1s linear infinite;
         }
 
         .form-state{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
             margin-top: -4px;
             font-family: $font-saira;

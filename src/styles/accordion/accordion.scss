@@ -8,10 +8,10 @@
         display: flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-                justify-content: space-between;
+        justify-content: space-between;
         -webkit-box-align: center;
         -ms-flex-align: center;
-                align-items: center;
+        align-items: center;
         padding: 23.5px 16px 23.5px 0px;
         position: relative;
         h2{
@@ -43,10 +43,10 @@
             transition: 1s;
             -webkit-transform: rotateZ(90deg);
             -ms-transform: rotate(90deg);
-                    transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
             -webkit-transition-delay: 0.1s;
             -o-transition-delay: 0.1s;
-                    transition-delay: 0.1s;
+            transition-delay: 0.1s;
         }
         .line2-open{
             -webkit-transition: 1s;
@@ -54,7 +54,7 @@
             transition: 1s;
             -webkit-transform: rotateZ(180deg);
             -ms-transform: rotate(180deg);
-                    transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
         }
         
         .line1-close{
@@ -63,10 +63,10 @@
             transition: 0.8s;
             -webkit-transform: rotateZ(-90deg);
             -ms-transform: rotate(-90deg);
-                    transform: rotateZ(-90deg);
+            transform: rotateZ(-90deg);
             -webkit-transition-delay: 0.1s;
             -o-transition-delay: 0.1s;
-                    transition-delay: 0.1s;
+            transition-delay: 0.1s;
         }
         .line2-close{
             -webkit-transition: 0.8s;
@@ -74,7 +74,7 @@
             transition: 0.8s;
             -webkit-transform: rotateZ(-90deg);
             -ms-transform: rotate(-90deg);
-                    transform: rotateZ(-90deg);
+            transform: rotateZ(-90deg);
         }
     }
     
@@ -96,18 +96,10 @@
             margin-left: 19px;
         }
     }
-    @keyframes scrollDownAccordion {
-        0%{
-            height: 0px;
-        }
-        100%{
-            height: fit-content;
-        }
-    }
     .accordion-open{
         -webkit-transition: 1s;
         -o-transition: 1s;
-        transition: 1s;
+        transition: 1.3s;
         overflow: hidden;
         max-height: 180px;
         margin-top: -16px;
