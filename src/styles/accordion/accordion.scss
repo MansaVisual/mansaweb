@@ -81,7 +81,7 @@
     .accordion-close{
         -webkit-transition: 1s;
         -o-transition: 1s;
-        transition: 1s;
+        transition: 1.2s;
         height: auto;
         overflow: hidden;
         margin-top: -16px;
@@ -99,7 +99,7 @@
     .accordion-open{
         -webkit-transition: 1s;
         -o-transition: 1s;
-        transition: 1.3s;
+        transition: 1.2s;
         overflow: hidden;
         max-height: 180px;
         margin-top: -16px;
