@@ -5,6 +5,7 @@ import eagle from "../assets/eagle.svg"
 import Accordion from "../Components/Accordion"
 import Ourteam from "../Components/OurTeam"
 import { useEffect } from "react"
+import { InlineWidget } from "react-calendly"
 
 const Home = ({menuOpen,setMenuOpen}) =>{
 
@@ -21,7 +22,10 @@ const Home = ({menuOpen,setMenuOpen}) =>{
     return(
         <div className="home-container">
             <Banner/>
-            
+
+            {/* <div className="calendly-inline-widget" data-url="https://calendly.com/mansastudio/15min" style={{width:"820px",height:"900px", backgroundColor:"red"}}></div> */}
+            <InlineWidget url="https://calendly.com/mansastudio/15min" />
+
             <div className="home-container-2">
                 <div className="first-box gradient-background" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}>
                     <h2>Web Development & Design Agency</h2>
