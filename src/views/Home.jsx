@@ -5,7 +5,7 @@ import eagle from "../assets/eagle.svg"
 import Accordion from "../Components/Accordion"
 import Ourteam from "../Components/OurTeam"
 import { useEffect } from "react"
-import { InlineWidget } from "react-calendly"
+import { PopupWidget } from "react-calendly"
 
 const Home = ({menuOpen,setMenuOpen}) =>{
 
@@ -24,7 +24,18 @@ const Home = ({menuOpen,setMenuOpen}) =>{
             <Banner/>
 
             {/* <div className="calendly-inline-widget" data-url="https://calendly.com/mansastudio/15min" style={{width:"820px",height:"900px", backgroundColor:"red"}}></div> */}
-            <InlineWidget url="https://calendly.com/mansastudio/15min" />
+            {/* <InlineWidget url="https://calendly.com/mansastudio/15min" /> */}
+            <PopupWidget
+        url="https://calendly.com/mansastudio/15min"
+        /*
+         * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+         * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+         */
+        rootElement={document.getElementById("root")}
+        text="Click here to schedule!"
+        textColor="#ffffff"
+        color="#00a2ff"
+      />
 
             <div className="home-container-2">
                 <div className="first-box gradient-background" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}>
