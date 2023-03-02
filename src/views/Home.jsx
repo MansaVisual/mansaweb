@@ -4,10 +4,12 @@ import TitlesHome from "../Components/TitlesHome"
 import eagle from "../assets/eagle.svg"
 import Accordion from "../Components/Accordion"
 import Ourteam from "../Components/OurTeam"
-import { useEffect } from "react"
-import { PopupWidget } from "react-calendly"
+import { useEffect, useState } from "react"
+import { PopupModal, PopupWidget } from "react-calendly"
 
 const Home = ({menuOpen,setMenuOpen}) =>{
+
+    const [popUp,setPopUp]=useState(false)
 
     useEffect(() => {
         if(menuOpen){
@@ -17,28 +19,24 @@ const Home = ({menuOpen,setMenuOpen}) =>{
             top: 0,
             behavior: "auto",
         });
+
+        document.querySelectorAll(".calendly-badge-content")[0].innerHTML=`<img style=width:30px;height:30px src=${calendar} alt="BUTTON"/>`
+        document.querySelectorAll(".calendly-badge-content")[0].style.padding="0px 11px"
+        document.querySelectorAll(".calendly-badge-content")[0].style.width="52px"
+        document.querySelectorAll(".calendly-badge-content")[0].style.height="52px"
     }, [])
 
     return(
         <div className="home-container">
             <Banner/>
 
-            {/* <div className="calendly-inline-widget" data-url="https://calendly.com/mansastudio/15min" style={{width:"820px",height:"900px", backgroundColor:"red"}}></div> */}
-            {/* <InlineWidget url="https://calendly.com/mansastudio/15min" /> */}
             <PopupWidget
-        url="https://calendly.com/mansastudio/15min"
-        /*
-         * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
-         * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
-         */
-        rootElement={document.getElementById("root")}
-        text="Click here to schedule!"
-        textColor="#ffffff"
-        color="#00a2ff"
-      />
+                url="https://calendly.com/mansastudio/15min"
+                rootElement={document.getElementById("root")}
+            />
 
             <div className="home-container-2">
-                <div className="first-box gradient-background" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}>
+                <div className="first-box gradient-background" onClick={()=>setPopUp(true)}>
                     <h2>Web Development & Design Agency</h2>
                     <p>We create experiences and build products all together. We make your business grow</p>
                     <p className="link">Schedule a meeting here</p>
@@ -50,10 +48,17 @@ const Home = ({menuOpen,setMenuOpen}) =>{
 
                 <TitlesHome titleClass={"clients"} title={"Clients"}/>
 
-                <span className="button-schedule gradient-background" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}>
+                <span className="button-schedule gradient-background" onClick={()=>setPopUp(true)}>
                     <img src={calendar} alt="CALENDAR" />
                     Schedule Meeting
                 </span>
+
+                <PopupModal
+                    url="https://calendly.com/mansastudio/15min"
+                    open={popUp}
+                    onModalClose={() => {setPopUp(false)}}
+                    rootElement={document.getElementById("root")}
+                />
 
                 <div className="ourTeam-eagle">
                     <img src={eagle} alt="EAGLE" id="OurTeam"/>
