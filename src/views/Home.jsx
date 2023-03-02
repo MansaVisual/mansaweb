@@ -27,7 +27,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
             <InlineWidget url="https://calendly.com/mansastudio/15min" />
 
             <div className="home-container-2">
-                <div className="first-box gradient-background" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}>
+                <div className="first-box gradient-background" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}>
                     <h2>Web Development & Design Agency</h2>
                     <p>We create experiences and build products all together. We make your business grow</p>
                     <p className="link">Schedule a meeting here</p>
@@ -39,7 +39,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
 
                 <TitlesHome titleClass={"clients"} title={"Clients"}/>
 
-                <span className="button-schedule gradient-background" onClick={()=>window.open("https://calendly.com/mansavisual/15min")}>
+                <span className="button-schedule gradient-background" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}>
                     <img src={calendar} alt="CALENDAR" />
                     Schedule Meeting
                 </span>

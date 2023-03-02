@@ -22,24 +22,24 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
         {
             pais:"ARGENTINA",
             provincia:"Buenos Aires",
-            mail:"infoar@mansavisual.com",
+            mail:"infoar@mansastudio.com",
             telefono:"(+54) 11 63001724",
             bandera:arg
         },
         {
             pais:"UNITED STATES",
             provincia:"California",
-            mail:"infous@mansavisual.com",
+            mail:"infous@mansastudio.com",
             telefono:"(+1) 646 4040026",
             bandera:eua
         },
-        {
-            pais:"ITALY",
-            provincia:"Roma",
-            mail:"infoit@mansavisual.com",
-            telefono:"+6 51 4043130",
-            bandera:ita
-        },
+        // {
+        //     pais:"ITALY",
+        //     provincia:"Roma",
+        //     mail:"infoit@mansastudio.com",
+        //     telefono:"+6 51 4043130",
+        //     bandera:ita
+        // },
     ]
 
     return(

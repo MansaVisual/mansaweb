@@ -10,28 +10,28 @@ export default function Ourteam() {
         {
             name:"Abel Palavecino",
             rol:"CHIEF OPERATING OFFICER",
-            mail:"abelp@mansavisual.com",
+            mail:"abelp@mansastudio.com",
             linkedin:"https://www.linkedin.com/in/abelpalavecino/",
             foto:foto1
         },
         {
             name:"Luc Rossi",
             rol:"HEAD UX/UI DESIGNER",
-            mail:"lucr@mansavisual.com",
+            mail:"lucr@mansastudio.com",
             linkedin:"https://www.linkedin.com/in/lucasrossiux/",
             foto:foto2
         },
         {
             name:"Timo Gambella",
             rol:"SOFTWARE ENGINEER",
-            mail:"timog@mansavisual.com",
+            mail:"timog@mansastudio.com",
             linkedin:"https://www.linkedin.com/in/timoteo-gambella-4b6418210/",
             foto:foto3
         },
         {
             name:"Denise Viola",
             rol:"CHIEF MARKETING OFFICE",
-            mail:"denisev@mansavisual.com",
+            mail:"denisev@mansastudio.com",
             linkedin:"https://www.linkedin.com/in/denisereddyeco/",
             foto:foto4
         },
