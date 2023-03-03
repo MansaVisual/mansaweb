@@ -10,6 +10,7 @@ import { PopupModal, PopupWidget } from "react-calendly"
 const Home = ({menuOpen,setMenuOpen}) =>{
 
     const [popUp,setPopUp]=useState(false)
+    const [popUpBack,setPopUpBack]=useState(false)
 
     useEffect(() => {
         if(menuOpen){
@@ -19,33 +20,29 @@ const Home = ({menuOpen,setMenuOpen}) =>{
             top: 0,
             behavior: "auto",
         });
-
-        document.querySelectorAll(".calendly-badge-content")[0].innerHTML=`<img style=width:30px;height:30px src=${calendar} alt="BUTTON"/>`
-        document.querySelectorAll(".calendly-badge-content")[0].style.padding="0px 11px"
-        document.querySelectorAll(".calendly-badge-content")[0].style.width="52px"
-        document.querySelectorAll(".calendly-badge-content")[0].style.height="52px"
     }, [])
 
     return(
         <div className="home-container">
             <Banner/>
 
-            <PopupWidget
-                url="https://calendly.com/mansastudio/15min"
-                rootElement={document.getElementById("root")}
-            />
+            <div className="button-calendly" onClick={() => {setPopUp(true);setPopUpBack(true)}}>
+                <div>
+                    <img style={{width:"30px",height:"30px"}} src={calendar} alt="BUTTON"/>
+                </div>
+            </div>
 
             <PopupModal
                 url="https://calendly.com/mansastudio/15min"
                 open={popUp}
-                onModalClose={() => {setPopUp(false)}}
+                onModalClose={() => {setPopUp(false);setPopUpBack(false)}}
                 rootElement={document.getElementById("root")}
             />
 
-            {popUp && <div className="popUp-calendly"></div>}
+            {popUpBack && <div className="popUp-calendly"></div>}
 
             <div className="home-container-2">
-                <div className="first-box gradient-background" onClick={()=>setPopUp(true)}>
+                <div className="first-box gradient-background" onClick={()=>{setPopUp(true);setPopUpBack(true)}}>
                     <h2>Web Development & Design Agency</h2>
                     <p>We create experiences and build products all together. We make your business grow</p>
                     <p className="link">Schedule a meeting here</p>
@@ -57,7 +54,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
 
                 <TitlesHome titleClass={"clients"} title={"Clients"}/>
 
-                <span className="button-schedule gradient-background" onClick={()=>setPopUp(true)}>
+                <span className="button-schedule gradient-background" onClick={()=>{setPopUp(true);setPopUpBack(true)}}>
                     <img src={calendar} alt="CALENDAR" />
                     Schedule Meeting
                 </span>
