@@ -35,6 +35,15 @@ const Home = ({menuOpen,setMenuOpen}) =>{
                 rootElement={document.getElementById("root")}
             />
 
+            <PopupModal
+                url="https://calendly.com/mansastudio/15min"
+                open={popUp}
+                onModalClose={() => {setPopUp(false)}}
+                rootElement={document.getElementById("root")}
+            />
+
+            {popUp && <div className="popUp-calendly"></div>}
+
             <div className="home-container-2">
                 <div className="first-box gradient-background" onClick={()=>setPopUp(true)}>
                     <h2>Web Development & Design Agency</h2>
@@ -52,13 +61,6 @@ const Home = ({menuOpen,setMenuOpen}) =>{
                     <img src={calendar} alt="CALENDAR" />
                     Schedule Meeting
                 </span>
-
-                <PopupModal
-                    url="https://calendly.com/mansastudio/15min"
-                    open={popUp}
-                    onModalClose={() => {setPopUp(false)}}
-                    rootElement={document.getElementById("root")}
-                />
 
                 <div className="ourTeam-eagle">
                     <img src={eagle} alt="EAGLE" id="OurTeam"/>
