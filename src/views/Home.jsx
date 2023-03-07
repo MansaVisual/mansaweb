@@ -12,8 +12,6 @@ const Home = ({menuOpen,setMenuOpen}) =>{
     const [popUp,setPopUp]=useState(false)
     const [popUpBack,setPopUpBack]=useState(false)
 
-    const [ourTeam,setOurTeam]=useState(false)
-
     useEffect(() => {
         if(menuOpen){
             setMenuOpen(!menuOpen)
@@ -22,9 +20,6 @@ const Home = ({menuOpen,setMenuOpen}) =>{
             top: 0,
             behavior: "auto",
         });
-        setTimeout(() => {
-            setOurTeam(true)
-        }, 6000);
     }, [])
 
     return(
@@ -73,9 +68,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
                     We have a global team mainly focused in Argentina, Italy and the USA. This allows us to improve productivity as well as creativity and service.
                 </p>
 
-                {ourTeam &&
-                    <Ourteam/>
-                }
+                <Ourteam/>
 
             </div>
             <div className="footer gradient-background">

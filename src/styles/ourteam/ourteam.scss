@@ -20,16 +20,9 @@
     .card-team{
         position: relative;
         max-width: 175px;
-        overflow: hidden;
-        div{
-            overflow: hidden;
-            img{
-                width: 175px;
-                height: 175px;
-            }
-            .img-animation{
-                animation:glitch 4s infinite;
-            }
+        img{
+            width: 175px;
+            height: 175px;
         }
         .linkedin{
             width: 19px;
@@ -59,32 +52,5 @@
             line-height: 20px;
             color:#43AFC2;
         }
-    }
-}
-
-@keyframes glitch{
-    10%{
-        transform: skew(-50deg);
-    }
-    20%{
-        transform: skew(50deg);
-    }
-    30%{
-        transform: skew(-30deg);
-    }
-    40%{
-        transform: skew(30deg);
-    }
-    50%{
-        transform: skew(-10deg);
-    }
-    60%{
-        transform: skew(10deg);
-    }
-    90%{
-        transform: skew(100deg);
-    }
-    100%{
-        transform: skew(-100deg);
     }
 }
