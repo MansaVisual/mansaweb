@@ -21,7 +21,7 @@ const App = () =>{
         }else{
             setTimeout(() => {
                 setInitWeb(false)
-            }, 6000);
+            }, 100);
             setTimeout(() => {
                 setAnimation1(true)
                 setTimeout(() => {
@@ -54,7 +54,7 @@ const App = () =>{
             window.addEventListener('scroll', disableScroll);
             setTimeout(() => {
                 window.removeEventListener('scroll', disableScroll);  
-            }, 6700);
+            }, 100);
         }
     }, [initWeb])
 
