@@ -63,7 +63,17 @@ export default function Ourteam() {
             {ourTeamArray.map((obj,i)=>{
                 return(
                     <div className="card-team" key={i}>
-                        <img src={!changePh?[obj.foto]:[obj.foto2]} className="flicker" alt="FOTO" />
+                        <div>
+                            <div className='glitch' style={{backgroundImage:`url("${changePh?[obj.foto]:[obj.foto2]}")`}}></div>
+                            <div className='d1'></div>
+                            <div className='d2'></div>
+                            <div className='d3'></div>
+                            <div className='d4'></div>
+                            <div className='d5'></div>
+                            <div className='d6'></div>
+                            <div className='d7'></div>
+                            <img src={!changePh?[obj.foto]:[obj.foto2]} className="flicker" alt="FOTO" />
+                        </div>
                         <img src={linkedin} alt="LINKEDIN" className="linkedin" onClick={()=>window.open(obj.linkedin)}/>
                         <h4 className="name">{obj.name}</h4>
                         <h4 className="rol">{obj.rol}</h4>
