@@ -218,7 +218,7 @@
     }
   }
   
-  .flicker-4 {
-	-webkit-animation: flicker-4 4s linear infinite both;
-    animation: flicker-4 4s linear infinite both;
+    .flicker{
+        -webkit-animation: flicker-4 4s linear infinite both;
+        animation: flicker-4 4s linear infinite both;
     }
