@@ -1,7 +1,7 @@
-import foto1 from "../assets/timoteo.jpg"
-import foto2 from "../assets/BLzUH5GCIAAMGVe.jfif"
-import foto3 from "../assets/timoteo.jpg"
-import foto4 from "../assets/denise.jpeg"
+import foto1 from "../assets/abel.svg"
+import foto2 from "../assets/lucas.svg"
+import foto3 from "../assets/timoteo.svg"
+import foto4 from "../assets/denise.svg"
 import linkedin from "../assets/linkedin.svg"
 
 export default function Ourteam() {

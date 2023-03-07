@@ -5,7 +5,7 @@ import eagle from "../assets/eagle.svg"
 import Accordion from "../Components/Accordion"
 import Ourteam from "../Components/OurTeam"
 import { useEffect, useState } from "react"
-import { PopupModal, PopupWidget } from "react-calendly"
+import { PopupModal } from "react-calendly"
 
 const Home = ({menuOpen,setMenuOpen}) =>{
 
