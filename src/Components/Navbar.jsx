@@ -58,27 +58,30 @@ export default function Navbar({menuOpen,setMenuOpen}) {
             <div className={`${menuOpen?"menu-open":"menu-close"}`}>
                 <div className="navbar-bar">
                     <h4 
-                        onClick={()=>{
+                        onClick={(e)=>{
+                            e.target.style.transition="1s"
                             if(window.location.pathname!=="/"){
                                 setMenuBar(false)
                                 navigate("/")
                             }
                         }}
-                        onMouseEnter={(e)=>e.target.style.opacity="0"}
-                        onMouseLeave={(e)=>e.target.style.opacity="1"}
+                        onMouseEnter={(e)=>{e.target.style.opacity="0.3";e.target.style.transition="0s"}}
+                        onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
                     >Home</h4>
                     <h4 
-                        onClick={()=>{
+                        onClick={(e)=>{
+                            e.target.style.transition="1s"
                             if(window.location.pathname!=="/Contact"){
                                 setMenuBar(true)
                                 navigate("/Contact")
                             }
                         }}
-                        onMouseEnter={(e)=>e.target.style.opacity="0"}
-                        onMouseLeave={(e)=>e.target.style.opacity="1"}
+                        onMouseEnter={(e)=>{e.target.style.opacity="0.3";e.target.style.transition="0s"}}
+                        onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
                     >Contact</h4>
                     <h4 onClick={window.location.pathname==="/" ?
-                            ()=>{
+                            (e)=>{
+                                e.target.style.transition="1s"
                                 setMenuOpen(false)
                                 setTimeout(() => {
                                     window.scrollTo({
@@ -88,7 +91,8 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                                 }, 500);
                             }
                         :
-                            ()=>{
+                            (e)=>{
+                                e.target.style.transition="1s"
                                 navigate("/")
                                 setMenuOpen(false)
                                 setTimeout(() => {
@@ -99,8 +103,8 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                                 }, 500);
                             }
                         }
-                        onMouseEnter={(e)=>e.target.style.opacity="0"}
-                        onMouseLeave={(e)=>e.target.style.opacity="1"}
+                        onMouseEnter={(e)=>{e.target.style.opacity="0.3";e.target.style.transition="0s"}}
+                        onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
                     >
                         Our Team
                     </h4>
