@@ -1,0 +1,387 @@
+.ourTeam-container{
+    .card-team{
+        div{
+            overflow: hidden;
+            .glitch{
+                position: absolute;
+                top: 6px;
+                opacity: 0.15;
+                z-index: 2;
+                width: 100%;
+                height: 70%;
+                mix-blend-mode: hard-light;
+            }
+            .div-flicker{
+                z-index: 50;
+                height: 3px;
+                position: absolute;
+            }
+            .div-box-flicker{
+                z-index: 50;
+                position: absolute;
+                width: 50%;
+                height: 60%;
+                top: 10%;
+                left: 10%;
+                -webkit-animation: divGlitch1 2s linear infinite;
+                        animation: divGlitch1 2s linear infinite;
+            }
+            .div-box-flicker-2{
+                z-index: 50;
+                position: absolute;
+                width: 70%;
+                height: 20%;
+                top: 10%;
+                left: 10%;
+                -webkit-animation: divGlitch2 2s linear infinite;
+                        animation: divGlitch2 2s linear infinite;
+            }
+            .d1{
+                width: 50%;
+                top: 50%;
+                left: 0%;
+                -webkit-animation: glitch1 2s linear infinite;
+                        animation: glitch1 2s linear infinite;
+            }
+            .d2{
+                width: 65%;
+                top: 20%;
+                left: 10%;
+                -webkit-animation: glitch2 0.5s linear infinite;
+                        animation: glitch2 0.5s linear infinite;
+            }
+            .d3{
+                width: 50%;
+                top: 60%;
+                left: 50%;
+                -webkit-animation: glitch1 1s linear infinite;
+                        animation: glitch1 1s linear infinite;
+            }
+            .d4{
+                width: 40%;
+                top: 30%;
+                left: 50%;
+                -webkit-animation: glitch2 2.5s linear infinite;
+                        animation: glitch2 2.5s linear infinite;
+            }
+            .d5{
+                width: 100%;
+                top: 30%;
+                left: 0;
+                -webkit-animation: glitch1 2.1s linear infinite;
+                        animation: glitch1 2.1s linear infinite;
+            }
+            .d6{
+                width: 66%;
+                top: 19%;
+                left: 34%;
+                -webkit-animation: glitch2 1.8s linear infinite;
+                        animation: glitch2 1.8s linear infinite;
+            }
+            .d7{
+                width: 50%;
+                top: 28%;
+                left: 29%;
+                -webkit-animation: glitch1 0.7s linear infinite;
+                        animation: glitch1 0.7s linear infinite;
+            }
+            img{
+                width: 175px;
+                height: 175px;
+            }
+            .flicker{
+                -webkit-animation: flicker-4 4s linear infinite both;
+                animation: flicker-4 4s linear infinite both;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes glitch1 {
+    0%{
+        display: block;
+        background-color: black;
+        opacity: 0.7;
+        -webkit-box-shadow: -3px -3px 1px rgb(14, 255, 14);
+                box-shadow: -3px -3px 1px rgb(14, 255, 14);
+    }
+    4%{
+        background-color: transparent;
+        -webkit-box-shadow: -3px -3px 1px transparent;
+                box-shadow: -3px -3px 1px transparent;
+    }
+}
+
+@keyframes glitch1 {
+    0%{
+        display: block;
+        background-color: black;
+        opacity: 0.7;
+        -webkit-box-shadow: -3px -3px 1px rgb(14, 255, 14);
+                box-shadow: -3px -3px 1px rgb(14, 255, 14);
+    }
+    4%{
+        background-color: transparent;
+        -webkit-box-shadow: -3px -3px 1px transparent;
+                box-shadow: -3px -3px 1px transparent;
+    }
+}
+@-webkit-keyframes glitch2 {
+    0%{
+        display: block;
+        background-color: white;
+        -webkit-box-shadow: 3px 5px 1px rgb(255, 0, 0);
+                box-shadow: 3px 5px 1px rgb(255, 0, 0);
+        opacity: 0.7;
+    }
+    4%{
+        background-color: transparent;
+        -webkit-box-shadow: 3px 5px 1px transparent;
+                box-shadow: 3px 5px 1px transparent;
+    }
+}
+@keyframes glitch2 {
+    0%{
+        display: block;
+        background-color: white;
+        -webkit-box-shadow: 3px 5px 1px rgb(255, 0, 0);
+                box-shadow: 3px 5px 1px rgb(255, 0, 0);
+        opacity: 0.7;
+    }
+    4%{
+        background-color: transparent;
+        -webkit-box-shadow: 3px 5px 1px transparent;
+                box-shadow: 3px 5px 1px transparent;
+    }
+}
+
+@-webkit-keyframes divGlitch1{
+    0%{
+        display: block;
+        background-color: grey;
+        -webkit-box-shadow: 3px 5px 1px rgb(255, 0, 0);
+                box-shadow: 3px 5px 1px rgb(255, 0, 0);
+        opacity: 0.4;
+    }
+    4%{
+        background-color: transparent;
+        -webkit-box-shadow: -3px -3px 1px transparent;
+                box-shadow: -3px -3px 1px transparent;
+        -webkit-box-shadow: 3px 5px 1px transparent;
+                box-shadow: 3px 5px 1px transparent;
+    }
+}
+
+@keyframes divGlitch1{
+    0%{
+        display: block;
+        background-color: grey;
+        -webkit-box-shadow: 3px 5px 1px rgb(255, 0, 0);
+                box-shadow: 3px 5px 1px rgb(255, 0, 0);
+        opacity: 0.4;
+    }
+    4%{
+        background-color: transparent;
+        -webkit-box-shadow: -3px -3px 1px transparent;
+                box-shadow: -3px -3px 1px transparent;
+        -webkit-box-shadow: 3px 5px 1px transparent;
+                box-shadow: 3px 5px 1px transparent;
+    }
+}
+
+@-webkit-keyframes divGlitch2{
+    0%{
+        display: block;
+        background-color: black;
+        -webkit-box-shadow: 3px 5px 1px rgb(14, 255, 14);
+                box-shadow: 3px 5px 1px rgb(14, 255, 14);
+        opacity: 0.4;
+    }
+    4%{
+        background-color: transparent;
+        -webkit-box-shadow: -3px -3px 1px transparent;
+                box-shadow: -3px -3px 1px transparent;
+        -webkit-box-shadow: 3px 5px 1px transparent;
+                box-shadow: 3px 5px 1px transparent;
+    }
+}
+
+@keyframes divGlitch2{
+    0%{
+        display: block;
+        background-color: black;
+        -webkit-box-shadow: 3px 5px 1px rgb(14, 255, 14);
+                box-shadow: 3px 5px 1px rgb(14, 255, 14);
+        opacity: 0.4;
+    }
+    4%{
+        background-color: transparent;
+        -webkit-box-shadow: -3px -3px 1px transparent;
+                box-shadow: -3px -3px 1px transparent;
+        -webkit-box-shadow: 3px 5px 1px transparent;
+                box-shadow: 3px 5px 1px transparent;
+    }
+}
+
+@-webkit-keyframes flicker-4 {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    31.98% {
+        opacity: 1;
+    }
+    32% {
+        opacity: 0;
+    }
+    32.8% {
+        opacity: 0;
+    }
+    32.82% {
+        opacity: 1;
+    }
+    34.98% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+    35.7% {
+        opacity: 0;
+    }
+    35.72% {
+        opacity: 1;
+    }
+    36.98% {
+        opacity: 1;
+    }
+    37% {
+        opacity: 0;
+    }
+    37.6% {
+        opacity: 0;
+    }
+    37.62% {
+        opacity: 1;
+    }
+    67.98% {
+        opacity: 1;
+    }
+    68% {
+        opacity: 0;
+    }
+    68.4% {
+        opacity: 0;
+    }
+    68.42% {
+        opacity: 1;
+    }
+    95.98% {
+        opacity: 1;
+    }
+    96% {
+        opacity: 0;
+    }
+    96.7% {
+        opacity: 0;
+    }
+    96.72% {
+        opacity: 1;
+    }
+    98.98% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    99.6% {
+        opacity: 0;
+    }
+    99.62% {
+        opacity: 1;
+    }
+    }
+    @keyframes flicker-4 {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    31.98% {
+        opacity: 1;
+    }
+    32% {
+        opacity: 0;
+    }
+    32.8% {
+        opacity: 0;
+    }
+    32.82% {
+        opacity: 1;
+    }
+    34.98% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+    35.7% {
+        opacity: 0;
+    }
+    35.72% {
+        opacity: 1;
+    }
+    36.98% {
+        opacity: 1;
+    }
+    37% {
+        opacity: 0;
+    }
+    37.6% {
+        opacity: 0;
+    }
+    37.62% {
+        opacity: 1;
+    }
+    67.98% {
+        opacity: 1;
+    }
+    68% {
+        opacity: 0;
+    }
+    68.4% {
+        opacity: 0;
+    }
+    68.42% {
+        opacity: 1;
+    }
+    95.98% {
+        opacity: 1;
+    }
+    96% {
+        opacity: 0;
+    }
+    96.7% {
+        opacity: 0;
+    }
+    96.72% {
+        opacity: 1;
+    }
+    98.98% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    99.6% {
+        opacity: 0;
+    }
+    99.62% {
+        opacity: 1;
+    }
+    99.90% {
+        opacity: 1;
+        }
+    100% {
+        opacity: 1;
+    }
+}
