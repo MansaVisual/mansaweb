@@ -20,11 +20,11 @@
                 z-index: 50;
                 position: absolute;
                 width: 50%;
-                height: 60%;
-                top: 10%;
+                height: 40%;
+                top: 20%;
                 left: 10%;
-                -webkit-animation: divGlitch1 2s linear infinite;
-                        animation: divGlitch1 2s linear infinite;
+                -webkit-animation: divGlitch1 2.5s linear infinite;
+                        animation: divGlitch1 2.5s linear infinite;
             }
             .div-box-flicker-2{
                 z-index: 50;
@@ -33,8 +33,18 @@
                 height: 20%;
                 top: 10%;
                 left: 10%;
-                -webkit-animation: divGlitch2 2s linear infinite;
-                        animation: divGlitch2 2s linear infinite;
+                -webkit-animation: divGlitch2 4s linear infinite;
+                        animation: divGlitch2 4s linear infinite;
+            }
+            .div-box-flicker-3{
+                z-index: 50;
+                position: absolute;
+                width: 50%;
+                height: 20%;
+                top: 40%;
+                left: 70%;
+                -webkit-animation: divGlitch3 1s linear infinite;
+                animation: divGlitch3 1s linear infinite;
             }
             .d1{
                 width: 50%;
@@ -61,8 +71,8 @@
                 width: 40%;
                 top: 30%;
                 left: 50%;
-                -webkit-animation: glitch2 2.5s linear infinite;
-                        animation: glitch2 2.5s linear infinite;
+                -webkit-animation: glitch2 3.5s linear infinite;
+                        animation: glitch2 3.5s linear infinite;
             }
             .d5{
                 width: 100%;
@@ -105,7 +115,7 @@
         -webkit-box-shadow: -3px -3px 1px rgb(14, 255, 14);
                 box-shadow: -3px -3px 1px rgb(14, 255, 14);
     }
-    4%{
+    3%{
         background-color: transparent;
         -webkit-box-shadow: -3px -3px 1px transparent;
                 box-shadow: -3px -3px 1px transparent;
@@ -120,7 +130,7 @@
         -webkit-box-shadow: -3px -3px 1px rgb(14, 255, 14);
                 box-shadow: -3px -3px 1px rgb(14, 255, 14);
     }
-    4%{
+    3%{
         background-color: transparent;
         -webkit-box-shadow: -3px -3px 1px transparent;
                 box-shadow: -3px -3px 1px transparent;
@@ -134,7 +144,7 @@
                 box-shadow: 3px 5px 1px rgb(255, 0, 0);
         opacity: 0.7;
     }
-    4%{
+    3%{
         background-color: transparent;
         -webkit-box-shadow: 3px 5px 1px transparent;
                 box-shadow: 3px 5px 1px transparent;
@@ -148,7 +158,7 @@
                 box-shadow: 3px 5px 1px rgb(255, 0, 0);
         opacity: 0.7;
     }
-    4%{
+    3%{
         background-color: transparent;
         -webkit-box-shadow: 3px 5px 1px transparent;
                 box-shadow: 3px 5px 1px transparent;
@@ -163,7 +173,7 @@
                 box-shadow: 3px 5px 1px rgb(255, 0, 0);
         opacity: 0.4;
     }
-    4%{
+    3%{
         background-color: transparent;
         -webkit-box-shadow: -3px -3px 1px transparent;
                 box-shadow: -3px -3px 1px transparent;
@@ -180,7 +190,7 @@
                 box-shadow: 3px 5px 1px rgb(255, 0, 0);
         opacity: 0.4;
     }
-    4%{
+    3%{
         background-color: transparent;
         -webkit-box-shadow: -3px -3px 1px transparent;
                 box-shadow: -3px -3px 1px transparent;
@@ -197,7 +207,7 @@
                 box-shadow: 3px 5px 1px rgb(14, 255, 14);
         opacity: 0.4;
     }
-    4%{
+    3%{
         background-color: transparent;
         -webkit-box-shadow: -3px -3px 1px transparent;
                 box-shadow: -3px -3px 1px transparent;
@@ -214,7 +224,40 @@
                 box-shadow: 3px 5px 1px rgb(14, 255, 14);
         opacity: 0.4;
     }
-    4%{
+    3%{
+        background-color: transparent;
+        -webkit-box-shadow: -3px -3px 1px transparent;
+                box-shadow: -3px -3px 1px transparent;
+        -webkit-box-shadow: 3px 5px 1px transparent;
+                box-shadow: 3px 5px 1px transparent;
+    }
+}
+
+@keyframes divGlitch3{
+    0%{
+        display: block;
+        background-color: black;
+        -webkit-box-shadow: 3px 5px 1px rgb(14, 255, 14);
+                box-shadow: 3px 5px 1px rgb(14, 255, 14);
+        opacity: 0.4;
+    }
+    3%{
+        background-color: transparent;
+        -webkit-box-shadow: -3px -3px 1px transparent;
+                box-shadow: -3px -3px 1px transparent;
+        -webkit-box-shadow: 3px 5px 1px transparent;
+                box-shadow: 3px 5px 1px transparent;
+    }
+}
+@-webkit-keyframes divGlitch2{
+    0%{
+        display: block;
+        background-color: black;
+        -webkit-box-shadow: 3px 5px 1px rgb(14, 255, 14);
+                box-shadow: 3px 5px 1px rgb(14, 255, 14);
+        opacity: 0.4;
+    }
+    3%{
         background-color: transparent;
         -webkit-box-shadow: -3px -3px 1px transparent;
                 box-shadow: -3px -3px 1px transparent;

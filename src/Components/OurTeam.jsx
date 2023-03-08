@@ -88,6 +88,7 @@ export default function Ourteam() {
                             <div className='div-flicker d7'></div>
                             <div className='div-box-flicker'></div>
                             <div className='div-box-flicker-2'></div>
+                            <div className='div-box-flicker-3'></div>
                             <img src={changePhN===`obj${i+1}`?changePh?[obj.foto2]:[obj.foto]:[obj.foto]} className="flicker" alt="FOTO" />
                         </div>
                         <img src={linkedin} alt="LINKEDIN" className="linkedin" onClick={()=>window.open(obj.linkedin)}/>
