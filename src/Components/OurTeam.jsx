@@ -12,6 +12,7 @@ import linkedin from "../assets/linkedin.svg"
 export default function Ourteam() {
 
     const [changePh,setChangePh]=useState(false)
+    const [changePhN,setChangePhN]=useState("obj2")
 
     const ourTeamArray=[
         {
@@ -52,15 +53,28 @@ export default function Ourteam() {
         setTimeout(() => {
             if(!changePh){
                 setChangePh(true)
-            }else{
-                setChangePh(false)
             }
         }, 4000);
     }, [changePh]);
 
+    useEffect(() => {
+        setTimeout(() => {
+            if(changePhN==="obj2"){
+                setChangePhN("obj3")
+            }else if(changePhN==="obj3"){
+                setChangePhN("obj1")
+            }else if(changePhN==="obj1"){
+                setChangePhN("obj4")
+            }else{
+                setChangePhN("obj2")
+            }
+        }, 2000);
+    }, [changePhN]);
+
     return(
         <div className="ourTeam-container">
             {ourTeamArray.map((obj,i)=>{
+                console.log(i)
                 return(
                     <div className="card-team" key={i}>
                         <div>
@@ -74,7 +88,7 @@ export default function Ourteam() {
                             <div className='div-flicker d7'></div>
                             <div className='div-box-flicker'></div>
                             <div className='div-box-flicker-2'></div>
-                            <img src={!changePh?[obj.foto]:[obj.foto2]} className="flicker" alt="FOTO" />
+                            <img src={changePhN===`obj${i+1}`?changePh?[obj.foto2]:[obj.foto]:[obj.foto]} className="flicker" alt="FOTO" />
                         </div>
                         <img src={linkedin} alt="LINKEDIN" className="linkedin" onClick={()=>window.open(obj.linkedin)}/>
                         <h4 className="name">{obj.name}</h4>
