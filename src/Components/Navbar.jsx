@@ -65,7 +65,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                                 navigate("/")
                             }
                         }}
-                        onMouseEnter={(e)=>{e.target.style.opacity="0.3";e.target.style.transition="0s"}}
+                        onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
                         onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
                     >Home</h4>
                     <h4 
@@ -76,7 +76,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                                 navigate("/Contact")
                             }
                         }}
-                        onMouseEnter={(e)=>{e.target.style.opacity="0.3";e.target.style.transition="0s"}}
+                        onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
                         onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
                     >Contact</h4>
                     <h4 onClick={window.location.pathname==="/" ?
@@ -103,7 +103,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                                 }, 500);
                             }
                         }
-                        onMouseEnter={(e)=>{e.target.style.opacity="0.3";e.target.style.transition="0s"}}
+                        onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
                         onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
                     >
                         Our Team

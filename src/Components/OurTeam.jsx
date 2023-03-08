@@ -78,18 +78,20 @@ export default function Ourteam() {
                 return(
                     <div className="card-team" key={i}>
                         <div>
-                            <div className='glitch'></div>
-                            <div className='div-flicker d1'></div>
-                            <div className='div-flicker d2'></div>
-                            <div className='div-flicker d3'></div>
-                            <div className='div-flicker d4'></div>
-                            <div className='div-flicker d5'></div>
-                            <div className='div-flicker d6'></div>
-                            <div className='div-flicker d7'></div>
-                            <div className='div-box-flicker'></div>
-                            <div className='div-box-flicker-2'></div>
-                            <div className='div-box-flicker-3'></div>
-                            <img src={changePhN===`obj${i+1}`?changePh?[obj.foto2]:[obj.foto]:[obj.foto]} className="flicker" alt="FOTO" />
+                            {changePhN===`obj${i+1}` &&<>
+                                <div className='glitch'></div>
+                                <div className='div-flicker d1'></div>
+                                <div className='div-flicker d2'></div>
+                                <div className='div-flicker d3'></div>
+                                <div className='div-flicker d4'></div>
+                                <div className='div-flicker d5'></div>
+                                <div className='div-flicker d6'></div>
+                                <div className='div-flicker d7'></div>
+                                <div className='div-box-flicker'></div>
+                                <div className='div-box-flicker-2'></div>
+                                <div className='div-box-flicker-3'></div>
+                            </>}
+                            <img src={changePhN===`obj${i+1}`?changePh?[obj.foto2]:[obj.foto]:[obj.foto]} className={`${changePhN===`obj${i+1}`?"flicker":""}`} alt="FOTO" />
                         </div>
                         <img src={linkedin} alt="LINKEDIN" className="linkedin" onClick={()=>window.open(obj.linkedin)}/>
                         <h4 className="name">{obj.name}</h4>
