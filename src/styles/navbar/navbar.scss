@@ -22,6 +22,7 @@
         margin: auto 0;
         cursor: pointer;
         background-repeat: no-repeat;
+        text-align: start;
     }
     .logo-menu-open{
         -webkit-transition: 0.5s;
@@ -33,11 +34,17 @@
         margin-top: 17px;
         cursor: pointer;
         background-repeat: no-repeat;
+        text-align: start;
     }
     &.menuOpen{
         position: fixed;
         top:0;
-        z-index: 3;
+        z-index: 100;
+    }
+    &.menuClose{
+        position: fixed;
+        top:0;
+        z-index: 100;
     }
     .hamburger{
         margin: auto 0px;
@@ -54,7 +61,7 @@
 .menu-close{
     position: fixed;
     top:0;
-    z-index: 2;
+    z-index: 51;
     width: 100vw;
     height: 0px;
     -webkit-transition: 1s;
@@ -110,7 +117,7 @@
 .menu-open{
     position: fixed;
     top:0;
-    z-index: 2;
+    z-index: 51;
     width: 100vw;
     -webkit-transition: 1s;
     -o-transition: 1s;

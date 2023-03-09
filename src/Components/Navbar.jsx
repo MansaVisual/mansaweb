@@ -19,18 +19,38 @@ export default function Navbar({menuOpen,setMenuOpen}) {
             setMenuBar(false)
         }
     }, []);
+
+    const array = [
+        {
+            title:"Home",
+            url:"/",
+            menuBar:false,
+        },
+        {
+            title:"Contact",
+            url:"Contact",
+            menuBar:true,
+        },
+        {
+            title:"Our Team",
+            url:"/",
+            menuBar:false,
+        },
+    ]
     
     return(
         <>
             <div className={`navbar-container-mobile ${menuOpen && "menuOpen"}`}>
-                <div style={{backgroundImage:!menuOpen && window.location.pathname==="/Contact" ? `url(${logo2}` : menuOpen ? `url(${logo3}`:`url(${logo1}`}} alt="LOGO"
+                <div alt="LOGO"
                     onClick={()=>{
                         if(window.location.pathname==="/Contact"){
                             setMenuBar(false)
                         }
                         navigate("/")
                     }}className={`${menuOpen?"logo-menu-open":"logo-menu-close"}`}
-                />
+                >
+                    <img src={!menuOpen && window.location.pathname==="/Contact" ? logo2 : menuOpen ? logo3:logo1} alt="LOGO" />
+                </div>
                 <button className={`hamburger hamburger--stack ${menuOpen&&"active"}`} type="button"
                     onClick={()=>{
                         window.scrollTo({
@@ -57,57 +77,30 @@ export default function Navbar({menuOpen,setMenuOpen}) {
             </div>
             <div className={`${menuOpen?"menu-open":"menu-close"}`}>
                 <div className="navbar-bar">
-                    <h4 
-                        onClick={(e)=>{
-                            e.target.style.transition="1s"
-                            if(window.location.pathname!=="/"){
-                                setMenuBar(false)
-                                navigate("/")
-                            }
-                        }}
-                        onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
-                        onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
-                    >Home</h4>
-                    <h4 
-                        onClick={(e)=>{
-                            e.target.style.transition="1s"
-                            if(window.location.pathname!=="/Contact"){
-                                setMenuBar(true)
-                                navigate("/Contact")
-                            }
-                        }}
-                        onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
-                        onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
-                    >Contact</h4>
-                    <h4 onClick={window.location.pathname==="/" ?
-                            (e)=>{
-                                e.target.style.transition="1s"
-                                setMenuOpen(false)
-                                setTimeout(() => {
-                                    window.scrollTo({
-                                        top: document.getElementById("OurTeam").getBoundingClientRect().y + 140,
-                                        behavior: "smooth",
-                                    })
-                                }, 500);
-                            }
-                        :
-                            (e)=>{
-                                e.target.style.transition="1s"
-                                navigate("/")
-                                setMenuOpen(false)
-                                setTimeout(() => {
-                                    window.scrollTo({
-                                        top: document.getElementById("OurTeam").getBoundingClientRect().y + 140,
-                                        behavior: "smooth",
-                                    })
-                                }, 500);
-                            }
-                        }
-                        onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
-                        onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
-                    >
-                        Our Team
-                    </h4>
+                    {array.map((obj,i)=>{
+                        return(
+                            <h4 
+                                onClick={(e)=>{
+                                    e.target.style.transition="1s"
+                                    if(window.location.pathname!==`${obj.url}`){
+                                        setMenuBar(obj.menuBar)
+                                        navigate(`${obj.url}`)
+                                    }
+                                    if(obj.title==="Our Team"){
+                                        setMenuOpen(false)
+                                        setTimeout(() => {
+                                            window.scrollTo({
+                                                top: document.getElementById("OurTeam").getBoundingClientRect().y + 140,
+                                                behavior: "smooth",
+                                            })
+                                        }, 500);
+                                    }
+                                }}
+                                onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
+                                onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
+                            >{obj.title}</h4>
+                        )
+                    })}
                 </div>
                 <div className="navbar-logos">
                         <img src={subLogo1} alt="LINKEDIN"/>
