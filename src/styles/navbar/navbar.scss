@@ -1,4 +1,4 @@
-.navbar-container-mobile{
+.navbar-container{
     background-color: transparent;
     width: 100%;
     height: 48px;
@@ -39,7 +39,7 @@
     &.menuOpen{
         position: fixed;
         top:0;
-        z-index: 100;
+        z-index: 99999;
     }
     .hamburger{
         margin: auto 0px;
@@ -49,22 +49,25 @@
         .bar2-background{
             background-color: black !important;
         }
+        &.inner-desk{
+            width: 28px;
+        }
+    }
+    &.navbar-desk{
+        padding: 0px 20px 0px 23px;
     }
 }
 
-
-.menu-close{
+.menu{
     position: fixed;
     top:0;
-    z-index: 51;
-    width: 100vw;
-    height: 0px;
+    z-index: 9999;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
+    overflow: hidden;
     background: -o-linear-gradient(317.35deg, #414141 19.85%, #101010 73.97%);
     background: linear-gradient(132.65deg, #414141 19.85%, #101010 73.97%);
-    overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -95,73 +98,77 @@
         }
     }
     .navbar-logos{
-        display: flex;
         display: -webkit-box;
         display: -ms-flexbox;
-        -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-        margin-bottom: 75px;
+        display: flex;
         justify-content: center;
         align-items: center;
         img{
             padding: 24px 22px;
+        }
+        &.desk{
+            img{
+                padding: 0px 27px;
+                margin-bottom: 103px;
+            }
+        }
+    }
+    &.menu-close-mobile{
+        height: 0px;
+        width: 100vw;
+        h4{
+            height: 0px;
+        }
+        .navbar-logos{
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+            margin-bottom: 75px;
+        }
+    }
+    &.menu-open-mobile{
+        height: 100vh;
+        width: 100vw;
+        h4{
+            height: 94px;
+        }
+        .navbar-logos{
+            margin-bottom: 95px;
+            -webkit-transition: 1s;
+            -o-transition: 1s;
+            transition: 1s;
+        }
+    }
+
+    &.menu-desk{
+        right: 0;
+        height: 100vh;
+        box-shadow: -10px 0px 12px 1px rgba(0, 0, 0, 0.25);
+        h4{
+            height: 94px;
+        }
+    }
+    &.menu-close-desk{
+        width: 0px;
+        h4{
+            width: 0px;
+            font-size: 40px;
+        }
+    }
+    &.menu-open-desk{
+        width: 81%;
+        h4{
+            width: 358px;
         }
     }
 }
-.menu-open{
+
+.fonto-navbar-desk{
+    background-color: black;
+    opacity: 0.4;
     position: fixed;
-    top:0;
-    z-index: 51;
-    width: 100vw;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
-    height: 100vh;
-    overflow: hidden;
-    background: -o-linear-gradient(317.35deg, #414141 19.85%, #101010 73.97%);
-    background: linear-gradient(132.65deg, #414141 19.85%, #101010 73.97%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    .navbar-bar{
-        margin-top: 112px;
-        margin-left: 16px;
-        h4{
-            -webkit-transition-duration: 1s;
-            -o-transition-duration: 1s;
-            transition-duration: 1s;
-            overflow: hidden;
-            font-family: $font-saira;
-            font-weight: 600;
-            height: 94px;
-            font-size: 60px;
-            line-height: 94px;
-            color: $primary-color;
-        }
-        .hover-h4{
-            opacity:0.3;
-        }
-    }
-    .navbar-logos{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-        margin-bottom: 95px;
-        justify-content: center;
-        align-items: center;
-        img{
-            padding: 24px 22px;
-        }
-    }
+    top: 0;
+    width: 100%;
+    height: 110vh;
+    z-index: 100;
 }
