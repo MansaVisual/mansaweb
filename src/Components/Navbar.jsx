@@ -40,7 +40,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
     
     return(
         <>
-            <div className={`navbar-container-mobile ${menuOpen && "menuOpen"}`}>
+            <div className={`navbar-container-mobile ${menuOpen ? "menuOpen" : "menuClose"}`}>
                 <div alt="LOGO"
                     onClick={()=>{
                         if(window.location.pathname==="/Contact"){
