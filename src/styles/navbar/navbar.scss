@@ -57,7 +57,10 @@
             background-color: black !important;
         }
         &.inner-desk{
-            width: 28px;
+            width: 34px;
+            &.active{
+                margin-top: 18px;
+            }
         }
     }
     &.navbar-desk{
@@ -156,6 +159,7 @@
         background-color: #1D1D1D;
         h4{
             height: 94px;
+            margin-left: 78px;
         }
     }
     &.menu-close-desk{

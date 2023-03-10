@@ -65,10 +65,12 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                 </div>
                 <button className={`hamburger hamburger--stack ${menuOpen&&"active"} ${isDesktop&&"inner-desk"}`} type="button"
                     onClick={()=>{
-                        window.scrollTo({
-                            top: 0,
-                            behavior: "auto",
-                        });
+                        if(!isDesktop){
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "auto",
+                            });
+                        }
                         setMenuOpen(!menuOpen)
                     }}
                 >
