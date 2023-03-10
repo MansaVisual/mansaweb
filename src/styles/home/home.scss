@@ -258,23 +258,23 @@
     0% {
       transform: rotate(-3deg);
       box-shadow: 0 2px 2px rgba(0,0,0,.2);
-      opacity: 1;
+      filter: brightness(1);
     }
     10% {
       transform: rotate(20deg);
-      opacity: 0.5;
+      filter: brightness(1.5);
     }
     20% {
       transform: rotate(-15deg);
-      opacity: 1;
+      filter: brightness(1);
     }
     30% {
       transform: rotate(5deg);
-      opacity: 0.5;
+      filter: brightness(1.5);
     }
     40% {
       transform: rotate(-1deg);
-      opacity: 1;
+      filter: brightness(1);
     }
     50% {
       transform: rotate(0);
