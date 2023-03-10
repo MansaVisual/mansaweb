@@ -1,7 +1,5 @@
 .accordion-container{
-    padding: 8px 16px;
     background-color: $contrast-primary-dark;
-    margin-top: 16px;
     .card-accordion{
         display: -webkit-box;
         display: -ms-flexbox;
@@ -12,29 +10,19 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        padding: 23.5px 16px 23.5px 0px;
         position: relative;
         h2{
             font-family: $font-nunito;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 25px;
             color: $primary-color;
         }
         
         .line1{
-            width: 2px;
-            height: 17px;
             background-color: $primary-color;
             position: absolute;
-            right: 23px;
         }
         .line2{
-            width: 17px;
-            height: 2px;
             background-color: $primary-color;  
             position: absolute;
-            right: 15.5px;
         }
         
         .line1-open{
@@ -56,7 +44,6 @@
             -ms-transform: rotate(180deg);
             transform: rotateZ(180deg);
         }
-        
         .line1-close{
             -webkit-transition: 0.8s;
             -o-transition: 0.8s;
@@ -84,16 +71,9 @@
         transition: 1.2s;
         height: auto;
         overflow: hidden;
-        margin-top: -16px;
-        max-height: 0px;
-        margin-bottom: 8px;
         h3{
             font-family: $font-nunito;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 25px;
             color: $primary-color;
-            margin-left: 19px;
         }
     }
     .accordion-open{
@@ -101,16 +81,109 @@
         -o-transition: 1s;
         transition: 1.2s;
         overflow: hidden;
-        max-height: 180px;
-        margin-top: -16px;
-        margin-bottom: 8px;
         h3{
             font-family: $font-nunito;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 25px;
             color: $primary-color;
-            margin-left: 19px;
+        }
+    }
+
+    &.desk{
+        padding: 17px 42px;
+        margin-top: 40px;
+        .card-accordion{
+            padding: 23.5px 20px;
+            h2{
+                font-weight: 500;
+                font-size: 22.6956px;
+                line-height: 31px;
+            }
+            .line1{
+                width: 3px;
+                height: 26px;
+                right: 25px;
+            }
+            .line2{
+                width: 25px;
+                height: 3px;
+                right: 13.5px;
+            }
+        }
+        .accordion-info{
+            display: flex;
+            &.accordion-close{
+                margin-top: -16px;
+                max-height: 0px;
+                margin-bottom: 21px;
+                h3{
+                    font-weight: 500;
+                    font-size: 17.731px;
+                    line-height: 35px;
+                    margin-left: 20px;
+                }
+            }
+            &.accordion-open{
+                max-height: 180px;
+                margin-top: -16px;
+                margin-bottom: 21px;
+                h3{
+                    font-weight: 500;
+                    font-size: 17.731px;
+                    line-height: 35px;
+                    margin-left: 20px;
+                }
+            }
+            .accordion{
+                width: 315px;
+            }
+            .info{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        }
+    }
+    &.mobile{
+        padding: 8px 16px;
+        margin-top: 16px;
+        .card-accordion{
+            padding: 23.5px 16px 23.5px 0px;
+            h2{
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+            }
+            .line1{
+                width: 2px;
+                height: 17px;
+                right: 24px;
+            }
+            .line2{
+                width: 17px;
+                height: 2px;
+                right: 16.5px;
+            }
+        }
+        .accordion-close{
+            margin-top: -16px;
+            max-height: 0px;
+            margin-bottom: 8px;
+            h3{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 25px;
+                margin-left: 19px;
+            }
+        }
+        .accordion-open{
+            max-height: 180px;
+            margin-top: -16px;
+            margin-bottom: 8px;
+            h3{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 25px;
+                margin-left: 19px;
+            }
         }
     }
 }

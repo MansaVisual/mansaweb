@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@mui/material"
 import { useState } from "react"
 
 export default function Accordion(){
@@ -38,18 +39,37 @@ export default function Accordion(){
         }
         if(objOpen!==""){
             if(idParam===objOpen){
-                if(document.getElementById(`accordion${idParam}`).classList.value.indexOf("accordion-close")!==-1){
-                    helper1(`accordion${objOpen}`,"accordion-close","accordion-open")
+                if(!isDesktop){
+                    if(document.getElementById(`accordion${idParam}`).classList.value.indexOf("accordion-close")!==-1){
+                        helper1(`accordion${objOpen}`,"accordion-close","accordion-open")
+                    }else{
+                        helper1(`accordion${objOpen}`,"accordion-open","accordion-close")
+                    }
                 }else{
-                    helper1(`accordion${objOpen}`,"accordion-open","accordion-close")
+                    if(document.getElementById(`accordion-info-${idParam}`).classList.value.indexOf("accordion-close")!==-1){
+                        helper1(`accordion-info-${objOpen}`,"accordion-close","accordion-open")
+                    }else{
+                        helper1(`accordion-info-${objOpen}`,"accordion-open","accordion-close")
+                    }
                 }
             }else{
-                helper1(`accordion${objOpen}`,"accordion-open","accordion-close")
+                if(!isDesktop){
+                    helper1(`accordion${objOpen}`,"accordion-open","accordion-close")
+                }else{
+                    helper1(`accordion-info-${objOpen}`,"accordion-open","accordion-close")
+                }
             }
         }
-        if(idParam!==objOpen){
-            setObjOpen(idParam)
-            helper1(`accordion${idParam}`,"accordion-close","accordion-open")
+        if(!isDesktop){
+            if(idParam!==objOpen){
+                setObjOpen(idParam)
+                helper1(`accordion${idParam}`,"accordion-close","accordion-open")
+            }
+        }else{
+            if(idParam!==objOpen){
+                setObjOpen(idParam)
+                helper1(`accordion-info-${idParam}`,"accordion-close","accordion-open")
+            }
         }
 
         // -------------------------------------------------------------------------------------------------------------
@@ -102,13 +122,14 @@ export default function Accordion(){
         }
     }
 
+    const isDesktop = useMediaQuery("(min-width:1024px")
 
     return(
-        <div className="accordion-container">
+        <div className={`accordion-container ${isDesktop?"desk":"mobile"}`}>
             {arrayAccordion.map((obj,i)=>{
                 return(
                     <div key={i} style={{borderBottom:i+1!==arrayAccordion.length&&"1px solid #FFF0D9"}}>
-                        <div className="card-accordion" onClick={()=>{onClickAccordion(i)}}>
+                        <div className="card-accordion" onClick={()=>{obj.array.length!==0 && onClickAccordion(i)}}>
                             <h2>{obj.title}</h2>
                             {obj.array.length!==0&&
                                 <>
@@ -117,13 +138,26 @@ export default function Accordion(){
                                 </>
                             }
                         </div>
-                        <div id={`accordion${i}`} className={`accordion${i} accordion-close`}>
-                            {obj.array.map((obj,ii)=>{
-                                return(
-                                    <h3 key={ii}>{obj}</h3>
-                                )
-                            })}
-                        </div>
+                        {!isDesktop ? 
+                            <div id={`accordion${i}`} className={`accordion${i} accordion-close`}>
+                                {obj.array.map((obj,ii)=>{
+                                    return(
+                                        <h3 key={ii}>{obj}</h3>
+                                    )
+                                })}
+                            </div>
+                        :
+                            <div id={`accordion-info-${i}`} className="accordion-info accordion-close">
+                                <div id={`accordion${i}`} className="accordion">
+                                    {obj.array.map((obj,ii)=>{
+                                        return(
+                                            <h3 key={ii}>{obj}</h3>
+                                        )
+                                    })}
+                                </div>
+                                <div className="info"></div>
+                            </div>
+                        }
                     </div>
                 )
             })}
