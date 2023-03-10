@@ -11,6 +11,7 @@ import { useEffect, useState } from "react"
 import { useMediaQuery } from "@mui/material"
 
 import backArrow from "../assets/back-arrow.svg"
+import logoVertical from "../assets/logo-vertical.svg"
 
 export default function Navbar({menuOpen,setMenuOpen}) {
     const navigate=useNavigate()
@@ -122,9 +123,14 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                         <img src={subLogo2} alt="ENVELOPE" />
                 </div>
                 {isDesktop &&
-                    <div className="back-arrow" onClick={()=>setMenuOpen(false)}>
-                        <img src={backArrow} alt="BACK" />
-                    </div>
+                    <>
+                        <div className="back-arrow" onClick={()=>setMenuOpen(false)}>
+                            <img src={backArrow} alt="BACK" />
+                        </div>
+                        <div className={`logo-vertical`} style={{display:!menuOpen&&"none"}}>
+                            <img src={logoVertical} alt="LOGO" />
+                        </div>
+                    </>
                 }
             </div>
             {isDesktop && menuOpen &&
