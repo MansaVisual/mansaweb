@@ -6,6 +6,7 @@ import Accordion from "../Components/Accordion"
 import Ourteam from "../Components/OurTeam"
 import { useEffect, useState } from "react"
 import { PopupModal } from "react-calendly"
+import { useMediaQuery } from "@mui/material"
 
 const Home = ({menuOpen,setMenuOpen}) =>{
 
@@ -21,6 +22,8 @@ const Home = ({menuOpen,setMenuOpen}) =>{
             behavior: "auto",
         });
     }, [])
+
+    const isDesktop = useMediaQuery("(min-width:1024px")
 
     return(
         <div className="home-container">
@@ -42,9 +45,9 @@ const Home = ({menuOpen,setMenuOpen}) =>{
             {popUpBack && <div className="popUp-calendly"></div>}
 
             <div className="home-container-2">
-                <div className="first-box gradient-background" onClick={()=>{setPopUp(true);setPopUpBack(true)}}>
+                <div className={`first-box gradient-background ${isDesktop?"desk":""}`} onClick={()=>{setPopUp(true);setPopUpBack(true)}}>
                     <h2>Web Development & Design Agency</h2>
-                    <p>We create experiences and build products all together. We make your business grow</p>
+                    <p>We create experiences and build products all together. We make your business grow.</p>
                     <p className="link">Schedule a meeting here</p>
                 </div>
                 

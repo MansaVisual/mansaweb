@@ -45,6 +45,23 @@
                 &.link{
                     text-decoration: underline;
                     cursor: pointer;
+                    font-weight: 600;
+                }
+            }
+            &.desk{
+                margin-top: 136px;
+                h2{
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 150%;
+                    &.link{
+                        font-weight: 700
+                    }
                 }
             }
         }
@@ -66,6 +83,11 @@
             }
             &.team{
                 margin-top: 64px;
+            }
+            &.desk{
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 79px;
             }
         }
         .button-schedule{
@@ -248,9 +270,11 @@
     }
     30% {
       transform: rotate(5deg);
+      opacity: 0.5;
     }
     40% {
       transform: rotate(-1deg);
+      opacity: 1;
     }
     50% {
       transform: rotate(0);
