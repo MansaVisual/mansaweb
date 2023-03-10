@@ -7,6 +7,7 @@ import Ourteam from "../Components/OurTeam"
 import { useEffect, useState } from "react"
 import { PopupModal } from "react-calendly"
 import { useMediaQuery } from "@mui/material"
+import logoFoot from "../assets/logo-footer.svg"
 
 const Home = ({menuOpen,setMenuOpen}) =>{
 
@@ -74,12 +75,20 @@ const Home = ({menuOpen,setMenuOpen}) =>{
                 <Ourteam/>
 
             </div>
-            <div className="footer gradient-background">
-                <p>2023 Mansa Visual. All Rights Reserved.</p>
-                <p>
-                    Terms Of Use. Privacy Policy
-                </p>
-            </div>
+            {!isDesktop ?
+                <div className="footer gradient-background">
+                    <p>2023 Mansa Visual. All Rights Reserved.</p>
+                    <p>
+                        Terms Of Use. Privacy Policy
+                    </p>
+                </div>
+            :
+                <div className="footer">
+                    <p>info@mansa-studio.com</p>
+                    <img src={logoFoot} alt="LOGO" />
+                    <p>© 2023 Mansa. All Rights Reserved</p>
+                </div>
+            }
         </div>
     )
 }
