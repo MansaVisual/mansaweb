@@ -40,36 +40,14 @@
         }
         .title{
             font-family: $font-saira;
-            font-weight: 500;
-            font-size: 30px;
-            line-height: 47px;
             color: $black-color;
             margin: auto;
             width: -webkit-fit-content;
             width: -moz-fit-content;
             width: fit-content;
-            &.services{
-                margin-top: 75px;
-            }
-            &.clients{
-                margin-top: 64px;
-            }
-            &.team{
-                margin-top: 64px;
-            }
-            &.desk{
-                font-weight: 600;
-                font-size: 50px;
-                line-height: 79px;
-            }
         }
         .button-schedule{
-            border-radius: 3px;
-            padding: 17px 0px;
             font-family: $font-saira;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 21px;
             color: $primary-color;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -80,13 +58,11 @@
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            margin-top: 30px;
             cursor: pointer;
             -webkit-transition: 0.5s;
             -o-transition: 0.5s;
             transition: 0.5s;
             &:hover{
-                font-size: 20px;
                 -webkit-transition: 0.5s;
                 -o-transition: 0.5s;
                 transition: 0.5s;
@@ -104,12 +80,7 @@
         }
         .ourTeam-description{
             font-family: $font-nunito;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 32px;
             color: $black-color;
-            margin-top: 13px;
-            padding: 0px 8px;
         }
     }
     &.desk{
@@ -131,6 +102,38 @@
                         font-weight: 700
                     }
                 }
+            }
+            .title{
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 79px;
+                &.services{
+                    margin-top: 70px;
+                }
+                &.clients{
+                    margin-top: 70px;
+                }
+                &.team{
+                    margin-top: 70px;
+                }
+            }
+            .button-schedule{
+                font-weight: 600;
+                font-size: 21.501px;
+                line-height: 30px;
+                padding: 25px 370px;
+                margin-top: 70px;
+                &:hover{
+                    font-size: 22.5px;
+                }
+            }
+            .ourTeam-description{
+                font-weight: 300;
+                font-size: 28px;
+                line-height: 150%;
+                margin: 0px 83px;
+                text-align: center;
+                margin-top: 40px;
             }
         }
     }
@@ -154,6 +157,38 @@
                         font-weight: 600;
                     }
                 }
+            }
+            .title{
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 47px;
+                &.services{
+                    margin-top: 75px;
+                }
+                &.clients{
+                    margin-top: 64px;
+                }
+                &.team{
+                    margin-top: 64px;
+                }
+            }
+            .button-schedule{
+                border-radius: 3px;
+                padding: 17px 0px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 21px;
+                margin-top: 30px;
+                &:hover{
+                    font-size: 20px;
+                }
+            }
+            .ourTeam-description{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 32px;
+                margin-top: 13px;
+                padding: 0px 8px;
             }
         }
     }
