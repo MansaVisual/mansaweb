@@ -47,7 +47,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
     
     return(
         <>
-            <div className={`navbar-container ${isDesktop&&"navbar-desk"} ${menuOpen ? "menuOpen" : "menuClose"}`}>
+            <div className={`navbar-container ${isDesktop&&"navbar-desk"} ${menuOpen ? isDesktop?"menuOpen-desk":"menuOpen-mobile" : "menuClose"}`}>
                 <div alt="LOGO"
                     onClick={()=>{
                         if(window.location.pathname==="/Contact"){
@@ -120,7 +120,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                         <img src={subLogo2} alt="ENVELOPE" />
                 </div>
                 {isDesktop &&
-                    <div className="back-arrow" onClick={()=>setMenuOpen(!menuOpen)}>
+                    <div className="back-arrow" onClick={()=>setMenuOpen(false)}>
                         <img src={backArrow} alt="BACK" />
                     </div>
                 }

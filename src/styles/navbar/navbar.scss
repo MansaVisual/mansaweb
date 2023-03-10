@@ -10,7 +10,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     text-align: center;
-    z-index: 3;
+    z-index: 103;
     position: absolute;
     .logo-menu-close{
         width: 100%;
@@ -36,13 +36,20 @@
         background-repeat: no-repeat;
         text-align: start;
     }
-    &.menuOpen{
+    &.menuOpen-mobile{
         position: fixed;
         top:0;
-        z-index: 101;
+        width: 100%;
+    }
+    &.menuOpen-desk{
+        position: fixed;
+        top:0;
+        right: 0;
+        width: 30%;
     }
     .hamburger{
         margin: auto 0px;
+        z-index: 102;
         .bar2::before{
             background-color: black !important;
         }
@@ -61,13 +68,11 @@
 .menu{
     position: fixed;
     top:0;
-    z-index: 100;
+    z-index: 102;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
     overflow: hidden;
-    background: -o-linear-gradient(317.35deg, #414141 19.85%, #101010 73.97%);
-    background: linear-gradient(132.65deg, #414141 19.85%, #101010 73.97%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -116,6 +121,8 @@
     &.menu-close-mobile{
         height: 0px;
         width: 100vw;
+        background: -o-linear-gradient(317.35deg, #414141 19.85%, #101010 73.97%);
+        background: linear-gradient(132.65deg, #414141 19.85%, #101010 73.97%);
         h4{
             height: 0px;
         }
@@ -129,6 +136,8 @@
     &.menu-open-mobile{
         height: 100vh;
         width: 100vw;
+        background: -o-linear-gradient(317.35deg, #414141 19.85%, #101010 73.97%);
+        background: linear-gradient(132.65deg, #414141 19.85%, #101010 73.97%);
         h4{
             height: 94px;
         }
@@ -144,6 +153,7 @@
         right: 0;
         height: 100vh;
         box-shadow: -10px 0px 12px 1px rgba(0, 0, 0, 0.25);
+        background-color: #1D1D1D;
         h4{
             height: 94px;
         }
