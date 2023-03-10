@@ -26,7 +26,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
     const isDesktop = useMediaQuery("(min-width:1024px")
 
     return(
-        <div className="home-container">
+        <div className={`home-container ${isDesktop?"desk":"mobile"}`}>
             <Banner/>
 
             <div className="button-calendly" onClick={() => {setPopUp(true);setPopUpBack(true)}}>

@@ -13,7 +13,6 @@
     -ms-flex-direction: column;
     flex-direction: column;
     .home-container-2{
-        margin: 0px 16px;
         .first-box{
             display: -webkit-box;
             display: -ms-flexbox;
@@ -25,43 +24,17 @@
             -webkit-box-align: start;
             -ms-flex-align: start;
             align-items: flex-start;
-            margin-top: 64px;
-            padding: 24px;
             h2{
                 font-family: $font-nunito;
-                font-weight: 700;
-                font-size: 18px;
-                line-height: 25px;
                 color: $primary-color;
                 margin-bottom: 6px;
             }
             p{
                 font-family: $font-nunito;
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 26px;
-                letter-spacing: 0.03em;
                 color: $primary-color;
                 &.link{
                     text-decoration: underline;
                     cursor: pointer;
-                    font-weight: 600;
-                }
-            }
-            &.desk{
-                margin-top: 136px;
-                h2{
-                    font-weight: 700;
-                    font-size: 22px;
-                    line-height: 30px;
-                }
-                p{
-                    font-weight: 400;
-                    font-size: 22px;
-                    line-height: 150%;
-                    &.link{
-                        font-weight: 700
-                    }
                 }
             }
         }
@@ -137,6 +110,51 @@
             color: $black-color;
             margin-top: 13px;
             padding: 0px 8px;
+        }
+    }
+    &.desk{
+        .home-container-2{
+            margin: 0px 20px;
+            .first-box{
+                margin-top: 136px;
+                padding: 28px 62px;
+                h2{
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 150%;
+                    &.link{
+                        font-weight: 700
+                    }
+                }
+            }
+        }
+    }
+    &.mobile{
+        .home-container-2{
+            margin: 0px 16px;
+            .first-box{
+                margin-top: 64px;
+                padding: 24px;
+                h2{
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 26px;
+                    letter-spacing: 0.03em;
+                    &.link{
+                        font-weight: 600;
+                    }
+                }
+            }
         }
     }
 }
