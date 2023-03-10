@@ -1,30 +1,64 @@
 .banner-container{
     z-index: -2;
     width: 100%;
-    min-height: 440px;
     background-image: url("../../assets/portada.svg");
     background-repeat: no-repeat;
     background-position: 70%;
     background-size: cover;
-    padding-top: 72px;
-    padding-left: 16px;
     .title{
         h1{
             font-family: $font-saira;
-            font-weight: 500;
-            font-size: 40px;
-            line-height: 58px;
+
             color: $primary-color;
         }
     }
-    .subtititle{
+    .subtitle{
       margin: 24px 16px 16px 1px;
       font-family: $font-nunito;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 32px;
       color: $white-color;
+      font-style: normal;
     }
+
+    &.desk{
+      background-position-y: 20%;
+      min-height: 540px;
+      padding-top: 92px;
+      padding-left: 83px;
+      .title{
+        h1{
+          font-weight: 600;
+          font-size: 64px;
+          line-height: 76px;
+        }
+      }
+      .subtitle{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 33px;
+        max-width: 547px;
+        margin-bottom: 37px;
+      }
+    }
+
+    
+    &.mobile{
+      min-height: 440px;
+      padding-top: 72px;
+      padding-left: 16px;
+      .title{
+        h1{
+          font-weight: 500;
+          font-size: 40px;
+          line-height: 58px;
+        }
+      }
+      .subtititle{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+
     @keyframes scrollDown {
         0% {
           top: 20px;
@@ -67,6 +101,50 @@
         opacity: 0;
       }
   }
+
+  @keyframes scrollDown-desk {
+    0% {
+      top: 5px;
+      height: 4px;
+      opacity: 1;
+    }
+    33% {
+      top: 10px;
+      height: 4px;
+    }
+    66% {
+      top: 15px;
+      height: 6px;
+      opacity: 1;
+    }
+    100% {
+      top: 20px;
+      height: 8px;
+      opacity: 0;
+    }
+}
+@-webkit-keyframes scrollDown-desk {
+  0% {
+    top: 5px;
+    height: 4px;
+    opacity: 1;
+  }
+  33% {
+    top: 10px;
+    height: 4px;
+  }
+  66% {
+    top: 15px;
+    height: 6px;
+    opacity: 1;
+  }
+  100% {
+    top: 20px;
+    height: 8px;
+    opacity: 0;
+  }
+}
+
   .mouse-container{
     margin-left: -16px;
     @include max_screen(370){
@@ -93,8 +171,18 @@
         height: 2px;
         background: #fff;
         border-radius: 10px;
-        -webkit-animation: scrollDown 1.5s linear infinite;
-        animation: scrollDown 1.5s linear infinite;
+      }
+      &.desk{
+        &::before{
+          -webkit-animation: scrollDown-desk 1.5s linear infinite;
+          animation: scrollDown-desk 1.5s linear infinite;
+        }
+      }
+      &.mobile{
+        &::before{
+          -webkit-animation: scrollDown 1.5s linear infinite;
+          animation: scrollDown 1.5s linear infinite;
+        }
       }
     }
   }
