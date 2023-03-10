@@ -39,7 +39,7 @@
     &.menuOpen{
         position: fixed;
         top:0;
-        z-index: 99999;
+        z-index: 101;
     }
     .hamburger{
         margin: auto 0px;
@@ -61,7 +61,7 @@
 .menu{
     position: fixed;
     top:0;
-    z-index: 9999;
+    z-index: 100;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
@@ -161,6 +161,14 @@
             width: 358px;
         }
     }
+    .back-arrow{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 78px;
+        padding-top: 22px;
+        z-index: 9999;
+    }
 }
 
 .fonto-navbar-desk{
@@ -170,5 +178,5 @@
     top: 0;
     width: 100%;
     height: 110vh;
-    z-index: 100;
+    z-index: 90;
 }

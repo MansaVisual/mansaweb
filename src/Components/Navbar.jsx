@@ -4,12 +4,13 @@ import logo2 from "../assets/logo2.svg"
 import logo3 from "../assets/logo3.svg"
 import logo1desk from "../assets/logo1-desk.svg"
 import logo2desk from "../assets/logo2-desk.svg"
-import logo3desk from "../assets/logo1-desk.svg"
 import subLogo1 from "../assets/linkedinWhite.svg"
 import subLogo2 from "../assets/envelope.svg"
 import subLogo3 from "../assets/calendar.svg"
 import { useEffect, useState } from "react"
 import { useMediaQuery } from "@mui/material"
+
+import backArrow from "../assets/back-arrow.svg"
 
 export default function Navbar({menuOpen,setMenuOpen}) {
     const navigate=useNavigate()
@@ -118,6 +119,11 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                         <img src={subLogo3} alt="CALENDAR" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}/>
                         <img src={subLogo2} alt="ENVELOPE" />
                 </div>
+                {isDesktop &&
+                    <div className="back-arrow" onClick={()=>setMenuOpen(!menuOpen)}>
+                        <img src={backArrow} alt="BACK" />
+                    </div>
+                }
             </div>
             {isDesktop && menuOpen &&
                 <div className="fonto-navbar-desk" onClick={()=>setMenuOpen(!menuOpen)}></div>
