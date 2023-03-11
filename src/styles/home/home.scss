@@ -24,6 +24,7 @@
             -webkit-box-align: start;
             -ms-flex-align: start;
             align-items: flex-start;
+            cursor: pointer;
             h2{
                 font-family: $font-nunito;
                 color: $primary-color;
@@ -285,6 +286,7 @@
     z-index: 99;
     font-size: 16px;
     line-height: 1.2em;
+    cursor: pointer;
     div{
         background: rgb(0, 162, 255);
         color: rgb(255, 255, 255);

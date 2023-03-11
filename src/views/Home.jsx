@@ -84,7 +84,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
                 </div>
             :
                 <div className="footer">
-                    <p onClick={()=>window.location=`mailto:info@mansa-studio.com`}>info@mansa-studio.com</p>
+                    <p onClick={()=>window.location=`mailto:info@mansa-studio.com`} className="mail-footer">info@mansa-studio.com</p>
                     <img src={logoFoot} alt="LOGO" onClick={()=>{
                             window.scrollTo({
                                 top: 0,
