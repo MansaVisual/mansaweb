@@ -14,7 +14,7 @@ export default function Form(){
         description:""
     })
     
-    const arrayForm=[
+    const arrayFormMobile=[
         {
             title:"Name",
             form:"name",
@@ -33,6 +33,34 @@ export default function Form(){
         {
             title:"Company Name",
             form:"company",
+            optional:true
+        },
+        {
+            title:"Describe your project in short",
+            form:"description",
+            optional:false
+        },
+    ]
+
+    const arrayFormDesk=[
+        {
+            title:"Name",
+            form:"name",
+            optional:false
+        },
+        {
+            title:"Company Name",
+            form:"company",
+            optional:true
+        },
+        {
+            title:"Email",
+            form:"mail",
+            optional:false
+        },
+        {
+            title:"Phone",
+            form:"phone",
             optional:true
         },
         {
@@ -130,15 +158,15 @@ export default function Form(){
             }
             {!isDesktop ?
                 <FormMobile 
-                    mailSend={mailSend} arrayForm={arrayForm} setForm={setForm} form={form} setErrorDescription={setErrorDescription} setErrorMail={setErrorMail}
+                    mailSend={mailSend} arrayFormMobile={arrayFormMobile} setForm={setForm} form={form} setErrorDescription={setErrorDescription} setErrorMail={setErrorMail}
                     setErrorValidate={setErrorValidate} errorName={errorName} errorValidate={errorValidate} errorMail={errorMail} errorDescription={errorDescription}
-                    clickButton={clickButton} handleClick={handleClick} setClickButton={setClickButton} setMailSend={setMailSend}
+                    clickButton={clickButton} handleClick={handleClick} setClickButton={setClickButton} setMailSend={setMailSend} arrayFormDesk={arrayFormDesk}
                 />
             :
                 <FormDesk 
-                    mailSend={mailSend} arrayForm={arrayForm} setForm={setForm} form={form} setErrorDescription={setErrorDescription} setErrorMail={setErrorMail}
+                    mailSend={mailSend} setForm={setForm} form={form} setErrorDescription={setErrorDescription} setErrorMail={setErrorMail}
                     setErrorValidate={setErrorValidate} errorName={errorName} errorValidate={errorValidate} errorMail={errorMail} errorDescription={errorDescription}
-                    clickButton={clickButton} handleClick={handleClick} setClickButton={setClickButton} setMailSend={setMailSend}
+                    clickButton={clickButton} handleClick={handleClick} setClickButton={setClickButton} setMailSend={setMailSend} arrayFormDesk={arrayFormDesk}
                 />
             }
         </div>
