@@ -1,41 +1,23 @@
 .form-container{
     background-color: $contrast-primary-dark;
-    padding: 42px 16px 21px 16px;
-    margin-top: 36px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    .title{
-        font-family: $font-saira;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 29px;
-        color: $primary-color;
-    }
     .subtitle{
         font-family: $font-nunito;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 32px;
         color: $primary-color;
-        margin-top: 28px;
         span{
             font-weight: 900;
         }
     }
     .form{
-        margin-top: 10px;
-        margin-bottom: 20px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -43,8 +25,6 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        gap: 10px;
-        width: 100%;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
@@ -203,6 +183,48 @@
             .try-again{
                 text-decoration: underline;
             }
+        }
+    }
+    &.desk{
+        padding: 32px 73px 55px 73px;
+        -webkit-box-align: flex-start;
+        -ms-flex-align: flex-start;
+        align-items: flex-start;
+        .subtitle{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 32px;
+            width: 795px;
+        }
+        .form{
+            margin-top: 12px;
+            margin-bottom: 24px;
+        }
+    }
+    &.mobile{
+        padding: 42px 16px 21px 16px;
+        margin-top: 36px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .title{
+            font-family: $font-saira;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 29px;
+            color: $primary-color;
+        }
+        .subtitle{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 32px;
+            margin-top: 28px;
+        }
+        .form{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            gap: 10px;
+            width: 100%;
         }
     }
 }
