@@ -1,59 +1,34 @@
 .contact-container{
     .contact-container-2{
-        padding: 58px 16px 0px 16px;
         h2{
             font-family: $font-saira;
             color: $black-color;
             margin-bottom: 24px;
-            font-weight: 600;
-            font-size: 22px;
-            line-height: 29px;
         }
         .description{
             font-family: $font-nunito;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 32px;
             color: $black-color;
         }
 
         .contacts{
-            margin-top: 28px;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            gap: 18px;
             div{
                 h3{
                     font-family: $font-saira;
-                    font-weight: 500;
-                    font-size: 22px;
-                    line-height: 29px;
                     color: $black-color;
                 }
                 div{
                     display: -webkit-box;
                     display: -ms-flexbox;
                     display: flex;
-                    img{
-                        margin-right: 7px;
-                    }
                     h3{
                         font-family: $font-saira;
-                        font-weight: 600;
-                        font-size: 16px;
-                        line-height: 22px;
                         color: $black-color-2-disabled;
                     }
                     h4{
                         font-family: $font-saira;
-                        font-weight: 400;
-                        font-size: 16px;
-                        line-height: 22px;
                         color: #767676;
                     }
                     .mail{
@@ -86,5 +61,111 @@
     }
     .footer-contact{
         margin-top: 0px;
+    }
+
+    &.desk{
+        .contact-container-2{
+            padding: 126px 83px 70px 83px;
+            h2{
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 79px;
+            }
+            .description{
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 32px;
+                width: 545px;
+            }
+            .contacts{
+                margin-top: 57px;
+                gap: 24px;
+                flex-direction: row;
+                div{
+                    h3{
+                        font-weight: 600;
+                        font-size: 22px;
+                        line-height: 29px;
+                        margin-bottom: 8px;
+                    }
+                    div{
+                        width: 270px;
+                        img{
+                            margin-right: 8px;
+                        }
+                        h3{
+                            font-family: $font-saira;
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $black-color-2-disabled;
+                        }
+                        h4{
+                            font-family: $font-saira;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: #767676;
+                            margin-bottom: 8px;
+                        }
+                        .mail{
+                            color:#43AFC2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.mobile{
+        .contact-container-2{
+            padding: 58px 16px 0px 16px;
+            h2{
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 29px;
+            }
+            .description{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 32px;
+            }
+            .contacts{
+                margin-top: 28px;
+                gap: 18px;
+                flex-direction: column;
+                div{
+                    h3{
+                        font-weight: 500;
+                        font-size: 22px;
+                        line-height: 29px;
+                        margin-bottom: 8px;
+                    }
+                    div{
+                        img{
+                            margin-right: 7px;
+                        }
+                        h3{
+                            font-family: $font-saira;
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $black-color-2-disabled;
+                            margin-bottom: 4px
+                        }
+                        h4{
+                            font-family: $font-saira;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: #767676;
+                            margin-bottom: 4px
+                        }
+                        .mail{
+                            color:#43AFC2;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

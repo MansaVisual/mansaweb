@@ -5,6 +5,7 @@ import eua from "../assets/united-states.svg"
 import Form from "../Components/Form"
 import con1 from "../assets/contact-1.svg"
 import con2 from "../assets/contact-2.svg"
+import { useMediaQuery } from "@mui/material"
 
 const Contact = ({menuOpen,setMenuOpen}) =>{
 
@@ -42,8 +43,10 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
         // },
     ]
 
+    const isDesktop = useMediaQuery("(min-width:1024px")
+
     return(
-        <div className="contact-container">
+        <div className={`contact-container ${isDesktop?"desk":"mobile"}`}>
             <div className="contact-container-2">
                 <h2>Contact us</h2>
                 <p className="description">
