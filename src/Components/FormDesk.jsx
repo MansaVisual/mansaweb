@@ -54,8 +54,8 @@ export default function FormDesk({mailSend,arrayFormDesk,setForm,form,setErrorVa
                         })}
                     </div>
                     <p className="text-form">By submitting this form I consent to having Mansa Studio collect and process my personal details and agree with <span style={{color:"#E9696A"}}>Privacy policy.</span></p>
-                    <button className="button">
-                        {!clickButton&&<p onClick={()=>handleClick()}>Send</p>}
+                    <button className="button" onClick={()=>!clickButton&&handleClick()}>
+                        {!clickButton&&<p>Send</p>}
                         {clickButton&&<div className="button-loader"></div>}
                     </button>
                 </>
@@ -67,10 +67,24 @@ export default function FormDesk({mailSend,arrayFormDesk,setForm,form,setErrorVa
                     <p>Please <span className="try-again" onClick={()=>{
                         setClickButton(false)
                         setMailSend(null)
+                        setForm({
+                            mail:"",
+                            name:"",
+                            phone:"",
+                            company:"",
+                            description:""
+                        })
                     }}>try again</span></p>
                     <button className="button" onClick={()=>{
                         setClickButton(false)
                         setMailSend(null)
+                        setForm({
+                            mail:"",
+                            name:"",
+                            phone:"",
+                            company:"",
+                            description:""
+                        })
                     }}>
                         Try again
                     </button>

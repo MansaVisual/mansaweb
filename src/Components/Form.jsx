@@ -159,13 +159,13 @@ export default function Form(){
             {!isDesktop ?
                 <FormMobile 
                     mailSend={mailSend} arrayFormMobile={arrayFormMobile} setForm={setForm} form={form} setErrorDescription={setErrorDescription} setErrorMail={setErrorMail}
-                    setErrorValidate={setErrorValidate} errorName={errorName} errorValidate={errorValidate} errorMail={errorMail} errorDescription={errorDescription}
+                    setErrorValidate={setErrorValidate} setErrorName={setErrorName} errorName={errorName} errorValidate={errorValidate} errorMail={errorMail} errorDescription={errorDescription}
                     clickButton={clickButton} handleClick={handleClick} setClickButton={setClickButton} setMailSend={setMailSend} arrayFormDesk={arrayFormDesk}
                 />
             :
                 <FormDesk 
                     mailSend={mailSend} setForm={setForm} form={form} setErrorDescription={setErrorDescription} setErrorMail={setErrorMail}
-                    setErrorValidate={setErrorValidate} errorName={errorName} errorValidate={errorValidate} errorMail={errorMail} errorDescription={errorDescription}
+                    setErrorValidate={setErrorValidate} setErrorName={setErrorName} errorName={errorName} errorValidate={errorValidate} errorMail={errorMail} errorDescription={errorDescription}
                     clickButton={clickButton} handleClick={handleClick} setClickButton={setClickButton} setMailSend={setMailSend} arrayFormDesk={arrayFormDesk}
                 />
             }
