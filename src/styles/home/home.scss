@@ -144,11 +144,18 @@
         }
         .footer{
             display: flex;
+            padding: 0px 22px;
+            margin-top: 89px;
+            margin-bottom: 28px;
+            justify-content: space-between;
             p{
                 font-weight: 400;
                 font-size: 11.3478px;
                 line-height: 15px;
                 color: black;
+            }
+            img{
+                padding: 8px;
             }
         }
     }

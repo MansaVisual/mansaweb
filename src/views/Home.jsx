@@ -84,8 +84,14 @@ const Home = ({menuOpen,setMenuOpen}) =>{
                 </div>
             :
                 <div className="footer">
-                    <p>info@mansa-studio.com</p>
-                    <img src={logoFoot} alt="LOGO" />
+                    <p onClick={()=>window.location=`mailto:info@mansa-studio.com`}>info@mansa-studio.com</p>
+                    <img src={logoFoot} alt="LOGO" onClick={()=>{
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth",
+                            })
+                        }
+                    }/>
                     <p>© 2023 Mansa. All Rights Reserved</p>
                 </div>
             }

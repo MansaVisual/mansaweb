@@ -94,7 +94,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                 <div className="navbar-bar">
                     {array.map((obj,i)=>{
                         return(
-                            <h4 
+                            <h4 key={i}
                                 onClick={(e)=>{
                                     e.target.style.transition="1s"
                                     if(window.location.pathname!==`${obj.url}`){

@@ -74,7 +74,6 @@ export default function Ourteam() {
     return(
         <div className="ourTeam-container">
             {ourTeamArray.map((obj,i)=>{
-                console.log(i)
                 return(
                     <div className="card-team" key={i}>
                         <div>
