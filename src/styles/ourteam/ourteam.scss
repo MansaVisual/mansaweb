@@ -4,7 +4,6 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    gap: 16px 8px;
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
@@ -13,41 +12,85 @@
     align-items: flex-start;
     max-width: 540px;
     margin: auto;
-    margin-top: 60px;
     @include min_screen(770){
         max-width: none;
     }
     .card-team{
         position: relative;
-        max-width: 175px;
         overflow: hidden;
         .linkedin{
-            width: 19px;
-            height: 19px;
             position: absolute;
-            left: 8px;
-            top: 4px;
         }
         .name{
             font-family: $font-saira;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 21px;
             color: $full-black;
         }
         .rol{
             font-family: $font-saira;
-            font-weight: 600;
-            font-size: 13px;
-            line-height: 20px;
             color:#C5C5C5;
         }
         .mail{
             font-family: $font-saira;
-            font-weight: 400;
-            font-size: 13px;
-            line-height: 20px;
             color:#43AFC2;
+        }
+    }
+    &.desk{
+        gap: 16px 34px;
+        .card-team{
+            max-width: 188px;
+            width: 188px;
+            img{
+                width: 100%;
+            }
+            .linkedin{
+                width: 20px;
+                height: 37px;
+                left: 5px;
+                top: 8px;
+            }
+            .name{
+                font-weight: 500;
+                font-size: 20.6341px;
+                line-height: 22px;
+            }
+            .rol{
+                font-weight: 500;
+                font-size: 14.53px;
+                line-height: 20.75px;
+            }
+            .mail{
+                font-weight: 500;
+                font-size: 14.53px;
+                line-height: 20.75px;
+            }
+        }
+    }
+    &.mobile{
+        gap: 16px 8px;
+        margin-top: 60px;
+        .card-team{
+            max-width: 175px;
+            .linkedin{
+                width: 19px;
+                height: 19px;
+                left: 8px;
+                top: 4px;
+            }
+            .name{
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 21px;
+            }
+            .rol{
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 20px;
+            }
+            .mail{
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 20px;
+            }
         }
     }
 }

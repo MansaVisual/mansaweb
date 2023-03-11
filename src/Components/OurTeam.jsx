@@ -8,6 +8,7 @@ import foto_2 from "../assets/lucas2.svg"
 import foto_3 from "../assets/timoteo2.svg"
 import foto_4 from "../assets/denise2.svg"
 import linkedin from "../assets/linkedin.svg"
+import { useMediaQuery } from '@mui/material'
 
 export default function Ourteam() {
 
@@ -71,8 +72,10 @@ export default function Ourteam() {
         }, 2000);
     }, [changePhN]);
 
+    const isDesktop = useMediaQuery("(min-width:1024px")
+
     return(
-        <div className="ourTeam-container">
+        <div className={`ourTeam-container ${isDesktop?"desk":"mobile"}`}>
             {ourTeamArray.map((obj,i)=>{
                 return(
                     <div className="card-team" key={i}>
