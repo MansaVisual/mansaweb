@@ -23,6 +23,45 @@ $hamburger-thickness:2px;
     user-select: none;
 }
 
+.footer{
+    width: 100%;
+    p{
+        font-family: $font-nunito;
+    }
+}
+.desk{
+    .footer{
+        display: flex;
+        padding: 0px 22px;
+        margin-top: 89px;
+        margin-bottom: 28px;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            font-weight: 400;
+            font-size: 11.3478px;
+            line-height: 15px;
+            color: black;
+        }
+        img{
+            padding: 8px 100px;
+        }
+    }
+}
+.mobile{
+    .footer{
+        padding: 29.5px 47.5px 29.5px 16px;
+        margin-top: 64px;
+        p{
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 26px;
+            letter-spacing: 0.03em;
+            color: $primary-color;
+        }
+    }
+}
+
 @import "./navbar/navbar.scss";
 @import "./banner/banner.scss";
 @import "./home/home.scss";

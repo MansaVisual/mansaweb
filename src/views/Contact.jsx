@@ -6,6 +6,7 @@ import Form from "../Components/Form"
 import con1 from "../assets/contact-1.svg"
 import con2 from "../assets/contact-2.svg"
 import { useMediaQuery } from "@mui/material"
+import logoFoot from "../assets/logo-footer.svg"
 
 const Contact = ({menuOpen,setMenuOpen}) =>{
 
@@ -78,12 +79,26 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
 
             </div>
             <Form/>
-            <div className="footer footer-contact gradient-background">
-                <p>2023 Mansa Visual. All Rights Reserved.</p>
-                <p>
-                    Terms Of Use. Privacy Policy
-                </p>
-            </div>
+            {!isDesktop ? 
+                <div className="footer footer-contact gradient-background">
+                    <p>2023 Mansa Visual. All Rights Reserved.</p>
+                    <p>
+                        Terms Of Use. Privacy Policy
+                    </p>
+                </div>
+            :
+                <div className="footer">
+                    <p onClick={()=>window.location=`mailto:info@mansa-studio.com`}>info@mansa-studio.com</p>
+                    <img src={logoFoot} alt="LOGO" onClick={()=>{
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth",
+                            })
+                        }
+                    }/>
+                    <p>© 2023 Mansa. All Rights Reserved</p>
+                </div>
+            }
         </div>
     )
 }
