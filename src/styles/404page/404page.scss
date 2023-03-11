@@ -80,4 +80,13 @@
             margin-left: 8px;
         }
     }
+    &.desk{
+        div{
+            max-width: 358px;
+            width: 358px;
+        }
+        .button{
+            margin-bottom: 175px;
+        }
+    }
 }
