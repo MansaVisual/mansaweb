@@ -31,68 +31,56 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        div {
-            width: 100%;
-            label {
-                color: $primary-color;
-                font-family: $font-nunito;
-                margin-left: 16px;
-                font-weight: 700;
-                font-size: 18px;
-                line-height: 25px;
-                .MuiInputLabel-asterisk{
-                    color: #FFF0D94D;
-                }
-            }
-            .MuiInputBase-inputMultiline{
-                color: $primary-color !important;
-                margin-left: 5px;
-            }
+        .line-form{
             div {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                div{
-                    border-bottom: 1px solid $primary-color;
-                    &:after{
-                        border-bottom: 2px solid $primary-color;
-                    }
-                    &::before{
-                        border-bottom: none !important;
+                label {
+                    color: $primary-color;
+                    font-family: $font-nunito;
+                    .MuiInputLabel-asterisk{
+                        color: #FFF0D94D;
                     }
                 }
-            }
-            .MuiInputBase-inputMultiline-error{
-                div{
-                    border-bottom: 1px solid $error-color !important;
-                    &:after{
-                        border-bottom: 2px solid $error-color;
-                    }
-                    &::before{
-                        border-bottom: none !important;
+                .MuiInputBase-inputMultiline{
+                    color: $primary-color !important;
+                }
+                div {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    div{
+                        border-bottom: 1px solid $primary-color;
+                        &:after{
+                            border-bottom: 2px solid $primary-color;
+                        }
+                        &::before{
+                            border-bottom: none !important;
+                        }
                     }
                 }
-            }
-            .label-error{
-                font-family: $font-nunito;
-                font-weight: 400;
-                font-size: 13px;
-                line-height: 15px;
-                color: $error-color;
-                min-height: 18px;
+                .MuiInputBase-inputMultiline-error{
+                    div{
+                        border-bottom: 1px solid $error-color !important;
+                        &:after{
+                            border-bottom: 2px solid $error-color;
+                        }
+                        &::before{
+                            border-bottom: none !important;
+                        }
+                    }
+                }
+                .label-error{
+                    font-family: $font-nunito;
+                    color: $error-color;
+                }
             }
         }
         .text-form{
             font-family: $font-nunito;
-            font-weight: 400;
-            font-size: 13px;
-            line-height: 26px;
             color: $white-color;
-            margin-top: 20px;
         }
         button{
             width: -webkit-fit-content;
@@ -106,6 +94,7 @@
             line-height: 21px;
             color: $primary-color;
             margin-top: 24px;
+            cursor: pointer;
 
             border: solid 2px transparent;
             background-image: -o-linear-gradient($primary-color,$primary-color), -o-linear-gradient(50deg, $primary-color, #43AFC2);
@@ -185,6 +174,7 @@
             }
         }
     }
+    
     &.desk{
         padding: 32px 73px 55px 73px;
         -webkit-box-align: flex-start;
@@ -199,6 +189,28 @@
         .form{
             margin-top: 12px;
             margin-bottom: 24px;
+            width: 100%;
+            .line-form{
+                display: flex;
+                flex-direction: row;
+                gap: 7px;
+                div{
+                    label {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 25px;
+                    }
+                    .label-error{
+                        min-height: 22px;
+                    }
+                }
+            }
+            .text-form{
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 26px;
+                margin-top: 56px;
+            }
         }
     }
     &.mobile{
@@ -225,6 +237,33 @@
             margin-bottom: 20px;
             gap: 10px;
             width: 100%;
+            .line-form{
+                width: 100%;
+                div{
+                    width: 100%;
+                    label {
+                        margin-left: 16px;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 25px;
+                    }
+                    .MuiInputBase-inputMultiline{
+                        margin-left: 5px;
+                    }
+                    .label-error{
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 15px;
+                        min-height: 18px;
+                    }
+                }
+            }
+            .text-form{
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 26px;
+                margin-top: 20px;
+            }
         }
     }
 }

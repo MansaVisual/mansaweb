@@ -1,50 +1,59 @@
-import { TextField } from "@mui/material"
 import tick from "../assets/form-tick.svg"
 import cross from "../assets/form-cross.svg"
 import eagle from "../assets/eagle-form.svg"
+import FormInputs from "./FormInputs"
+import { Fragment } from "react"
 
-export default function FormDesk({mailSend,arrayForm,setForm,form,setErrorValidate,setErrorMail,setErrorName,setErrorDescription,errorName,errorValidate,errorDescription,errorMail,clickButton,handleClick,setClickButton,setMailSend}){
+export default function FormDesk({mailSend,arrayFormDesk,setForm,form,setErrorValidate,setErrorMail,setErrorName,setErrorDescription,errorName,errorValidate,errorDescription,errorMail,clickButton,handleClick,setClickButton,setMailSend}){
+    
+    
     return(
         <div className="form desk">
             {mailSend===null &&
                 <>
-                    {arrayForm.map((obj,i)=>{
-                        return(
-                            <div key={i}>
-                                <TextField id={obj.title} variant="standard" label={`${obj.title}${!obj.optional?"*":""}`} 
-                                    onChange={(e)=>{
-                                        setForm({...form,[obj.form]:e.target.value})
-                                        if(obj.title==="Email"){
-                                            setErrorValidate(false)
-                                            setErrorMail(false)
-                                        }else if(obj.title==="Name"){
-                                            setErrorName(false)
-                                        }else if(obj.title==="Describe your project in short"){
-                                            setErrorDescription(false)
-                                        }
-                                    }}
-                                    multiline={true}
-                                    className={`
-                                        ${obj.title==="Email" && errorValidate ? "MuiInputBase-inputMultiline-error" : ""}
-                                        ${obj.title==="Email" && errorMail ? "MuiInputBase-inputMultiline-error" : ""}
-                                        ${obj.title==="Name" && errorName ? "MuiInputBase-inputMultiline-error" : ""}
-                                        ${obj.title==="Describe your project in short" && errorDescription ? "MuiInputBase-inputMultiline-error" : ""}
-                                    `}
-                                />
-                                {obj.title==="Email" && errorValidate && <span className="label-error">Incorrect email</span>}
-                                {obj.title==="Email" && errorMail && <span className="label-error">Please enter your email</span>}
-                                {obj.title==="Email" && !errorMail && !errorValidate && <div className="label-error"></div>}
-                                {obj.title==="Name" && errorName && <span className="label-error">Please enter your name</span>}
-                                {obj.title==="Name" && !errorName && <div className="label-error"></div>}
-                                {obj.title==="Describe your project in short" && errorDescription && <span className="label-error">Please enter a project's description</span>}
-                                {obj.title==="Describe your project in short" && !errorDescription && <div className="label-error"></div>}
-
-                                {obj.title==="Phone" && <div className="label-error"></div>}
-                                {obj.title==="Company Name" && <div className="label-error"></div>}
-                            </div>
-                        )
-                    })}
-                    <p className="text-form">By submitting this form I consent to having Mansa Studio collect and process my personal details and agree with Privacy policy.</p>
+                    <div className="line-form">
+                        {arrayFormDesk.map((obj,i)=>{
+                            return(
+                                <Fragment key={i}>
+                                    {i<2 &&
+                                        <FormInputs i={i} obj={obj} setErrorDescription={setErrorDescription} setErrorMail={setErrorMail} setErrorName={setErrorName}
+                                            setErrorValidate={setErrorValidate} setForm={setForm} form={form} errorDescription={errorDescription} errorMail={errorMail}
+                                            errorName={errorName} errorValidate={errorValidate}
+                                        />
+                                    }
+                                </Fragment>
+                            )
+                        })}
+                    </div>
+                    <div className="line-form">
+                        {arrayFormDesk.map((obj,i)=>{
+                            return(
+                                <Fragment key={i}>
+                                    {i>1 && i<4 &&
+                                        <FormInputs i={i} obj={obj} setErrorDescription={setErrorDescription} setErrorMail={setErrorMail} setErrorName={setErrorName}
+                                            setErrorValidate={setErrorValidate} setForm={setForm} form={form} errorDescription={errorDescription} errorMail={errorMail}
+                                            errorName={errorName} errorValidate={errorValidate}
+                                        />
+                                    }
+                                </Fragment>
+                            )
+                        })}
+                    </div>
+                    <div className="line-form">
+                        {arrayFormDesk.map((obj,i)=>{
+                            return(
+                                <Fragment key={i}>
+                                    {i===4 &&
+                                        <FormInputs i={i} obj={obj} setErrorDescription={setErrorDescription} setErrorMail={setErrorMail} setErrorName={setErrorName}
+                                            setErrorValidate={setErrorValidate} setForm={setForm} form={form} errorDescription={errorDescription} errorMail={errorMail}
+                                            errorName={errorName} errorValidate={errorValidate} last={true}
+                                        />
+                                    }
+                                </Fragment>
+                            )
+                        })}
+                    </div>
+                    <p className="text-form">By submitting this form I consent to having Mansa Studio collect and process my personal details and agree with <span style={{color:"#E9696A"}}>Privacy policy.</span></p>
                     <button className="button">
                         {!clickButton&&<p onClick={()=>handleClick()}>Send</p>}
                         {clickButton&&<div className="button-loader"></div>}
