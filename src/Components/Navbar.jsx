@@ -48,7 +48,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
     
     return(
         <>
-            <div className={`navbar-container ${isDesktop&&"navbar-desk"} ${menuOpen ? isDesktop?"menuOpen-desk":"menuOpen-mobile" : "menuClose"}`}>
+            <div className={`navbar-container ${isDesktop?"desk":"mobile"} ${menuOpen ? "menuOpen" : "menuClose"}`}>
                 <div alt="LOGO"
                     onClick={()=>{
                         if(window.location.pathname==="/Contact"){
@@ -64,7 +64,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                          <img src={!menuOpen && window.location.pathname==="/Contact" ? logo2 : menuOpen ? logo3:logo1} alt="LOGO" />
                     }
                 </div>
-                <button className={`hamburger hamburger--stack ${menuOpen&&"active"} ${isDesktop&&"inner-desk"}`} type="button"
+                <button className={`hamburger hamburger--stack ${menuOpen&&"active"}`} type="button"
                     onClick={()=>{
                         if(!isDesktop){
                             window.scrollTo({
@@ -75,7 +75,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                         setMenuOpen(!menuOpen)
                     }}
                 >
-                    <div className={`inner ${isDesktop&&"inner-desk"}`}
+                    <div className={`inner`}
                         onClick={()=>{
                             if(window.location.pathname==="/Contact" && menuBar){
                                 setMenuBar(false)
@@ -90,7 +90,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                     </div>
                 </button>
             </div>
-            <div className={`menu ${isDesktop&&"menu-desk"} ${menuOpen?isDesktop?"menu-open-desk":"menu-open-mobile":isDesktop?"menu-close-desk":"menu-close-mobile"}`}>
+            <div className={`menu ${isDesktop?"desk":"mobile"} ${menuOpen?"menu-open":"menu-close"}`}>
                 <div className="navbar-bar">
                     {array.map((obj,i)=>{
                         return(
@@ -117,7 +117,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                         )
                     })}
                 </div>
-                <div className={`navbar-logos ${isDesktop&&"desk"}`}>
+                <div className={`navbar-logos`}>
                         <img src={subLogo1} alt="LINKEDIN"/>
                         <img src={subLogo3} alt="CALENDAR" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}/>
                         <img src={subLogo2} alt="ENVELOPE" />
@@ -134,7 +134,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                 }
             </div>
             {isDesktop && menuOpen &&
-                <div className="fonto-navbar-desk" onClick={()=>setMenuOpen(!menuOpen)}></div>
+                <div className="fondo-navbar-desk" onClick={()=>setMenuOpen(!menuOpen)}></div>
             }
         </>
     )
