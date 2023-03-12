@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@mui/material"
-import { Fragment, useEffect, useState } from "react"
+import { Fragment, useState } from "react"
 import emailjs from "@emailjs/browser";
 import FormMobile from "./FormMobile";
 import FormDesk from "./FormDesk";
