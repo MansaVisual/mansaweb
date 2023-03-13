@@ -66,7 +66,7 @@ const Home = ({menuOpen,setMenuOpen}) =>{
                     Schedule Meeting
                 </span>
 
-                <div className="ourTeam-eagle">
+                <div className={`ourTeam-eagle ${isDesktop?"desk":"mobile"}`}>
                     <img src={eagle} alt="EAGLE" id="OurTeam"/>
                 </div>
 
