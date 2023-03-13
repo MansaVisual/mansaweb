@@ -37,6 +37,7 @@ $hamburger-thickness:2px;
         margin-bottom: 28px;
         justify-content: space-between;
         align-items: center;
+        position: relative;
         .mail-footer{
             cursor: pointer;
         }
@@ -47,6 +48,8 @@ $hamburger-thickness:2px;
             color: black;
         }
         img{
+            position: absolute;
+            bottom: 0;
             padding: 8px 100px;
             cursor: pointer;
         }
