@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 import { PopupModal } from "react-calendly"
 import { useMediaQuery } from "@mui/material"
 import logoFoot from "../assets/logo-footer.svg"
+import CarouselC from "../Components/CarouselC"
 
 const Home = ({menuOpen,setMenuOpen}) =>{
 
@@ -57,6 +58,8 @@ const Home = ({menuOpen,setMenuOpen}) =>{
                 <Accordion/>
 
                 <TitlesHome titleClass={"clients"} title={"Clients"}/>
+
+                <CarouselC/>
 
                 <span className="button-schedule gradient-background" onClick={()=>{setPopUp(true);setPopUpBack(true)}}>
                     <img src={calendar} alt="CALENDAR" />
