@@ -8,27 +8,33 @@ export default function Accordion(){
             title:"UX/UI Design",
             array:["Strategy workshop","Defining user person","Empathy mapping","Analyting competitor","Mind mapping & card sorting",
                 "Architecting information","Low difelity sketches","High fidelity wireframing","Defining UI guidelines"
-            ]        
+            ],
+            info:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
         },
         {
             title:"Web Development",
-            array:["Front-end development","Back-end development","UI/UX design","MVP development","QA testing","Maintenance & support"]        
+            array:["Front-end development","Back-end development","UI/UX design","MVP development","QA testing","Maintenance & support"],
+            info:"We offer you a combination of deep knowledge of flagship frameworks and expertise in creating pixel-perfect designs for top-notch user experiences. Build an outstanding application that’s perfectly compatible with any desktop device."
         },
         {
             title:"App Development",
-            array:["iOs App development","Android app development","React Native App development","Launch & deployment"]        
+            array:["iOs App development","Android app development","React Native App development","Launch & deployment"],
+            info:"We will take your project through a comprehensive app development process that comprises the following phases."
         },
         {
             title:"Branding",
-            array:["Design Logo", "Visual Design", "Tone of voice", "Identity manual"]        
+            array:["Design Logo", "Visual Design", "Tone of voice", "Identity manual"],
+            info:""
         },
         {
             title:"Data & Analytics",
-            array:["Brand Strategy", "Brand, sdfsd", "Load generatoru"]        
+            array:["Brand Strategy", "Brand, sdfsd", "Load generatoru"],
+            info:""
         },
         {
             title:"Marketing & Promotion",
-            array:["Google & Facebook Ads", "Social Media Strategy", "Content Design", "Marketing Planification"]        
+            array:["Google & Facebook Ads", "Social Media Strategy", "Content Design", "Marketing Planification"],
+            info:""
         }
     ]
 
@@ -157,7 +163,9 @@ export default function Accordion(){
                                         )
                                     })}
                                 </div>
-                                <div className="info"></div>
+                                <div className="info">
+                                    <p>{obj.info}</p>
+                                </div>
                             </div>
                         }
                     </div>

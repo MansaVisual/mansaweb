@@ -137,9 +137,13 @@
                 width: 315px;
             }
             .info{
-                width: 100px;
-                height: 100px;
-                background-color: red;
+                width: 429px;
+                font-weight: 500;
+                font-size: 16.3125px;
+                line-height: 35px;
+                color: $primary-color;
+                font-family: $font-nunito;
+                margin-left: 57px;
             }
         }
     }
