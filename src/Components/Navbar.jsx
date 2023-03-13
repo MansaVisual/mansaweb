@@ -118,9 +118,18 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                     })}
                 </div>
                 <div className={`navbar-logos`}>
-                        <img src={subLogo1} alt="LINKEDIN" onClick={()=>window.open("https://www.linkedin.com/company/mansavisualagency/")}/>
-                        <img src={subLogo3} alt="CALENDAR" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}/>
-                        <img src={subLogo2} alt="ENVELOPE" />
+                        <img src={subLogo1} alt="LINKEDIN" onClick={()=>{window.open("https://www.linkedin.com/company/mansavisualagency/")}}
+                            onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
+                            onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
+                        />
+                        <img src={subLogo3} alt="CALENDAR" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}
+                            onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
+                            onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
+                        />
+                        <img src={subLogo2} alt="ENVELOPE" 
+                            onMouseEnter={(e)=>{e.target.style.opacity="0.5";e.target.style.transition="0s"}}
+                            onMouseLeave={(e)=>{e.target.style.opacity="1";e.target.style.transition="1s"}}
+                        />
                 </div>
                 {isDesktop &&
                     <>
