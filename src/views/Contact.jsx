@@ -60,15 +60,15 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
                         return(
                             <div key={i}>
                                 <h3>{obj.provincia}</h3>
-                                <div>
+                                <div className="country">
                                     <img src={obj.bandera} alt="BANDERA" />
                                     <h3>{obj.pais}</h3>
                                 </div>
-                                <div>
+                                <div className="mail">
                                     <img src={con2} alt="MAIL" />
                                     <h4 className="mail" onClick={()=>window.location=`mailto:${obj.mail}`}>{obj.mail}</h4>
                                 </div>
-                                <div>
+                                <div className="phone">
                                     <img src={con1} alt="TEL" />
                                     <h4>{obj.telefono}</h4>
                                 </div>

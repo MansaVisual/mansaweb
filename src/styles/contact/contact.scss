@@ -70,17 +70,18 @@
                 margin-top: 57px;
                 gap: 24px;
                 flex-direction: row;
+                align-items: center;
                 div{
+                    margin-bottom: 8px;
                     h3{
                         font-weight: 600;
                         font-size: 22px;
                         line-height: 29px;
-                        margin-bottom: 8px;
+                        margin-bottom: 10px;
                     }
-                    div{
-                        width: 270px;
+                    .country{
                         img{
-                            margin-right: 8px;
+                            width: 22px;
                         }
                         h3{
                             font-family: $font-saira;
@@ -88,6 +89,23 @@
                             font-size: 16px;
                             line-height: 22px;
                             color: $black-color-2-disabled;
+                            margin-bottom: 0px;
+                        }
+                    }
+                    .mail{
+                        img{
+                            width: 18px;
+                        }
+                    }
+                    .phone{
+                        img{
+                            width: 13px;
+                        }
+                    }
+                    div{
+                        width: 270px;
+                        img{
+                            margin-right: 8px;
                         }
                         h4{
                             font-family: $font-saira;
@@ -95,7 +113,6 @@
                             font-size: 16px;
                             line-height: 22px;
                             color: #767676;
-                            margin-bottom: 8px;
                         }
                         .mail{
                             color:#43AFC2;
@@ -130,6 +147,7 @@
                         margin-bottom: 8px;
                     }
                     div{
+                        margin-bottom: 4px;
                         img{
                             margin-right: 7px;
                         }
@@ -139,7 +157,7 @@
                             font-size: 16px;
                             line-height: 22px;
                             color: $black-color-2-disabled;
-                            margin-bottom: 4px
+                            margin-bottom: 0px
                         }
                         h4{
                             font-family: $font-saira;
@@ -147,7 +165,6 @@
                             font-size: 16px;
                             line-height: 22px;
                             color: #767676;
-                            margin-bottom: 4px
                         }
                         .mail{
                             color:#43AFC2;
