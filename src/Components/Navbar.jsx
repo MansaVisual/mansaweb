@@ -118,7 +118,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                     })}
                 </div>
                 <div className={`navbar-logos`}>
-                        <img src={subLogo1} alt="LINKEDIN"/>
+                        <img src={subLogo1} alt="LINKEDIN" onClick={()=>window.open("https://www.linkedin.com/company/mansavisualagency/")}/>
                         <img src={subLogo3} alt="CALENDAR" onClick={()=>window.open("https://calendly.com/mansastudio/15min")}/>
                         <img src={subLogo2} alt="ENVELOPE" />
                 </div>
