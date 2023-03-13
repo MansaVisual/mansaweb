@@ -26,11 +26,11 @@ export default function Accordion(){
             array:["Design Logo", "Visual Design", "Tone of voice", "Identity manual"],
             info:""
         },
-        {
-            title:"Data & Analytics",
-            array:["Brand Strategy", "Brand, sdfsd", "Load generatoru"],
-            info:""
-        },
+        // {
+        //     title:"Data & Analytics",
+        //     array:["Brand Strategy", "Brand, sdfsd", "Load generatoru"],
+        //     info:""
+        // },
         {
             title:"Marketing & Promotion",
             array:["Google & Facebook Ads", "Social Media Strategy", "Content Design", "Marketing Planification"],
