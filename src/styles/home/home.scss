@@ -13,6 +13,9 @@
     -ms-flex-direction: column;
     flex-direction: column;
     .home-container-2{
+        @include min_screen(1440){
+            max-width: 1440px;
+        }
         .first-box{
             display: -webkit-box;
             display: -ms-flexbox;

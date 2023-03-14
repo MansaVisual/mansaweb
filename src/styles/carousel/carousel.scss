@@ -3,6 +3,9 @@
   margin: auto;
   margin-top: 16px;
   height: 127px;
+  @include min_screen(1440){
+    max-width: 1440px;
+  }
   .react-multi-carousel-list{
     padding: 0px 45px;
     height: 127px;

@@ -17,6 +17,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
     const navigate=useNavigate()
 
     const [menuBar,setMenuBar]=useState(false)
+    const [openClose,setOpenClose]=useState(false)
 
     useEffect(() => {
         if(window.location.pathname==="/Contact"){
@@ -72,6 +73,7 @@ export default function Navbar({menuOpen,setMenuOpen}) {
                                 behavior: "auto",
                             });
                         }
+                        setOpenClose(true)
                         setMenuOpen(!menuOpen)
                     }}
                 >
