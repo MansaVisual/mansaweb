@@ -7,6 +7,7 @@ import con1 from "../assets/contact-1.svg"
 import con2 from "../assets/contact-2.svg"
 import { useMediaQuery } from "@mui/material"
 import logoFoot from "../assets/logo-footer.svg"
+import eagle from "../assets/eagle-2.svg"
 
 const Contact = ({menuOpen,setMenuOpen}) =>{
 
@@ -49,6 +50,11 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
     return(
         <div className={`contact-container ${isDesktop?"desk":"mobile"}`}>
             <div className="contact-container-2">
+                {isDesktop&&
+                    <div className="eagle">
+                        <img src={eagle} alt="EAGLE"/>
+                    </div>
+                }
                 <h2>Contact us</h2>
                 <p className="description">
                     Our team is based in Buenos Aires, but we work with clients all over the world.
