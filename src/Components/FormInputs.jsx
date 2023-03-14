@@ -3,7 +3,7 @@ import { TextField } from "@mui/material"
 export default function FormInputs({last,i,obj,setForm,setErrorValidate,setErrorMail,setErrorName,setErrorDescription,errorValidate,errorName,errorMail,errorDescription,form}){
     return(
         <div key={i} style={{width:last?"855px":"421px"}}>
-            <TextField id={obj.title} type={obj.form==="phone"?"number":"text"} variant="standard" label={`${obj.title}${!obj.optional?"*":""}`} 
+            <TextField id={obj.title} type={obj.form==="number"?"number":"text"} variant="standard" label={`${obj.title}${!obj.optional?"*":""}`} 
                 onChange={(e)=>{
                     setForm({...form,[obj.form]:e.target.value})
                     if(obj.title==="Email"){
