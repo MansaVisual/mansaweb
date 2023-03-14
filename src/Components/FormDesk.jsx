@@ -8,7 +8,7 @@ export default function FormDesk({mailSend,arrayFormDesk,setForm,form,setErrorVa
     
     
     return(
-        <div className="form desk">
+        <div className="form desk" style={{alignItems:mailSend!==null&&"center"}}>
             {mailSend===null &&
                 <>
                     <div className="line-form">
