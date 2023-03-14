@@ -56,6 +56,16 @@
     &.desk{
         .contact-container-2{
             padding: 126px 83px 70px 83px;
+            position: relative;
+            .eagle{
+                width: 100%;
+                img{
+                    position: absolute;
+                    z-index: -5;
+                    top: 128px;
+                    right: 126px;
+                }
+            }
             h2{
                 font-weight: 600;
                 font-size: 50px;

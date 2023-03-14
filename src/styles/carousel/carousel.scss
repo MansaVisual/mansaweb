@@ -1,13 +1,27 @@
 .carousel-container{
-    width: 98vw;
-    margin: auto;
-    margin-top: 16px;
+  width: 98vw;
+  margin: auto;
+  margin-top: 16px;
+  height: 127px;
+  .react-multi-carousel-list{
+    padding: 0px 45px;
     height: 127px;
-    .react-multi-carousel-list{
-        padding: 0px 45px;
-        height: 127px;
-        align-items: center;
+    align-items: center;
+    ul{
+      align-items: center;
+      li{
+        width: fit-content !important;
+        margin: 0px 30px;
+      }
     }
+  }
+  &.desk{
+    ul{
+      li{
+        margin: 0px 78px;
+      }
+    }
+  }
 }
 
 .buttonSlidePrev {
