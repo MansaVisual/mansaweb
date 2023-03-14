@@ -59,6 +59,14 @@
             &.active{
                 margin-top: 18px;
             }
+            .bar::before{
+                height: 3px !important;
+                border-radius: 2px;
+            }
+            .bar{
+                height: 3px !important;
+                border-radius: 2px;
+            }
         }
         .logo-menu-close{
             height: auto;
