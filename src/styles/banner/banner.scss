@@ -23,6 +23,9 @@
       min-height: 540px;
       padding-top: 92px;
       padding-left: 83px;
+      @include min_screen(1800){
+        min-height: 650px;
+    }
       .title{
         h1{
           font-weight: 600;
