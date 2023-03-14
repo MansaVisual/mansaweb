@@ -124,8 +124,10 @@
                 line-height: 30px;
                 padding: 25px 370px;
                 margin-top: 70px;
+                transition: 0s;
                 &:hover{
-                    font-size: 22.5px;
+                    padding: 28px 370px;
+                    transition: 0s;
                 }
             }
             .ourTeam-description{
@@ -186,9 +188,6 @@
                 font-size: 18px;
                 line-height: 21px;
                 margin-top: 60px;
-                &:hover{
-                    font-size: 20px;
-                }
             }
             .ourTeam-description{
                 font-weight: 400;
