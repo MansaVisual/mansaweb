@@ -57,6 +57,7 @@ export default function CarouselC(){
               responsive={responsive}
               infinite={true}
               autoPlay={true}
+              autoPlaySpeed={1200}
               customLeftArrow={<PrevArrow />}
               customRightArrow={<NextArrow />}
           >
