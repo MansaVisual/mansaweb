@@ -101,7 +101,9 @@ const Contact = ({menuOpen,setMenuOpen}) =>{
                                 behavior: "smooth",
                             })
                         }
-                    }/>
+                    }
+                    style={{left:`50%`,marginLeft:`-${264/2}px`}}
+                    />
                     <p>© 2023 Mansa. All Rights Reserved</p>
                 </div>
             }
